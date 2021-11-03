@@ -27,9 +27,14 @@ describe('Testing demoPage', () => {
         if(await Helper.displayed(demoPage.title)) expect(await demoPage.title.getText()).toBe("PHPTRAVELS")
     })
 
-    fit('Check if the subtitle is correct', async () => {
+    it('Check if the subtitle is correct', async () => {
         let demoPage = new DemoPage()
         if(await Helper.displayed(demoPage.subTitle)) expect(await demoPage.subTitle.getText()).toBe("TRAVEL TECHNOLOGY PARTNER")
+    })
+
+    fit('Check if the main title is correct', async () => {
+        let demoPage = new DemoPage()
+        if(await Helper.displayed(demoPage.mainTitle)) expect(await demoPage.mainTitle.getText()).toBe("Demo Credentials for Frontend and Backend")
     })
 
 })
