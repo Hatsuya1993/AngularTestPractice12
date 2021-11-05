@@ -1,4 +1,4 @@
-import { $, ElementFinder } from "protractor";
+import { $, by, element, ElementFinder, Locator } from "protractor";
 
 export class DemoPage {
 
@@ -7,6 +7,7 @@ export class DemoPage {
     subTitle : ElementFinder
     mainTitle : ElementFinder
     navOption : ElementFinder
+    demoOption : ElementFinder
 
     constructor(private readonly $main = $("#Main")){
         this.website = "https://phptravels.com/demo/"
@@ -14,6 +15,7 @@ export class DemoPage {
         this.subTitle = $("#TRAVEL_TECHNOLOGY_PARTNER")
         this.mainTitle = this.$main.$(".main-title")
         this.navOption = $("nav.clearfix")
+        this.demoOption = element(by.linkText("Demo"))
     }
 
 }
