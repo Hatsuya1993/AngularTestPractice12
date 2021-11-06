@@ -42,10 +42,16 @@ describe('Testing demoPage', () => {
         expect(await Helper.displayed(demoPage.navOption)).toBeTruthy()
     })
 
-    fit('Check if the home url is correct if demo is clicked', async () => {
+    it('Check if the home url is correct if demo is clicked', async () => {
         let demoPage = new DemoPage()
         await Helper.clickItem(demoPage.demoOption)
         expect(await browser.getCurrentUrl()).toContain("demo")
+    })
+
+    it('Check if the pricing url is currect if pricing is clicked', async () => {
+        let demoPage = new DemoPage()
+        await Helper.clickItem(demoPage.pricingOption)
+        expect(await browser.getCurrentUrl()).toContain("order")
     })
 
 })

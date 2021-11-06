@@ -8,6 +8,7 @@ export class DemoPage {
     mainTitle : ElementFinder
     navOption : ElementFinder
     demoOption : ElementFinder
+    pricingOption : ElementFinder
 
     constructor(private readonly $main = $("#Main")){
         this.website = "https://phptravels.com/demo/"
@@ -16,6 +17,7 @@ export class DemoPage {
         this.mainTitle = this.$main.$(".main-title")
         this.navOption = $("nav.clearfix")
         this.demoOption = element(by.linkText("Demo"))
+        this.pricingOption = element(by.linkText("Pricing"))
     }
 
 }
