@@ -48,10 +48,16 @@ describe('Testing demoPage', () => {
         expect(await browser.getCurrentUrl()).toContain("demo")
     })
 
-    it('Check if the pricing url is currect if pricing is clicked', async () => {
+    it('Check if the pricing url is currect if pricing if clicked', async () => {
         let demoPage = new DemoPage()
         await Helper.clickItem(demoPage.pricingOption)
         expect(await browser.getCurrentUrl()).toContain("order")
+    })
+
+    fit('Check if the integrations url is correct if clicked', async () => {
+        let demoPage = new DemoPage()
+        await Helper.clickItem(demoPage.integrationOption)
+        expect(await browser.getCurrentUrl()).toContain("integrations")
     })
 
 })

@@ -9,6 +9,7 @@ export class DemoPage {
     navOption : ElementFinder
     demoOption : ElementFinder
     pricingOption : ElementFinder
+    integrationOption : ElementFinder
 
     constructor(private readonly $main = $("#Main")){
         this.website = "https://phptravels.com/demo/"
@@ -18,6 +19,7 @@ export class DemoPage {
         this.navOption = $("nav.clearfix")
         this.demoOption = element(by.linkText("Demo"))
         this.pricingOption = element(by.linkText("Pricing"))
+        this.integrationOption = element(by.linkText("Integrations"))
     }
 
 }
