@@ -10,6 +10,7 @@ export class DemoPage {
     demoOption : ElementFinder
     pricingOption : ElementFinder
     integrationOption : ElementFinder
+    docsOption : ElementFinder
 
     constructor(private readonly $main = $("#Main")){
         this.website = "https://phptravels.com/demo/"
@@ -20,6 +21,7 @@ export class DemoPage {
         this.demoOption = element(by.linkText("Demo"))
         this.pricingOption = element(by.linkText("Pricing"))
         this.integrationOption = element(by.linkText("Integrations"))
+        this.docsOption = element(by.linkText("Docs"))
     }
 
 }

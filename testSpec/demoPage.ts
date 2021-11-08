@@ -54,10 +54,16 @@ describe('Testing demoPage', () => {
         expect(await browser.getCurrentUrl()).toContain("order")
     })
 
-    fit('Check if the integrations url is correct if clicked', async () => {
+    it('Check if the integrations url is correct if clicked', async () => {
         let demoPage = new DemoPage()
         await Helper.clickItem(demoPage.integrationOption)
         expect(await browser.getCurrentUrl()).toContain("integrations")
+    })
+
+    it('Check another tab is opened when Docs is clicked', async () => {
+        let demoPage = new DemoPage()
+        await Helper.clickItem(demoPage.docsOption)
+        expect((await browser.getAllWindowHandles()).length).toBe(2)
     })
 
 })
