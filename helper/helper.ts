@@ -22,4 +22,11 @@ export class Helper {
         }
     }
 
+    static async handleTabs(tabs: number) {
+        await browser.sleep(globalData["WAIT_TIME"]["WAIT_SHORT"])
+        let windowHandles = await browser.getAllWindowHandles();
+        await browser.switchTo().window(windowHandles[tabs])
+        await browser.sleep(globalData["WAIT_TIME"]["WAIT_SHORT"])
+    }
+
 }
