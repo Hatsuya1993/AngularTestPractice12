@@ -73,10 +73,17 @@ describe('Testing demoPage', () => {
         expect(await browser.getCurrentUrl()).toContain("docs")
     })
 
-    fit('Check another tab is opened when Blog is clicked', async () => {
+    it('Check another tab is opened when Blog is clicked', async () => {
         let demoPage = new DemoPage()
         await Helper.clickItem(demoPage.blogOption)
         expect((await browser.getAllWindowHandles()).length).toBe(2)
+    })
+
+    it('Check when Blog tab is clicked, the new tab hold the correct url', async () => {
+        let demoPage = new DemoPage()
+        await Helper.clickItem(demoPage.blogOption)
+        await Helper.handleTabs(1)
+        expect(await browser.getCurrentUrl()).toContain("blog")
     })
 
 })
