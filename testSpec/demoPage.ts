@@ -86,4 +86,10 @@ describe('Testing demoPage', () => {
         expect(await browser.getCurrentUrl()).toContain("blog")
     })
 
+    fit('Check when login button is clicked another tab is opened', async () => {
+        let demoPage = new DemoPage()
+        await Helper.clickItem(demoPage.loginOption)
+        expect((await browser.getAllWindowHandles()).length).toBe(2)
+    })
+
 })
