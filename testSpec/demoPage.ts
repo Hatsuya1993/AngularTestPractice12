@@ -92,11 +92,17 @@ describe('Testing demoPage', () => {
         expect((await browser.getAllWindowHandles()).length).toBe(2)
     })
 
-    fit('Check when the login button is clicked, the url is correct', async () => {
+    it('Check when the login button is clicked, the url is correct', async () => {
         let demoPage = new DemoPage()
         await Helper.clickItem(demoPage.loginOption)
         await Helper.handleTabs(1)
         expect(await browser.getCurrentUrl()).toContain("login")
+    })
+
+    fit('Check when the facebook icon is clicked, 2 tabs are opened', async () => {
+        let demoPage = new DemoPage()
+        await Helper.clickItem(demoPage.facebookIcon)
+        expect((await browser.getAllWindowHandles()).length).toBe(2)
     })
 
 })
