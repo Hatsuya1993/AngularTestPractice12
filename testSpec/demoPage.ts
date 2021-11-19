@@ -125,11 +125,17 @@ describe('Testing demoPage', () => {
         expect(await browser.getCurrentUrl()).toContain('phptravelsofficial')
     })
 
-    fit('Check the url when twitter is clicked', async () => {
+    it('Check the url when twitter is clicked', async () => {
         let demo = new DemoPage()
         await Helper.clickItem(demo.twitterIcon)
         await Helper.handleTabs(1)
         expect(await browser.getCurrentUrl()).toContain('twitter')
+    })
+
+    it('Check the number of tabs when linkedin button is clicked', async () => {
+        let demoPage = new DemoPage()
+        await Helper.clickItem(demoPage.linkedIn)
+        expect((await browser.getAllWindowHandles()).length).toBe(2)
     })
 
 })

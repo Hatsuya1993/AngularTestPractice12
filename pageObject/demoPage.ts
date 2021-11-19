@@ -16,6 +16,7 @@ export class DemoPage {
     facebookIcon : ElementFinder
     youtubeIcon : ElementFinder
     twitterIcon : ElementFinder
+    linkedIn : ElementFinder
 
     constructor(private readonly $main = $("#Main")){
         this.website = "https://phptravels.com/demo/"
@@ -32,6 +33,7 @@ export class DemoPage {
         this.facebookIcon = element(by.css("a[href='https://www.facebook.com/phptravels/']"))
         this.youtubeIcon = element(by.css("a[href='https://www.youtube.com/c/phptravelsofficial']"))
         this.twitterIcon = element(by.css("a[href='https://www.twitter.com/phptravels']"))
+        this.linkedIn = element(by.css("a[href='https://www.linkedin.com/company/phptravels/']"))
     }
 
 }
