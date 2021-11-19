@@ -92,11 +92,44 @@ describe('Testing demoPage', () => {
         expect((await browser.getAllWindowHandles()).length).toBe(2)
     })
 
-    fit('Check when the login button is clicked, the url is correct', async () => {
+    it('Check when the login button is clicked, the url is correct', async () => {
         let demoPage = new DemoPage()
         await Helper.clickItem(demoPage.loginOption)
         await Helper.handleTabs(1)
         expect(await browser.getCurrentUrl()).toContain("login")
+    })
+
+    it('Check when the facebook icon is clicked, 2 tabs are opened', async () => {
+        let demoPage = new DemoPage()
+        await Helper.clickItem(demoPage.facebookIcon)
+        expect((await browser.getAllWindowHandles()).length).toBe(2)
+    })
+
+    it('Check the url when the facebook icon is clicked', async () => {
+        let demoPage = new DemoPage()
+        await Helper.clickItem(demoPage.facebookIcon)
+        await Helper.handleTabs(1)
+        expect(await browser.getCurrentUrl()).toContain("facebook")
+    })
+
+    it('Check the url when the youtube icon is clicked', async () => {
+        let demoPage = new DemoPage()
+        await Helper.clickItem(demoPage.youtubeIcon)
+        expect((await browser.getAllWindowHandles()).length).toBe(2)
+    })
+
+    it('Check the url when youtube is clicked', async () => {
+        let demo = new DemoPage()
+        await Helper.clickItem(demo.youtubeIcon)
+        await Helper.handleTabs(1)
+        expect(await browser.getCurrentUrl()).toContain('phptravelsofficial')
+    })
+
+    fit('Check the url when twitter is clicked', async () => {
+        let demo = new DemoPage()
+        await Helper.clickItem(demo.twitterIcon)
+        await Helper.handleTabs(1)
+        expect(await browser.getCurrentUrl()).toContain('twitter')
     })
 
 })
