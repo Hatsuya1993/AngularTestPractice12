@@ -138,4 +138,11 @@ describe('Testing demoPage', () => {
         expect((await browser.getAllWindowHandles()).length).toBe(2)
     })
 
+    fit('Check the url when the linkedin is clicked', async () => {
+        let demoPage = new DemoPage()
+        await Helper.clickItem(demoPage.linkedIn)
+        await Helper.handleTabs(1)
+        expect(await browser.getCurrentUrl()).toContain('linkedin')
+    })
+
 })
