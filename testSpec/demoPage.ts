@@ -138,11 +138,17 @@ describe('Testing demoPage', () => {
         expect((await browser.getAllWindowHandles()).length).toBe(2)
     })
 
-    fit('Check the url when the linkedin is clicked', async () => {
+    it('Check the url when the linkedin is clicked', async () => {
         let demoPage = new DemoPage()
         await Helper.clickItem(demoPage.linkedIn)
         await Helper.handleTabs(1)
         expect(await browser.getCurrentUrl()).toContain('linkedin')
+    })
+
+    fit('Check the number of tabs opened when instagram icon is clicked', async () => {
+        let demoPage = new DemoPage()
+        await Helper.clickItem(demoPage.instagramIcon)
+        expect((await browser.getAllWindowHandles()).length).toBe(2)
     })
 
 })
