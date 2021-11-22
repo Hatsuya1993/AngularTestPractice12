@@ -151,11 +151,19 @@ describe('Testing demoPage', () => {
         expect((await browser.getAllWindowHandles()).length).toBe(2)
     })
 
-    fit('Check when instagram url when it is clicked', async () => {
+    it('Check when instagram url when it is clicked', async () => {
         let demoPage = new DemoPage()
         await Helper.clickItem(demoPage.instagramIcon)
         await Helper.handleTabs(1)
         expect(await browser.getCurrentUrl()).toContain('instagram')
     })
+
+    fit('Check the url when the desktop app is clicked', async () => {
+        let demoPage = new DemoPage()
+        await Helper.clickItem(demoPage.deskTopLink)
+        expect(await browser.getCurrentUrl()).toContain('desktop-application')
+    })
+
+
 
 })
