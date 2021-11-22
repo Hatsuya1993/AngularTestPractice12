@@ -145,10 +145,17 @@ describe('Testing demoPage', () => {
         expect(await browser.getCurrentUrl()).toContain('linkedin')
     })
 
-    fit('Check the number of tabs opened when instagram icon is clicked', async () => {
+    it('Check the number of tabs opened when instagram icon is clicked', async () => {
         let demoPage = new DemoPage()
         await Helper.clickItem(demoPage.instagramIcon)
         expect((await browser.getAllWindowHandles()).length).toBe(2)
+    })
+
+    fit('Check when instagram url when it is clicked', async () => {
+        let demoPage = new DemoPage()
+        await Helper.clickItem(demoPage.instagramIcon)
+        await Helper.handleTabs(1)
+        expect(await browser.getCurrentUrl()).toContain('instagram')
     })
 
 })
