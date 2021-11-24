@@ -19,6 +19,7 @@ export class DemoPage {
     linkedIn : ElementFinder
     instagramIcon : ElementFinder
     deskTopLink : ElementFinder
+    mobileAppLink : ElementFinder
 
     constructor(private readonly $main = $("#Main")){
         this.website = "https://phptravels.com/demo/"
@@ -38,6 +39,7 @@ export class DemoPage {
         this.linkedIn = element(by.css("a[href='https://www.linkedin.com/company/phptravels/']"))
         this.instagramIcon = element(by.css("a[href='https://www.instagram.com/phptravels_/']"))
         this.deskTopLink = element(by.linkText("Desktop App"))
+        this.mobileAppLink = element(by.linkText("Mobile Apps"))
     }
 
 }

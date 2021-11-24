@@ -158,12 +158,16 @@ describe('Testing demoPage', () => {
         expect(await browser.getCurrentUrl()).toContain('instagram')
     })
 
-    fit('Check the url when the desktop app is clicked', async () => {
+    it('Check the url when the desktop app is clicked', async () => {
         let demoPage = new DemoPage()
         await Helper.clickItem(demoPage.deskTopLink)
         expect(await browser.getCurrentUrl()).toContain('desktop-application')
     })
 
 
-
+    fit('Check the url when the mobile app is clicked', async () => {
+        let demoPage = new DemoPage()
+        await Helper.clickItem(demoPage.mobileAppLink)
+        expect(await browser.getCurrentUrl()).toContain('mobile-applications')
+    })
 })
