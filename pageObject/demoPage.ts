@@ -20,6 +20,7 @@ export class DemoPage {
     instagramIcon : ElementFinder
     deskTopLink : ElementFinder
     mobileAppLink : ElementFinder
+    featuresLink : ElementFinder
 
     constructor(private readonly $main = $("#Main")){
         this.website = "https://phptravels.com/demo/"
@@ -40,6 +41,7 @@ export class DemoPage {
         this.instagramIcon = element(by.css("a[href='https://www.instagram.com/phptravels_/']"))
         this.deskTopLink = element(by.linkText("Desktop App"))
         this.mobileAppLink = element(by.linkText("Mobile Apps"))
+        this.featuresLink = element(by.linkText("Features"))
     }
 
 }

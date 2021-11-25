@@ -165,9 +165,15 @@ describe('Testing demoPage', () => {
     })
 
 
-    fit('Check the url when the mobile app is clicked', async () => {
+    it('Check the url when the mobile app is clicked', async () => {
         let demoPage = new DemoPage()
         await Helper.clickItem(demoPage.mobileAppLink)
         expect(await browser.getCurrentUrl()).toContain('mobile-applications')
+    })
+
+    fit('Check the url when the features is clicked', async () => {
+        let demoPage = new DemoPage()
+        await Helper.clickItem(demoPage.featuresLink)
+        expect(await browser.getCurrentUrl()).toContain('features')
     })
 })
