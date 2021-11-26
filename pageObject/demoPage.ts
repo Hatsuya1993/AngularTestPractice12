@@ -21,6 +21,7 @@ export class DemoPage {
     deskTopLink : ElementFinder
     mobileAppLink : ElementFinder
     featuresLink : ElementFinder
+    requirementsLink : ElementFinder
 
     constructor(private readonly $main = $("#Main")){
         this.website = "https://phptravels.com/demo/"
@@ -42,6 +43,7 @@ export class DemoPage {
         this.deskTopLink = element(by.linkText("Desktop App"))
         this.mobileAppLink = element(by.linkText("Mobile Apps"))
         this.featuresLink = element(by.linkText("Features"))
+        this.requirementsLink = element(by.linkText("Requirements"))
     }
 
 }
