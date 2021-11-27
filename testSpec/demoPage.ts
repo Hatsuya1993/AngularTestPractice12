@@ -182,4 +182,10 @@ describe('Testing demoPage', () => {
         await Helper.clickItem(demoPage.requirementsLink)
         expect(await browser.getCurrentUrl()).toContain('requirements')
     })
+
+    fit('Check the url when the technology is clicked', async () => {
+        let demoPage = new DemoPage()
+        await Helper.clickItem(demoPage.technologyLink)
+        expect(await browser.getCurrentUrl()).toContain('technology')
+    })
 })
