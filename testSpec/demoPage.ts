@@ -195,9 +195,15 @@ describe('Testing demoPage', () => {
         expect(await browser.getCurrentUrl()).toContain('change-log')
     })
 
-    fit('Check the url when the updates is clicked', async () => {
+    it('Check the url when the updates is clicked', async () => {
         let demoPage = new DemoPage()
         await Helper.clickItem(demoPage.updatesLink)
         expect(await browser.getCurrentUrl()).toContain('updates')
+    })
+
+    fit('Check the url when the providers is clicked', async () => {
+        let demoPage = new DemoPage()
+        await Helper.clickItem(demoPage.providersLink)
+        expect(await browser.getCurrentUrl()).toContain('providers')
     })
 })

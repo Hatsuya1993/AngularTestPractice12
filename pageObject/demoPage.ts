@@ -25,6 +25,7 @@ export class DemoPage {
     technologyLink : ElementFinder
     changeLogLink : ElementFinder
     updatesLink : ElementFinder
+    providersLink : ElementFinder
 
     constructor(private readonly $main = $("#Main")){
         this.website = "https://phptravels.com/demo/"
@@ -50,6 +51,7 @@ export class DemoPage {
         this.technologyLink = element(by.linkText("Technology"))
         this.changeLogLink = element(by.linkText("Changelog"))
         this.updatesLink = element(by.linkText("Updates"))
+        this.providersLink = element(by.linkText("Providers"))
     }
 
 }
