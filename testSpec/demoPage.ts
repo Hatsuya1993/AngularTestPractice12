@@ -201,9 +201,15 @@ describe('Testing demoPage', () => {
         expect(await browser.getCurrentUrl()).toContain('updates')
     })
 
-    fit('Check the url when the providers is clicked', async () => {
+    it('Check the url when the providers is clicked', async () => {
         let demoPage = new DemoPage()
         await Helper.clickItem(demoPage.providersLink)
         expect(await browser.getCurrentUrl()).toContain('providers')
+    })
+
+    it('Check the url when the affiliate is clicked', async () => {
+        let demoPage = new DemoPage()
+        await Helper.clickItem(demoPage.affiliateLink)
+        expect(await browser.getCurrentUrl()).toContain('affiliate')
     })
 })
