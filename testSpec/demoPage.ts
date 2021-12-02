@@ -212,4 +212,10 @@ describe('Testing demoPage', () => {
         await Helper.clickItem(demoPage.affiliateLink)
         expect(await browser.getCurrentUrl()).toContain('affiliate')
     })
+
+    fit('Check the url when the roadmap is clicked', async () => {
+        let demoPage = new DemoPage()
+        await Helper.clickItem(demoPage.roadMapLink)
+        expect(await browser.getCurrentUrl()).toContain('roadmap')
+    })
 })
