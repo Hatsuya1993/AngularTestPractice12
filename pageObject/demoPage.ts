@@ -28,6 +28,7 @@ export class DemoPage {
     providersLink : ElementFinder
     affiliateLink : ElementFinder
     roadMapLink : ElementFinder
+    productServicesLink : ElementFinder
 
     constructor(private readonly $main = $("#Main")){
         this.website = "https://phptravels.com/demo/"
@@ -56,6 +57,7 @@ export class DemoPage {
         this.providersLink = element(by.linkText("Providers"))
         this.affiliateLink = element(by.linkText("Affiliate"))
         this.roadMapLink = element(by.linkText("Road Map"))
+        this.productServicesLink = element(by.linkText("Product Services"))
     }
 
 }
