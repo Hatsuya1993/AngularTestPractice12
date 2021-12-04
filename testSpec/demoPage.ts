@@ -219,9 +219,15 @@ describe('Testing demoPage', () => {
         expect(await browser.getCurrentUrl()).toContain('roadmap')
     })
     
-    fit('Check the url when the product services is clicked', async () => {
+    it('Check the url when the product services is clicked', async () => {
         let demoPage = new DemoPage()
         await Helper.clickItem(demoPage.productServicesLink)
         expect(await browser.getCurrentUrl()).toContain('services')
+    })
+
+    fit('Check the url when the customization is clicked', async () => {
+        let demoPage = new DemoPage()
+        await Helper.clickItem(demoPage.customizationLink)
+        expect(await browser.getCurrentUrl()).toContain('customizations')
     })
 })
