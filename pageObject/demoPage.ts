@@ -30,6 +30,7 @@ export class DemoPage {
     roadMapLink : ElementFinder
     productServicesLink : ElementFinder
     customizationLink : ElementFinder
+    hotelIntegration : ElementFinder
 
     constructor(private readonly $main = $("#Main")){
         this.website = "https://phptravels.com/demo/"
@@ -60,6 +61,7 @@ export class DemoPage {
         this.roadMapLink = element(by.linkText("Road Map"))
         this.productServicesLink = element(by.linkText("Product Services"))
         this.customizationLink = element(by.linkText("Customizations"))
+        this.hotelIntegration = element(by.css('a[href="https://phptravels.com/expedia-api-integration/"]'))
     }
 
 }

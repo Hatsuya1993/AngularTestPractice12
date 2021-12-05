@@ -225,9 +225,15 @@ describe('Testing demoPage', () => {
         expect(await browser.getCurrentUrl()).toContain('services')
     })
 
-    fit('Check the url when the customization is clicked', async () => {
+    it('Check the url when the customization is clicked', async () => {
         let demoPage = new DemoPage()
         await Helper.clickItem(demoPage.customizationLink)
         expect(await browser.getCurrentUrl()).toContain('customizations')
+    })
+
+    fit('Check the url when the hotels integration is clicked', async () => {
+        let demoPage = new DemoPage()
+        await Helper.clickItem(demoPage.hotelIntegration)
+        expect(await browser.getCurrentUrl()).toContain('expedia-api-integration')
     })
 })
