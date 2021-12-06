@@ -31,6 +31,7 @@ export class DemoPage {
     productServicesLink : ElementFinder
     customizationLink : ElementFinder
     hotelIntegration : ElementFinder
+    sharedCloudHosting : ElementFinder
 
     constructor(private readonly $main = $("#Main")){
         this.website = "https://phptravels.com/demo/"
@@ -62,6 +63,7 @@ export class DemoPage {
         this.productServicesLink = element(by.linkText("Product Services"))
         this.customizationLink = element(by.linkText("Customizations"))
         this.hotelIntegration = element(by.css('a[href="https://phptravels.com/expedia-api-integration/"]'))
+        this.sharedCloudHosting = element(by.linkText('Shared Cloud Hosting'))
     }
 
 }
