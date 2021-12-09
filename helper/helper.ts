@@ -29,4 +29,8 @@ export class Helper {
         await browser.sleep(globalData["WAIT_TIME"]["WAIT_SHORT"])
     }
 
+    static async waitForPage(page: string) {
+        await browser.wait(EC.urlContains(page), globalData["WAIT_TIME"]["WAIT_LONGER"])
+    }
+
 }

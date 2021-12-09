@@ -1,4 +1,4 @@
-import { browser } from "protractor"
+import { browser, $ } from "protractor"
 import { globalData } from "../helper/global";
 import { DemoPage } from "../pageObject/demoPage";
 import { Helper } from "../helper/helper"
@@ -24,6 +24,13 @@ describe('Testing orderPage', () => {
     it('Should disable the buy now button by default', async () => {        let demoPage = new DemoPage();
         await Helper.clickItem(demoPage.pricingOption)
         expect(await orderPage.buyNowButton.isEnabled()).toBe(false)
+    })
+
+    fit('Should able the buy now button after selecting an option', async () => {        let demoPage = new DemoPage();
+        await Helper.clickItem(demoPage.pricingOption)
+        await Helper.waitForPage("order")
+        await orderPage.getCheckBox("1")
+        expect(await orderPage.buyNowButton.isEnabled()).toBe(true)
     })
 
 })
