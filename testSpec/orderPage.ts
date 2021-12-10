@@ -26,11 +26,20 @@ describe('Testing orderPage', () => {
         expect(await orderPage.buyNowButton.isEnabled()).toBe(false)
     })
 
-    fit('Should able the buy now button after selecting an option', async () => {        let demoPage = new DemoPage();
+    it('Should able the buy now button after selecting an option', async () => {        let demoPage = new DemoPage();
         await Helper.clickItem(demoPage.pricingOption)
         await Helper.waitForPage("order")
         await orderPage.getCheckBox("1")
         expect(await orderPage.buyNowButton.isEnabled()).toBe(true)
+    })
+
+    fit('Should check the url when the buy now button is clicked', async () => {
+        await Helper.clickItem(demoPage.pricingOption)
+        await Helper.waitForPage("order")
+        await orderPage.getCheckBox("1")
+        await Helper.scrollPage('500')
+        await Helper.clickItem(orderPage.buyNowButton)
+        expect(await browser.getCurrentUrl()).toContain("order-confirm")
     })
 
 })

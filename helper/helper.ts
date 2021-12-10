@@ -33,4 +33,8 @@ export class Helper {
         await browser.wait(EC.urlContains(page), globalData["WAIT_TIME"]["WAIT_LONGER"])
     }
 
+    static async scrollPage(amount: string) {
+        await browser.executeScript(`window.scrollTo(0,${amount});`)
+    }
+
 }
