@@ -1,4 +1,4 @@
-import { browser, ElementFinder, ExpectedConditions } from "protractor";
+import { browser, ElementFinder, ExpectedConditions, $, WebElementPromise } from "protractor";
 import { globalData } from "./global";
 
 let EC = ExpectedConditions
