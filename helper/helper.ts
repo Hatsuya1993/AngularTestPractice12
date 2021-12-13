@@ -37,4 +37,8 @@ export class Helper {
         await browser.executeScript(`window.scrollTo(0,${amount});`)
     }
 
+    static async mouseOverElement(data: ElementFinder) {
+        await browser.actions().mouseMove(data).perform()
+    }
+
 }

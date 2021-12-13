@@ -237,7 +237,7 @@ describe('Testing demoPage', () => {
         expect(await browser.getCurrentUrl()).toContain('expedia-api-integration')
     })
 
-    fit('Check the url when the shared cloud hosting is clicked', async () => {
+    it('Check the url when the shared cloud hosting is clicked', async () => {
         let demoPage = new DemoPage()
         await Helper.clickItem(demoPage.sharedCloudHosting)
         expect(await browser.getCurrentUrl()).toContain('shared-hosting')

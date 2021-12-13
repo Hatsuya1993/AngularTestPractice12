@@ -10,6 +10,7 @@ export class OrderPage {
     businessNameInput : ElementFinder
     emailAddressInput : ElementFinder
     mobileInput : ElementFinder
+    orderPageData : ElementFinder
 
     constructor(private readonly $main = ("main")){
         this.buyNowButton = $("#order_button")
@@ -19,6 +20,7 @@ export class OrderPage {
         this.businessNameInput = $('#bizname')
         this.emailAddressInput = $('#email')
         this.mobileInput = $('#mobile')
+        this.orderPageData = $('#order')
     }
 
     public async getCheckBox(id: string) {

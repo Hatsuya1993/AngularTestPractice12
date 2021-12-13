@@ -44,7 +44,7 @@ describe('Testing orderPage', () => {
         expect(await browser.getCurrentUrl()).toContain("order-confirm")
     })
 
-    fit('Should enabled the confirm order button', async () => {
+    it('Should input the given values', async () => {
         await Helper.clickItem(demoPage.pricingOption)
         await Helper.waitForPage("order")
         await orderPage.getCheckBox("1")
@@ -62,6 +62,11 @@ describe('Testing orderPage', () => {
         expect(await confirmOrderPage.businessNameInput.getAttribute('value')).not.toBe('')
         expect(await confirmOrderPage.emailAddressInput.getAttribute('value')).not.toBe('')
         expect(await confirmOrderPage.mobileInput.getAttribute('value')).not.toBe('')
+    })
+
+    fit('Should check the default data is shown', async () => {
+        await Helper.clickItem(demoPage.pricingOption)
+        expect(await orderPage.orderPageData.isDisplayed()).toBeTruthy()
     })
 
 })
