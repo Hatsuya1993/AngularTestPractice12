@@ -64,7 +64,7 @@ describe('Testing orderPage', () => {
         expect(await confirmOrderPage.mobileInput.getAttribute('value')).not.toBe('')
     })
 
-    fit('Should check the default data is shown', async () => {
+    it('Should check the default data is shown', async () => {
         await Helper.clickItem(demoPage.pricingOption)
         expect(await orderPage.orderPageData.isDisplayed()).toBeTruthy()
     })
