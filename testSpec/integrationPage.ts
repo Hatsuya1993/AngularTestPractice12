@@ -49,4 +49,11 @@ describe('Testing orderPage', () => {
         await Helper.clickItem(integratePage.travelPortDoc)
         expect((await browser.getAllWindowHandles()).length).toBe(2)
     })
+
+    fit('Should open to the correct website for travelport', async () => {
+        let integratePage = await viewToPage.moveToIntegrate(demoPage.integrationOption)
+        await Helper.clickItem(integratePage.travelPortDoc)
+        await Helper.handleTabs(1)
+        expect(await browser.getCurrentUrl()).toContain('hotels/travelport')
+    })
 })
