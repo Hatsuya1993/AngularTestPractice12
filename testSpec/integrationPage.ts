@@ -57,9 +57,16 @@ describe('Testing orderPage', () => {
         expect(await browser.getCurrentUrl()).toContain('hotels/travelport')
     })
 
-    fit('Should open another tab to the correct website for travelpayout', async () => {
+    it('Should open another tab to the correct website for travelpayout', async () => {
         let integratePage = await viewToPage.moveToIntegrate(demoPage.integrationOption)
         await Helper.clickItem(integratePage.travelPayOut)
         expect((await browser.getAllWindowHandles()).length).toBe(2)
+    })
+
+    fit('Should open to the correct website for travelpayouts', async () => {
+        let integratePage = await viewToPage.moveToIntegrate(demoPage.integrationOption)
+        await Helper.clickItem(integratePage.travelPayOut)
+        await Helper.handleTabs(1)
+        expect(await browser.getCurrentUrl()).toContain('travelpayouts')
     })
 })
