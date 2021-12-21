@@ -1,4 +1,4 @@
-import { browser, ElementFinder, ExpectedConditions, $, WebElementPromise } from "protractor";
+import { browser, ElementFinder, ExpectedConditions, $, WebElementPromise, ElementArrayFinder } from "protractor";
 import { globalData } from "./global";
 
 let EC = ExpectedConditions
@@ -39,6 +39,14 @@ export class Helper {
 
     static async mouseOverElement(data: ElementFinder) {
         await browser.actions().mouseMove(data).perform()
+    }
+
+    static async checkEachValue(data: Array<string>, dataEl : ElementArrayFinder) : Promise<boolean> {
+        if(data.length !== await (await dataEl.getText()).length) return false
+        for(const i of await dataEl.getText()){
+            if(!data.includes(i)) return false
+        }
+        return true
     }
 
 }

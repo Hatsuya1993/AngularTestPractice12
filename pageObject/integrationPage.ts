@@ -1,4 +1,4 @@
-import { element, ElementFinder, $, by } from "protractor"
+import { element, ElementFinder, $, by, ElementArrayFinder, $$ } from "protractor"
 import { Helper } from "../helper/helper"
 
 export class IntegrationPage {
@@ -7,6 +7,7 @@ export class IntegrationPage {
     websiteTravelPort : ElementFinder
     travelPortDoc : ElementFinder
     travelPayOut : ElementFinder
+    modules : ElementArrayFinder
 
     constructor(private readonly $main = ("main")){
 
@@ -14,5 +15,6 @@ export class IntegrationPage {
         this.websiteTravelPort = $("a[href*='travelport']")
         this.travelPortDoc = $("a[href*='hotels/travelport']")
         this.travelPayOut = $("a[href*='travelpayouts']")
+        this.modules = $$(".module h4")
     }
 }
