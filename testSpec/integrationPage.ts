@@ -70,9 +70,15 @@ describe('Testing orderPage', () => {
         expect(await browser.getCurrentUrl()).toContain('travelpayouts')
     })
 
-    fit('Check if each module is correct', async () => {
+    it('Check if each module is correct', async () => {
         let integratePage = await viewToPage.moveToIntegrate(demoPage.integrationOption)
         const results = await Helper.checkEachValue(['Flights Modules','Hotels Modules','Tours Modules','Cars Modules','Multi-Vendor Manual Modules'], integratePage.modules)
         expect(results).toBe(true)
+    })
+
+    fit('Should open another tab to the correct website for hotel beds', async () => {
+        let integratePage = await viewToPage.moveToIntegrate(demoPage.integrationOption)
+        await Helper.clickItem(integratePage.hotelBeds)
+        expect((await browser.getAllWindowHandles()).length).toBe(2)
     })
 })

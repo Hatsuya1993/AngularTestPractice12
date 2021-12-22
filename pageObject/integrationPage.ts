@@ -8,6 +8,7 @@ export class IntegrationPage {
     travelPortDoc : ElementFinder
     travelPayOut : ElementFinder
     modules : ElementArrayFinder
+    hotelBeds : ElementFinder
 
     constructor(private readonly $main = ("main")){
 
@@ -16,5 +17,6 @@ export class IntegrationPage {
         this.travelPortDoc = $("a[href*='hotels/travelport']")
         this.travelPayOut = $("a[href*='travelpayouts']")
         this.modules = $$(".module h4")
+        this.hotelBeds = $("a[href*=hotelbeds]")
     }
 }
