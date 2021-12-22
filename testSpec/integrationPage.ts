@@ -76,9 +76,15 @@ describe('Testing orderPage', () => {
         expect(results).toBe(true)
     })
 
-    fit('Should open another tab to the correct website for hotel beds', async () => {
+    it('Should open another tab to the correct website for hotel beds', async () => {
         let integratePage = await viewToPage.moveToIntegrate(demoPage.integrationOption)
         await Helper.clickItem(integratePage.hotelBeds)
+        expect((await browser.getAllWindowHandles()).length).toBe(2)
+    })
+
+    fit('Should open another tab to the correct website for hotelbeds documentation', async () => {
+        let integratePage = await viewToPage.moveToIntegrate(demoPage.integrationOption)
+        await Helper.clickItem(integratePage.hotelBedsDoc)
         expect((await browser.getAllWindowHandles()).length).toBe(2)
     })
 })
