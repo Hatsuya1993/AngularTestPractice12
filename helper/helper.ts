@@ -17,7 +17,7 @@ export class Helper {
     static async clickItem(item: ElementFinder) {
         await browser.sleep(globalData["WAIT_TIME"]["WAIT_SHORT"])
         if(await this.displayed(item)){
-            item.click()
+            await item.click()
             await browser.sleep(globalData["WAIT_TIME"]["WAIT_SHORT"])
         }
     }
