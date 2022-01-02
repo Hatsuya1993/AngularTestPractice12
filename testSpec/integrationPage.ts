@@ -147,9 +147,16 @@ describe('Testing orderPage', () => {
         expect(await browser.getCurrentUrl()).toContain('viator')
     })
 
-    fit('Should open to the correct website for viator doc', async () => {
+    it('Should open to the correct website for viator doc', async () => {
         let integratePage = await viewToPage.moveToIntegrate(demoPage.integrationOption)
         await Helper.clickItem(integratePage.viatorDoc)
         expect((await browser.getAllWindowHandles()).length).toBe(2)
+    })
+
+    fit('Should open to the correct website for viator doc', async () => {
+        let integratePage = await viewToPage.moveToIntegrate(demoPage.integrationOption)
+        await Helper.clickItem(integratePage.viatorDoc)
+        await Helper.handleTabs(1)
+        expect(await browser.getCurrentUrl()).toContain('tours/viator')
     })
 })
