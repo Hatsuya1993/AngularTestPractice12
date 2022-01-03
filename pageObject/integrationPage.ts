@@ -15,6 +15,7 @@ export class IntegrationPage {
     expedia : ElementFinder
     viator : ElementFinder
     viatorDoc : ElementFinder
+    cartrawler : ElementFinder
 
     constructor(private readonly $main = ("main")){
 
@@ -30,5 +31,6 @@ export class IntegrationPage {
         this.expedia = $("a[href*='expedia.com']")
         this.viator = $("a[href*='viator']")
         this.viatorDoc = $("a[href*='tours/viator']")
+        this.cartrawler = $("a[href*='cartrawler']")
     }
 }
