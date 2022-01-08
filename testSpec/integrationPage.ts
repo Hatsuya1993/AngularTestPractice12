@@ -186,9 +186,16 @@ describe('Testing orderPage', () => {
         expect(await browser.getCurrentUrl()).toContain('cars/cartrawler')
     })
     
-    fit('Should open to the correct website for kiwitaxic', async () => {
+    it('Should open to the correct website for kiwitaxic', async () => {
         let integratePage = await viewToPage.moveToIntegrate(demoPage.integrationOption)
         await Helper.clickItem(integratePage.kititaxi)
         expect((await browser.getAllWindowHandles()).length).toBe(2)
+    })
+    
+    fit('Should open to the correct website for cartrawler doc', async () => {
+        let integratePage = await viewToPage.moveToIntegrate(demoPage.integrationOption)
+        await Helper.clickItem(integratePage.kititaxi)
+        await Helper.handleTabs(1)
+        expect(await browser.getCurrentUrl()).toContain('kiwitaxi')
     })
 })
