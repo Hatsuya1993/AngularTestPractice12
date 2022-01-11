@@ -2,6 +2,7 @@ import { browser } from "protractor"
 import { globalData } from "../helper/global";
 import { DemoPage } from "../pageObject/demoPage";
 import { Helper } from "../helper/helper"
+import {LoginPage} from '../pageObject/loginPage'
 
 
 describe('Testing demoPage', () => {
@@ -241,5 +242,14 @@ describe('Testing demoPage', () => {
         let demoPage = new DemoPage()
         await Helper.clickItem(demoPage.sharedCloudHosting)
         expect(await browser.getCurrentUrl()).toContain('shared-hosting')
+    })
+
+    fit('Check the url for the register page', async () => {
+        let demoPage = new DemoPage()
+        await Helper.clickItem(demoPage.loginOption)
+        await Helper.handleTabs(1)
+        let loginPage = new LoginPage()
+        await Helper.clickItem(loginPage.createNewAccount)
+        expect(await browser.getCurrentUrl()).toContain('register')
     })
 })
