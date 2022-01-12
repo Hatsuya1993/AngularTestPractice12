@@ -244,7 +244,7 @@ describe('Testing demoPage', () => {
         expect(await browser.getCurrentUrl()).toContain('shared-hosting')
     })
 
-    fit('Check the url for the register page', async () => {
+    it('Check the url for the register page', async () => {
         let demoPage = new DemoPage()
         await Helper.clickItem(demoPage.loginOption)
         await Helper.handleTabs(1)
