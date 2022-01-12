@@ -1,5 +1,22 @@
 import { browser, ElementFinder, $ } from "protractor"
+import { Helper } from '../helper/helper'
 
+interface RegisterDetails {
+    firstName : string
+    lastName : string
+    email : string
+    phoneNumber: string
+    companyName : string
+    streetAddress : string
+    streetaddress2 : string
+    city : string
+    state : string
+    postCode : string
+    country : string
+    mobile : string
+    password : string
+    confirmPassword : string
+}
 
 export class RegisterPage {
 
@@ -36,6 +53,15 @@ export class RegisterPage {
         this.password = $('#inputNewPassword1')
         this.confirmPassword = $('#inputNewPassword2')
         this.captchaBox = $('#recaptcha-anchor .recaptcha-checkbox-border')
+    }
+
+    async fill(data: Partial<RegisterDetails>){
+        if(data){
+            if(data.firstName){
+                await Helper.displayed(this.firstName)
+                await this.firstName.sendKeys(data.firstName)
+            }
+        }
     }
 
 }
