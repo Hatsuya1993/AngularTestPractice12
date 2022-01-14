@@ -1,4 +1,4 @@
-import { browser, ElementFinder, $ } from "protractor"
+import { browser, ElementFinder, $, by } from "protractor"
 import { Helper } from '../helper/helper'
 
 interface RegisterDetails {
@@ -8,7 +8,7 @@ interface RegisterDetails {
     phoneNumber: string
     companyName : string
     streetAddress : string
-    streetaddress2 : string
+    streetAddress2 : string
     city : string
     state : string
     postCode : string
@@ -61,6 +61,58 @@ export class RegisterPage {
                 await Helper.displayed(this.firstName)
                 await this.firstName.sendKeys(data.firstName)
             }
+            if(data.lastName){
+                await Helper.displayed(this.lastName)
+                await this.lastName.sendKeys(data.lastName)
+            }
+            if(data.email){
+                await Helper.displayed(this.email)
+                await this.email.sendKeys(data.email)
+            }
+            if(data.phoneNumber){
+                await Helper.displayed(this.phoneNumber)
+                await this.phoneNumber.sendKeys(data.phoneNumber)
+            }
+            if(data.companyName){
+                await Helper.displayed(this.companyName)
+                await this.companyName.sendKeys(data.companyName)
+            } 
+            if(data.streetAddress){
+                await Helper.displayed(this.streetAddress)
+                await this.streetAddress.sendKeys(data.streetAddress)
+            } 
+            if(data.streetAddress2){
+                await Helper.displayed(this.streetAddress2)
+                await this.streetAddress2.sendKeys(data.streetAddress2)
+            } 
+            if(data.city){
+                await Helper.displayed(this.city)
+                await this.city.sendKeys(data.city)
+            }
+            if(data.state){
+                await Helper.displayed(this.state)
+                await this.state.sendKeys(data.state)
+            }  
+            if(data.postCode){
+                await Helper.displayed(this.postCode)
+                await this.postCode.sendKeys(data.postCode)
+            }  
+            if(data.country){
+                await Helper.displayed(this.country)
+                await this.country.element(by.cssContainingText('option', data.country)).click()
+            }  
+            if(data.mobile){
+                await Helper.displayed(this.mobile)
+                await this.mobile.sendKeys(data.mobile)
+            }  
+            if(data.password){
+                await Helper.displayed(this.password)
+                await this.password.sendKeys(data.password)
+            }  
+            if(data.confirmPassword){
+                await Helper.displayed(this.confirmPassword)
+                await this.confirmPassword.sendKeys(data.confirmPassword)
+            }  
         }
     }
 
