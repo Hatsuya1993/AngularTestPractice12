@@ -1,19 +1,32 @@
-import { browser, $, by } from "protractor"
+import { browser} from "protractor"
 import { globalData } from "../helper/global";
-import { DemoPage } from "../pageObject/demoPage";
 import { Helper } from "../helper/helper"
-import { RegisterPage } from "../pageObject/registerPage";
-import { LoginPage } from "../pageObject/loginPage";
+import { RegisterDetails, RegisterPage } from "../pageObject/registerPage";
 
 describe('Testing registerPage', () => {
 
-    let demoPage = new DemoPage();
     let registerPage = new RegisterPage()
-    let loginPage = new LoginPage()
+
+    const accountRegister : RegisterDetails = {
+        firstName: 'FirstNameTest'+ new Date().getTime() / 1000,
+        lastName: 'LastNameTest'+ new Date().getTime() / 1000,
+        email: + new Date().getTime() / 1000+'@test.com',
+        phoneNumber: '1234567890',
+        companyName: 'testCompanyName',
+        streetAddress: 'testStreetAddress',
+        streetAddress2: 'testStreetAddress2',
+        city: 'testCity',
+        state: 'testState',
+        country: 'Singapore',
+        mobile: '1234567890',
+        password: 'testPassword12345',
+        confirmPassword: 'testPassword12345',
+        postCode: "12345"
+    }
 
     beforeEach( async () => {
         browser.waitForAngularEnabled(false);
-        await browser.get(demoPage.website)
+        await browser.get(registerPage.website)
         await browser.manage().window().maximize();
         await browser.sleep(globalData["WAIT_TIME"]["WAIT_LONG"])
     })
@@ -23,10 +36,17 @@ describe('Testing registerPage', () => {
     })
 
     it('Correct link for docs php travels', async () => {        
-        let demoPage = new DemoPage()
-        await Helper.clickItem(demoPage.loginOption)
-        await Helper.handleTabs(1)
-        await Helper.clickItem(loginPage.createNewAccount)
+        expect(await browser.getCurrentUrl()).toContain('register')
+    })
+
+    it('Error when email address is invalid', async () => {
+        await registerPage.fill(accountRegister)
+        await Helper.handleIframe(registerPage.reCaptcha)
+        await Helper.clickItem(registerPage.captchaBox)
+        await Helper.clickItem(registerPage.captchaBox)
+        await Helper.handleExitIframe()
+        await Helper.clickItem(registerPage.registerButton)
+        expect(await browser.getCurrentUrl()).toContain('clientarea')
     })
 
 })

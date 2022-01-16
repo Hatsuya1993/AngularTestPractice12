@@ -49,4 +49,12 @@ export class Helper {
         return true
     }
 
+    static async handleIframe(data: ElementFinder) {
+        await browser.switchTo().frame(data.getWebElement())
+    }
+
+    static async handleExitIframe() {
+        await browser.switchTo().defaultContent()
+    }
+
 }

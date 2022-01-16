@@ -1,7 +1,7 @@
-import { browser, ElementFinder, $, by } from "protractor"
+import { browser, ElementFinder, $, by, element } from "protractor"
 import { Helper } from '../helper/helper'
 
-interface RegisterDetails {
+export interface RegisterDetails {
     firstName : string
     lastName : string
     email : string
@@ -35,9 +35,13 @@ export class RegisterPage {
     password : ElementFinder
     confirmPassword : ElementFinder
     captchaBox : ElementFinder
+    registerButton : ElementFinder
+    website : string
+    reCaptcha : ElementFinder
 
     constructor(private readonly $main = ("#Main")){
 
+        this.website = 'https://phptravels.org/register.php'
         this.firstName = $('#inputFirstName')
         this.lastName = $('#inputLastName')
         this.email = $('#inputEmail')
@@ -53,6 +57,9 @@ export class RegisterPage {
         this.password = $('#inputNewPassword1')
         this.confirmPassword = $('#inputNewPassword2')
         this.captchaBox = $('#recaptcha-anchor .recaptcha-checkbox-border')
+        this.registerButton = element(by.buttonText('Register'))
+        this.reCaptcha = $("iframe[title='reCAPTCHA']")
+
     }
 
     async fill(data: Partial<RegisterDetails>){
