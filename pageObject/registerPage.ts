@@ -1,7 +1,7 @@
 import { browser, ElementFinder, $, by, element } from "protractor"
 import { Helper } from '../helper/helper'
 
-export interface RegisterDetails {
+export interface  RegisterDetails {
     firstName : string
     lastName : string
     email : string
@@ -38,6 +38,7 @@ export class RegisterPage {
     registerButton : ElementFinder
     website : string
     reCaptcha : ElementFinder
+    noMatchPassword : ElementFinder
 
     constructor(private readonly $main = ("#Main")){
 
@@ -59,6 +60,7 @@ export class RegisterPage {
         this.captchaBox = $('#recaptcha-anchor .recaptcha-checkbox-border')
         this.registerButton = element(by.buttonText('Register'))
         this.reCaptcha = $("iframe[title='reCAPTCHA']")
+        this.noMatchPassword = $("#nonMatchingPasswordResult")
 
     }
 

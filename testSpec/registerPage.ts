@@ -7,7 +7,7 @@ describe('Testing registerPage', () => {
 
     let registerPage = new RegisterPage()
 
-    const accountRegister : RegisterDetails = {
+    const accountRegister : Partial<RegisterDetails> = {
         firstName: 'FirstNameTest'+ new Date().getTime() / 1000,
         lastName: 'LastNameTest'+ new Date().getTime() / 1000,
         email: + new Date().getTime() / 1000+'@test.com',
@@ -22,6 +22,11 @@ describe('Testing registerPage', () => {
         password: 'testPassword12345',
         confirmPassword: 'testPassword12345',
         postCode: "12345"
+    }
+
+    const noMatchPassword : Partial<RegisterDetails> = {
+        password: 'testPassword12345',
+        confirmPassword: 'testPassword1234',
     }
 
     beforeEach( async () => {
@@ -39,7 +44,7 @@ describe('Testing registerPage', () => {
         expect(await browser.getCurrentUrl()).toContain('register')
     })
 
-    it('Error when email address is invalid', async () => {
+    it('Register flow success', async () => {
         await registerPage.fill(accountRegister)
         await Helper.handleIframe(registerPage.reCaptcha)
         await Helper.clickItem(registerPage.captchaBox)
@@ -47,6 +52,11 @@ describe('Testing registerPage', () => {
         await Helper.handleExitIframe()
         await Helper.clickItem(registerPage.registerButton)
         expect(await browser.getCurrentUrl()).toContain('clientarea')
+    })
+
+    fit('Error when email address is invalid', async () => {
+        await registerPage.fill(noMatchPassword)
+        expect(await registerPage.noMatchPassword.isDisplayed()).toBeTruthy()
     })
 
 })
