@@ -29,6 +29,15 @@ describe('Testing registerPage', () => {
         confirmPassword: 'testPassword1234',
     }
 
+    const errorRegister : Partial<RegisterDetails> = {
+        firstName: 'FirstNameTest'+ new Date().getTime() / 1000,
+        lastName: 'LastNameTest'+ new Date().getTime() / 1000,
+        streetAddress: 'testStreetAddress',
+        city: 'testCity',
+        state: 'testState',
+        country: 'Singapore',
+    }
+
     beforeEach( async () => {
         browser.waitForAngularEnabled(false);
         await browser.get(registerPage.website)
@@ -54,9 +63,15 @@ describe('Testing registerPage', () => {
         expect(await browser.getCurrentUrl()).toContain('clientarea')
     })
 
-    fit('Error when email address is invalid', async () => {
+    it('Error when email address is invalid', async () => {
         await registerPage.fill(noMatchPassword)
         expect(await registerPage.noMatchPassword.isDisplayed()).toBeTruthy()
     })
 
+
+    fit('Error when data is invalid', async () => {
+        await registerPage.fill(errorRegister)
+        await Helper.clickItem(registerPage.registerButton)
+        expect(await registerPage.errorAlert.isDisplayed()).toBeTruthy()
+    })
 })

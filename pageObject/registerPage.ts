@@ -39,6 +39,7 @@ export class RegisterPage {
     website : string
     reCaptcha : ElementFinder
     noMatchPassword : ElementFinder
+    errorAlert : ElementFinder
 
     constructor(private readonly $main = ("#Main")){
 
@@ -61,6 +62,8 @@ export class RegisterPage {
         this.registerButton = element(by.buttonText('Register'))
         this.reCaptcha = $("iframe[title='reCAPTCHA']")
         this.noMatchPassword = $("#nonMatchingPasswordResult")
+        this.errorAlert = $(".alert.alert-danger")
+
 
     }
 
