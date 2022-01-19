@@ -69,7 +69,7 @@ describe('Testing registerPage', () => {
     })
 
 
-    fit('Error when data is invalid', async () => {
+    it('Error when data is invalid', async () => {
         await registerPage.fill(errorRegister)
         await Helper.clickItem(registerPage.registerButton)
         expect(await registerPage.errorAlert.isDisplayed()).toBeTruthy()
