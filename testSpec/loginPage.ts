@@ -1,5 +1,6 @@
 import { browser} from "protractor"
 import { globalData } from "../helper/global";
+import { Helper } from "../helper/helper";
 import { LoginPage } from "../pageObject/loginPage";
 
 describe('Testing loginPage', () => {
@@ -21,5 +22,8 @@ describe('Testing loginPage', () => {
         expect(await browser.getCurrentUrl()).toContain('login')
     })
 
-
+    fit('Display error when no details is given', async () => {
+        await Helper.clickItem(loginPage.loginButton)
+        expect(loginPage.alertInfo.isDisplayed()).toBeTruthy()
+    })
 })
