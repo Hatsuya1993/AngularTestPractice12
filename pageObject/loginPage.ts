@@ -1,4 +1,11 @@
 import { browser, $, ElementFinder } from "protractor"
+import { Helper } from "../helper/helper"
+
+export interface  LoginDetails {
+    email : string
+    password : string
+}
+
 
 
 export class LoginPage {
@@ -10,6 +17,9 @@ export class LoginPage {
     loginButton : ElementFinder
     recaptchaBox : ElementFinder
     alertInfo : ElementFinder
+    firstName : ElementFinder
+    iframe : ElementFinder
+    title : ElementFinder
 
     constructor(private readonly $main = ("#Main")){
         this.createNewAccount = $("a[href='register.php']")
@@ -19,6 +29,22 @@ export class LoginPage {
         this.loginButton = $("#login")
         this.recaptchaBox = $(".recaptcha-checkbox-border")
         this.alertInfo = $(".alert.alert-danger")
+        this.firstName = $("#inputEmail")
+        this.iframe = $("iframe[title='reCAPTCHA']")
+        this.title = $(".login-title")
+    }
+
+    async fill(data: Partial<LoginDetails>){
+        if(data){
+            if(data.email){
+                await Helper.displayed(this.firstName)
+                await this.firstName.sendKeys(data.email)
+            }
+            if(data.password){
+                await Helper.displayed(this.password)
+                await this.password.sendKeys(data.password)
+            }
+        }
     }
 
 }

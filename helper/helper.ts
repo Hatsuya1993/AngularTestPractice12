@@ -22,6 +22,11 @@ export class Helper {
         }
     }
 
+    static async moveClickItem(item: ElementFinder) {
+        await browser.sleep(globalData["WAIT_TIME"]["WAIT_SHORT"])
+        await browser.actions().mouseMove(item).click().perform()
+    }
+
     static async handleTabs(tabs: number) {
         await browser.sleep(globalData["WAIT_TIME"]["WAIT_SHORT"])
         let windowHandles = await browser.getAllWindowHandles();
