@@ -20,6 +20,8 @@ export class LoginPage {
     firstName : ElementFinder
     iframe : ElementFinder
     title : ElementFinder
+    emailLabel : ElementFinder
+
 
     constructor(private readonly $main = ("#Main")){
         this.createNewAccount = $("a[href='register.php']")
@@ -32,6 +34,7 @@ export class LoginPage {
         this.firstName = $("#inputEmail")
         this.iframe = $("iframe[title='reCAPTCHA']")
         this.title = $(".login-title")
+        this.emailLabel = $("label[for='inputEmail']")
     }
 
     async fill(data: Partial<LoginDetails>){

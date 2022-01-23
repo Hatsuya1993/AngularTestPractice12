@@ -27,8 +27,13 @@ describe('Testing loginPage', () => {
         expect(await browser.getCurrentUrl()).toContain('login')
     })
 
-    fit('Check the login title', async () => {
+    it('Check the login title', async () => {
         expect(await loginPage.title.isDisplayed()).toBeTruthy()
+    })
+
+    fit('Check the email input is displayed and correctly labeled', async () => {
+        expect(await loginPage.emailLabel.isDisplayed()).toBeTruthy()
+        expect(await loginPage.emailLabel.getText()).toBe('Email Address')
     })
 
     it('Display error when no details is given', async () => {
@@ -46,6 +51,5 @@ describe('Testing loginPage', () => {
         await Helper.handleExitIframe()
         await Helper.clickItem(loginPage.loginButton)
         expect(await browser.getCurrentUrl()).toContain('clientarea')
-        // Need a way to handle puzzle
     })
 })
