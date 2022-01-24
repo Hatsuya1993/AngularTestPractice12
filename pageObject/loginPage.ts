@@ -21,6 +21,7 @@ export class LoginPage {
     iframe : ElementFinder
     title : ElementFinder
     emailLabel : ElementFinder
+    passwordLabel : ElementFinder
 
 
     constructor(private readonly $main = ("#Main")){
@@ -35,6 +36,8 @@ export class LoginPage {
         this.iframe = $("iframe[title='reCAPTCHA']")
         this.title = $(".login-title")
         this.emailLabel = $("label[for='inputEmail']")
+        this.passwordLabel = $("label[for='inputPassword']")
+
     }
 
     async fill(data: Partial<LoginDetails>){
