@@ -36,9 +36,14 @@ describe('Testing loginPage', () => {
         expect(await loginPage.emailLabel.getText()).toBe('Email Address')
     })
 
-    fit('Check the password input is displayed and correctly labeled', async () => {
+    it('Check the password input is displayed and correctly labeled', async () => {
         expect(await loginPage.passwordLabel.isDisplayed()).toBeTruthy()
         expect(await loginPage.passwordLabel.getText()).toBe('Password')
+    })
+
+    fit('Check the login button is displayed and correctly labeled', async () => {
+        expect(await loginPage.loginButton.isDisplayed()).toBeTruthy()
+        expect(await loginPage.loginButton.getAttribute('value')).toBe('Login')
     })
 
     it('Display error when no details is given', async () => {
