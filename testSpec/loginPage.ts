@@ -46,7 +46,7 @@ describe('Testing loginPage', () => {
         expect(await loginPage.loginButton.getAttribute('value')).toBe('Login')
     })
     
-    fit('Check the create a new account link is displayed and correctly labeled', async () => {
+    it('Check the create a new account link is displayed and correctly labeled', async () => {
         expect(await loginPage.createNewAccount.isDisplayed()).toBeTruthy()
         expect(await loginPage.createNewAccount.getText()).toBe('Create a New Account')
     })

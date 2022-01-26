@@ -53,6 +53,11 @@ describe('Testing registerPage', () => {
         expect(await browser.getCurrentUrl()).toContain('register')
     })
 
+    fit('Register title should be correct', async () => {
+        expect(await registerPage.registerTitle.isDisplayed()).toBeTruthy()
+        expect(await registerPage.registerTitle.getText()).toBe('Register')
+    })
+
     it('Register flow success', async () => {
         await registerPage.fill(accountRegister)
         await Helper.handleIframe(registerPage.reCaptcha)
