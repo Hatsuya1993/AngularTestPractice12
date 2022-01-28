@@ -1,12 +1,9 @@
-import { element, ElementFinder, $, by, ElementArrayFinder, $$ } from "protractor"
-import { Helper } from "../helper/helper"
+import {ElementFinder, $} from "protractor";
 
 export class IntegrationPage {
+  configuration : ElementFinder;
 
-    configuration : ElementFinder
-
-    constructor(private readonly $main = ("main")){
-        this.configuration = $("a[href='/startup/configuration']")
-
-    }
+  constructor(private readonly $main = ("main")) {
+    this.configuration = $("a[href='/startup/configuration']");
+  }
 }
