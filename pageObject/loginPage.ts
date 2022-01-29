@@ -1,4 +1,4 @@
-import {$, ElementFinder} from "protractor";
+import {$, ElementFinder, element, by} from "protractor";
 import {Helper} from "../helper/helper";
 
 export interface LoginDetails {
@@ -20,6 +20,7 @@ export class LoginPage {
   title : ElementFinder;
   emailLabel : ElementFinder;
   passwordLabel : ElementFinder;
+  forgot : ElementFinder;
 
   constructor(private readonly $main = ("#Main")) {
     this.createNewAccount = $("a[href='register.php']");
@@ -34,6 +35,7 @@ export class LoginPage {
     this.title = $(".login-title");
     this.emailLabel = $("label[for='inputEmail']");
     this.passwordLabel = $("label[for='inputPassword']");
+    this.forgot = element(by.linkText("Forgot?"));
   }
 
   async fill(data: Partial<LoginDetails>) {
