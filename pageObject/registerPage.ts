@@ -40,6 +40,7 @@ export class RegisterPage {
   noMatchPassword : ElementFinder;
   errorAlert : ElementFinder;
   registerTitle : ElementFinder;
+  labelForFirstName : ElementFinder;
 
   constructor(private readonly $main = ("#Main")) {
     this.website = "https://phptravels.org/register.php";
@@ -63,6 +64,7 @@ export class RegisterPage {
     this.noMatchPassword = $("#nonMatchingPasswordResult");
     this.errorAlert = $(".alert.alert-danger");
     this.registerTitle = $(".login-title");
+    this.labelForFirstName = $("label[for='inputFirstName']");
   }
 
   async fill(data: Partial<RegisterDetails>) {

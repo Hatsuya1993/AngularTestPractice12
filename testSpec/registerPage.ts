@@ -52,9 +52,14 @@ describe("Testing registerPage", () => {
     expect(await browser.getCurrentUrl()).toContain("register");
   });
 
-  fit("Register title should be correct", async () => {
+  it("Register title should be correct", async () => {
     expect(await registerPage.registerTitle.isDisplayed()).toBeTruthy();
     expect(await registerPage.registerTitle.getText()).toBe("Register");
+  });
+
+  fit("First name should be displayed with the correct label", async () => {
+    expect(await registerPage.labelForFirstName.isDisplayed()).toBeTruthy();
+    expect(await registerPage.labelForFirstName.getText()).toBe("First Name");
   });
 
   it("Register flow success", async () => {
