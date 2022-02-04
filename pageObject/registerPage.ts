@@ -46,6 +46,7 @@ export class RegisterPage {
   labelForPhone : ElementFinder;
   labelForCompanyName : ElementFinder;
   labelStreetAddress : ElementFinder;
+  labelStreetAddress2 : ElementFinder;
 
   constructor(private readonly $main = ("#Main")) {
     this.website = "https://phptravels.org/register.php";
@@ -75,6 +76,7 @@ export class RegisterPage {
     this.labelForPhone = $("label[for='inputPhone']");
     this.labelForCompanyName = $("label[for='inputCompanyName']");
     this.labelStreetAddress = $("label[for='inputAddress1']");
+    this.labelStreetAddress2 = $("label[for='inputAddress2']");
   }
 
   async fill(data: Partial<RegisterDetails>) {
