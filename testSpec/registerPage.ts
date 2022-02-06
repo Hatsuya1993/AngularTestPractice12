@@ -87,9 +87,14 @@ describe("Testing registerPage", () => {
     expect(await registerPage.labelStreetAddress.getText()).toBe("Street Address");
   });
 
-  fit("Street address 2 should be displayed with the correct label", async () => {
+  it("Street address 2 should be displayed with the correct label", async () => {
     expect(await registerPage.labelStreetAddress2.isDisplayed()).toBeTruthy();
     expect(await registerPage.labelStreetAddress2.getText()).toBe("Street Address 2");
+  });
+
+  fit("City should be displayed with the correct label", async () => {
+    expect(await registerPage.labelCity.isDisplayed()).toBeTruthy();
+    expect(await registerPage.labelCity.getText()).toBe("City");
   });
 
   it("Register flow success", async () => {
