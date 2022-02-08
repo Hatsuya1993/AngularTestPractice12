@@ -97,9 +97,14 @@ describe("Testing registerPage", () => {
     expect(await registerPage.labelCity.getText()).toBe("City");
   });
 
-  fit("State should be displayed with the correct label", async () => {
+  it("State should be displayed with the correct label", async () => {
     expect(await registerPage.labelState.isDisplayed()).toBeTruthy();
     expect(await registerPage.labelState.getText()).toBe("State (Optional)");
+  });
+
+  fit("Postcode should be displayed with the correct label", async () => {
+    expect(await registerPage.labelPostCode.isDisplayed()).toBeTruthy();
+    expect(await registerPage.labelPostCode.getText()).toBe("Postcode (Optional)");
   });
 
   it("Register flow success", async () => {
