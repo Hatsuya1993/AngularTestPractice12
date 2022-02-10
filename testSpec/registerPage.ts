@@ -112,9 +112,14 @@ describe("Testing registerPage", () => {
     expect(await registerPage.labelCountry.getText()).toBe("Country");
   });
 
-  fit("Mobile should be displayed with the correct label", async () => {
+  it("Mobile should be displayed with the correct label", async () => {
     expect(await registerPage.labelMobile.isDisplayed()).toBeTruthy();
     expect(await registerPage.labelMobile.getText()).toBe("Mobile");
+  });
+
+  fit("Password should be displayed with the correct label", async () => {
+    expect(await registerPage.labelPasswordOne.isDisplayed()).toBeTruthy();
+    expect(await registerPage.labelPasswordOne.getText()).toBe("Password");
   });
 
   it("Register flow success", async () => {

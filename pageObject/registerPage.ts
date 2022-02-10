@@ -52,6 +52,7 @@ export class RegisterPage {
   labelPostCode : ElementFinder;
   labelCountry : ElementFinder;
   labelMobile : ElementFinder;
+  labelPasswordOne : ElementFinder;
 
 
   constructor(private readonly $main = ("#Main")) {
@@ -88,6 +89,7 @@ export class RegisterPage {
     this.labelPostCode = $("label[for='inputPostcode']");
     this.labelCountry = $("label[for='inputCountry']");
     this.labelMobile = $("label[for='customfield2']");
+    this.labelPasswordOne = $("label[for='inputNewPassword1']");
   }
 
   async fill(data: Partial<RegisterDetails>) {
