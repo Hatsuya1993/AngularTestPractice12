@@ -19,4 +19,10 @@ describe("Testing orderPage", () => {
   it("Correct link for docs php travels", async () => {
     expect(await browser.getCurrentUrl()).toContain("phptravels.com/order");
   });
+
+  it("Check all the plans are populated correctly", async () => {
+    const plans = ["Plans and prices", "Startup", "Agency", "Business", "Enterprise"];
+    const results = await pricingPage.getAllPlans(pricingPage.plans, plans);
+    expect(results).toBeTruthy();
+  });
 });
