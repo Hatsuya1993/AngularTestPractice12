@@ -122,7 +122,7 @@ describe("Testing registerPage", () => {
     expect(await registerPage.labelPasswordOne.getText()).toBe("Password");
   });
 
-  fit("Confirm password should be displayed with the correct label", async () => {
+  it("Confirm password should be displayed with the correct label", async () => {
     expect(await registerPage.labelPasswordTwo.isDisplayed()).toBeTruthy();
     expect(await registerPage.labelPasswordTwo.getText()).toBe("Confirm Password");
   });
