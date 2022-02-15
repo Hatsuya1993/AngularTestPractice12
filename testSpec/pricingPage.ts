@@ -1,6 +1,7 @@
 import {browser} from "protractor";
 import {globalData} from "../helper/global";
 import {PricingPage} from "../pageObject/pricingPage";
+import {Helper} from "../helper/helper";
 
 describe("Testing orderPage", () => {
   const pricingPage = new PricingPage();
@@ -24,5 +25,13 @@ describe("Testing orderPage", () => {
     const plans = ["Plans and prices", "Startup", "Agency", "Business", "Enterprise"];
     const results = await pricingPage.getAllPlans(pricingPage.plans, plans);
     expect(results).toBeTruthy();
+  });
+
+  fit("Pop up when travelport flights button is clicked", async () => {
+    await Helper.scrollPage("1000");
+    await Helper.clickItem(pricingPage.travelPortFlights);
+    await Helper.handleIframe(pricingPage.iframe);
+    expect(pricingPage.travelPortFlightsPopUp.getAttribute("class")).toContain("showing");
+    await Helper.handleExitIframe();
   });
 });

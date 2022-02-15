@@ -1,13 +1,19 @@
-import {$$, ElementArrayFinder} from "protractor";
+import {$$, ElementArrayFinder, ElementFinder, $} from "protractor";
 
 
 export class PricingPage {
   website : string;
   plans : ElementArrayFinder;
+  travelPortFlights : ElementFinder;
+  travelPortFlightsPopUp : ElementFinder;
+  iframe : ElementFinder;
 
   constructor(private readonly $main = ("#Main")) {
     this.website = "https://phptravels.com/order";
     this.plans = $$(".plan-type");
+    this.travelPortFlights = $("a[href*='phptravels.gumroad.com/l/utzhq']");
+    this.travelPortFlightsPopUp = $(".product-row");
+    this.iframe = $(".gumroad-overlay-iframe");
   }
 
   async getAllPlans(data1 : ElementArrayFinder, data2 : Array<String>) : Promise<Boolean> {
