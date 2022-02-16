@@ -27,11 +27,19 @@ describe("Testing orderPage", () => {
     expect(results).toBeTruthy();
   });
 
-  fit("Pop up when travelport flights button is clicked", async () => {
+  it("Pop up when travelport flights button is clicked", async () => {
     await Helper.scrollPage("1000");
     await Helper.clickItem(pricingPage.travelPortFlights);
     await Helper.handleIframe(pricingPage.iframe);
     expect(pricingPage.travelPortFlightsPopUp.getAttribute("class")).toContain("showing");
+    await Helper.handleExitIframe();
+  });
+
+  it("Pop up when amadeus flights button is clicked", async () => {
+    await Helper.scrollPage("1000");
+    await Helper.clickItem(pricingPage.amadeusFlights);
+    await Helper.handleIframe(pricingPage.iframe);
+    expect(pricingPage.amadeusFlightsPopUp.getAttribute("class")).toContain("showing");
     await Helper.handleExitIframe();
   });
 });
