@@ -42,4 +42,12 @@ describe("Testing orderPage", () => {
     expect(pricingPage.amadeusFlightsPopUp.getAttribute("class")).toContain("showing");
     await Helper.handleExitIframe();
   });
+
+  fit("Pop up when aerticket flights button is clicked", async () => {
+    await Helper.scrollPage("1000");
+    await Helper.clickItem(pricingPage.aerTicketFlights);
+    await Helper.handleIframe(pricingPage.iframe);
+    expect(pricingPage.amadeusFlightsPopUp.getAttribute("class")).toContain("showing");
+    await Helper.handleExitIframe();
+  });
 });

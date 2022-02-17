@@ -8,6 +8,7 @@ export class PricingPage {
   travelPortFlightsPopUp : ElementFinder;
   amadeusFlights : ElementFinder;
   amadeusFlightsPopUp : ElementFinder;
+  aerTicketFlights : ElementFinder;
   iframe : ElementFinder;
 
   constructor(private readonly $main = ("#Main")) {
@@ -18,6 +19,7 @@ export class PricingPage {
     this.iframe = $(".gumroad-overlay-iframe");
     this.amadeusFlights = $("a[href*='phptravels.gumroad.com/l/nevel']");
     this.amadeusFlightsPopUp = $(".product-row");
+    this.aerTicketFlights = $("a[href*='phptravels.gumroad.com/l/ocyro']");
   }
 
   async getAllPlans(data1 : ElementArrayFinder, data2 : Array<String>) : Promise<Boolean> {
