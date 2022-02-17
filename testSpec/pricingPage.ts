@@ -43,11 +43,17 @@ describe("Testing orderPage", () => {
     await Helper.handleExitIframe();
   });
 
-  fit("Pop up when aerticket flights button is clicked", async () => {
+  it("Pop up when aerticket flights button is clicked", async () => {
     await Helper.scrollPage("1000");
     await Helper.clickItem(pricingPage.aerTicketFlights);
     await Helper.handleIframe(pricingPage.iframe);
     expect(pricingPage.amadeusFlightsPopUp.getAttribute("class")).toContain("showing");
     await Helper.handleExitIframe();
+  });
+
+  fit("Clicking the contact us button wil redirect the user to a new page", async () => {
+    await Helper.scrollPage("2000");
+    await Helper.clickItem(pricingPage.contactUs);
+    expect(await browser.getCurrentUrl()).toContain("contact-us");
   });
 });
