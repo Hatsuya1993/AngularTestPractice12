@@ -51,9 +51,13 @@ describe("Testing orderPage", () => {
     await Helper.handleExitIframe();
   });
 
-  fit("Clicking the contact us button wil redirect the user to a new page", async () => {
+  it("Clicking the contact us button wil redirect the user to a new page", async () => {
     await Helper.scrollPage("2000");
     await Helper.clickItem(pricingPage.contactUs);
     expect(await browser.getCurrentUrl()).toContain("contact-us");
+  });
+
+  it("Bottom info should populate 4 rows of data", async () => {
+    expect(await pricingPage.bottomInfo.count()).toBe(4);
   });
 });
