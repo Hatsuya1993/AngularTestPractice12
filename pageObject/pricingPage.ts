@@ -12,6 +12,7 @@ export class PricingPage {
   iframe : ElementFinder;
   contactUs : ElementFinder;
   bottomInfo : ElementArrayFinder;
+  frequentlyAsked : ElementFinder;
 
   constructor(private readonly $main = ("#Main")) {
     this.website = "https://phptravels.com/order";
@@ -24,6 +25,7 @@ export class PricingPage {
     this.aerTicketFlights = $("a[href*='phptravels.gumroad.com/l/ocyro']");
     this.contactUs = $(".main-content a[href*='phptravels.com/contact-us']");
     this.bottomInfo = $$(".bottom .info");
+    this.frequentlyAsked = $(".faq .faq-title");
   }
 
   async getAllPlans(data1 : ElementArrayFinder, data2 : Array<String>) : Promise<Boolean> {
