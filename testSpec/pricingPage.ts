@@ -61,8 +61,15 @@ describe("Testing orderPage", () => {
     expect(await pricingPage.bottomInfo.count()).toBe(4);
   });
 
-  fit("Frequently asked question is displayed and populated properly", async () => {
+  it("Frequently asked question is displayed and populated properly", async () => {
     expect(await pricingPage.frequentlyAsked.isDisplayed()).toBeTruthy();
     expect(await pricingPage.frequentlyAsked.getText()).toBe("Frequently asked questions");
+  });
+
+  it("Looking for customization is displayed and populated properly", async () => {
+    await Helper.scrollPage("2000");
+    await Helper.displayed(pricingPage.lookingForCustomization);
+    expect(await pricingPage.lookingForCustomization.isDisplayed()).toBeTruthy();
+    expect(await pricingPage.lookingForCustomization.getText()).toBe("Looking for customization?");
   });
 });

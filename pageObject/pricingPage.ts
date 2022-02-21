@@ -13,6 +13,7 @@ export class PricingPage {
   contactUs : ElementFinder;
   bottomInfo : ElementArrayFinder;
   frequentlyAsked : ElementFinder;
+  lookingForCustomization : ElementFinder;
 
   constructor(private readonly $main = ("#Main")) {
     this.website = "https://phptravels.com/order";
@@ -26,6 +27,7 @@ export class PricingPage {
     this.contactUs = $(".main-content a[href*='phptravels.com/contact-us']");
     this.bottomInfo = $$(".bottom .info");
     this.frequentlyAsked = $(".faq .faq-title");
+    this.lookingForCustomization = $(".working-in-a-team-container .main-content h2");
   }
 
   async getAllPlans(data1 : ElementArrayFinder, data2 : Array<String>) : Promise<Boolean> {
