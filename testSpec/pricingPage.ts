@@ -72,4 +72,11 @@ describe("Testing orderPage", () => {
     expect(await pricingPage.lookingForCustomization.isDisplayed()).toBeTruthy();
     expect(await pricingPage.lookingForCustomization.getText()).toBe("Looking for customization?");
   });
+
+  fit("World's leading booking software title is displayed and populated correctly", async () => {
+    await Helper.scrollPage("2000");
+    await Helper.displayed(pricingPage.worldLeadingBooking);
+    expect(await pricingPage.worldLeadingBooking.isDisplayed()).toBeTruthy();
+    expect(await pricingPage.worldLeadingBooking.getText()).toBe("World's leading booking software");
+  });
 });
