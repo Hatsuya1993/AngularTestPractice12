@@ -35,6 +35,14 @@ describe("Testing orderPage", () => {
     await Helper.handleExitIframe();
   });
 
+  fit("Clicking buy this from popup will display checkout form", async () => {
+    await Helper.scrollPage("1000");
+    await Helper.clickItem(pricingPage.travelPortFlights);
+    await Helper.handleIframe(pricingPage.iframe);
+    await Helper.clickItem(pricingPage.iWantThisButton);
+    expect(await pricingPage.checkoutPopUpForm.isDisplayed()).toBeTruthy();
+  });
+
   it("Pop up when amadeus flights button is clicked", async () => {
     await Helper.scrollPage("1000");
     await Helper.clickItem(pricingPage.amadeusFlights);
@@ -73,7 +81,7 @@ describe("Testing orderPage", () => {
     expect(await pricingPage.lookingForCustomization.getText()).toBe("Looking for customization?");
   });
 
-  fit("World's leading booking software title is displayed and populated correctly", async () => {
+  it("World's leading booking software title is displayed and populated correctly", async () => {
     await Helper.scrollPage("2000");
     await Helper.displayed(pricingPage.worldLeadingBooking);
     expect(await pricingPage.worldLeadingBooking.isDisplayed()).toBeTruthy();

@@ -1,4 +1,4 @@
-import {$$, ElementArrayFinder, ElementFinder, $} from "protractor";
+import {$$, ElementArrayFinder, ElementFinder, $, element, by} from "protractor";
 
 
 export class PricingPage {
@@ -15,6 +15,8 @@ export class PricingPage {
   frequentlyAsked : ElementFinder;
   lookingForCustomization : ElementFinder;
   worldLeadingBooking : ElementFinder;
+  checkoutPopUpForm : ElementFinder;
+  iWantThisButton : ElementFinder;
 
   constructor(private readonly $main = ("#Main")) {
     this.website = "https://phptravels.com/order";
@@ -30,6 +32,8 @@ export class PricingPage {
     this.frequentlyAsked = $(".faq .faq-title");
     this.lookingForCustomization = $(".working-in-a-team-container .main-content h2");
     this.worldLeadingBooking = $(".form-group h2");
+    this.checkoutPopUpForm = $(".buy-form-main");
+    this.iWantThisButton = element(by.buttonText("I want this!"));
   }
 
   async getAllPlans(data1 : ElementArrayFinder, data2 : Array<String>) : Promise<Boolean> {
