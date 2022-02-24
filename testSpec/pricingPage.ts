@@ -53,6 +53,15 @@ describe("Testing orderPage", () => {
     await Helper.handleExitIframe();
   });
 
+  fit("Clicking AerTicker buy this from popup will display checkout form", async () => {
+    await Helper.scrollPage("1200");
+    await Helper.clickItem(pricingPage.aerTicketFlights);
+    await Helper.handleIframe(pricingPage.iframe);
+    await Helper.clickItem(pricingPage.buyThisButton);
+    expect(await pricingPage.checkoutPopUpForm.isDisplayed()).toBeTruthy();
+    await Helper.handleExitIframe();
+  });
+
   it("Pop up when amadeus flights button is clicked", async () => {
     await Helper.scrollPage("1000");
     await Helper.clickItem(pricingPage.amadeusFlights);
