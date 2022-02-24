@@ -35,12 +35,22 @@ describe("Testing orderPage", () => {
     await Helper.handleExitIframe();
   });
 
-  fit("Clicking buy this from popup will display checkout form", async () => {
+  it("Clicking startup buy this from popup will display checkout form", async () => {
     await Helper.scrollPage("1000");
     await Helper.clickItem(pricingPage.travelPortFlights);
     await Helper.handleIframe(pricingPage.iframe);
     await Helper.clickItem(pricingPage.iWantThisButton);
     expect(await pricingPage.checkoutPopUpForm.isDisplayed()).toBeTruthy();
+    await Helper.handleExitIframe();
+  });
+
+  it("Clicking amadeus buy this from popup will display checkout form", async () => {
+    await Helper.scrollPage("1000");
+    await Helper.clickItem(pricingPage.amadeusFlights);
+    await Helper.handleIframe(pricingPage.iframe);
+    await Helper.clickItem(pricingPage.buyThisButton);
+    expect(await pricingPage.checkoutPopUpForm.isDisplayed()).toBeTruthy();
+    await Helper.handleExitIframe();
   });
 
   it("Pop up when amadeus flights button is clicked", async () => {

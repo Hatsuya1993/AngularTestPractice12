@@ -17,6 +17,7 @@ export class PricingPage {
   worldLeadingBooking : ElementFinder;
   checkoutPopUpForm : ElementFinder;
   iWantThisButton : ElementFinder;
+  buyThisButton : ElementFinder;
 
   constructor(private readonly $main = ("#Main")) {
     this.website = "https://phptravels.com/order";
@@ -34,6 +35,7 @@ export class PricingPage {
     this.worldLeadingBooking = $(".form-group h2");
     this.checkoutPopUpForm = $(".buy-form-main");
     this.iWantThisButton = element(by.buttonText("I want this!"));
+    this.buyThisButton = element(by.buttonText("Buy this"));
   }
 
   async getAllPlans(data1 : ElementArrayFinder, data2 : Array<String>) : Promise<Boolean> {
