@@ -9,6 +9,7 @@ export class PricingPage {
   amadeusFlights : ElementFinder;
   amadeusFlightsPopUp : ElementFinder;
   aerTicketFlights : ElementFinder;
+  kiwiFlightsPopUp: ElementFinder;
   iframe : ElementFinder;
   contactUs : ElementFinder;
   bottomInfo : ElementArrayFinder;
@@ -28,6 +29,7 @@ export class PricingPage {
     this.amadeusFlights = $("a[href*='phptravels.gumroad.com/l/nevel']");
     this.amadeusFlightsPopUp = $(".product-row");
     this.aerTicketFlights = $("a[href*='phptravels.gumroad.com/l/ocyro']");
+    this.kiwiFlightsPopUp = $("a[href*='phptravels.gumroad.com/l/bplom']");
     this.contactUs = $(".main-content a[href*='phptravels.com/contact-us']");
     this.bottomInfo = $$(".bottom .info");
     this.frequentlyAsked = $(".faq .faq-title");
