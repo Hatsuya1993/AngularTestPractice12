@@ -71,9 +71,18 @@ describe("Testing orderPage", () => {
     await Helper.handleExitIframe();
   });
 
-  fit("Clicking TravelPayouts buy this from popup will display checkout form", async () => {
+  it("Clicking TravelPayouts buy this from popup will display checkout form", async () => {
     await Helper.scrollPage("1200");
     await Helper.clickItem(pricingPage.travelPayOutsPopUp);
+    await Helper.handleIframe(pricingPage.iframe);
+    await Helper.clickItem(pricingPage.buyThisButton);
+    expect(await pricingPage.checkoutPopUpForm.isDisplayed()).toBeTruthy();
+    await Helper.handleExitIframe();
+  });
+
+  fit("Clicking Viator buy this from popup will display checkout form", async () => {
+    await Helper.scrollPage("1200");
+    await Helper.clickItem(pricingPage.viatorPopUp);
     await Helper.handleIframe(pricingPage.iframe);
     await Helper.clickItem(pricingPage.buyThisButton);
     expect(await pricingPage.checkoutPopUpForm.isDisplayed()).toBeTruthy();
