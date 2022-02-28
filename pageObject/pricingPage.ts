@@ -12,6 +12,7 @@ export class PricingPage {
   kiwiFlightsPopUp: ElementFinder;
   travelPayOutsPopUp : ElementFinder;
   viatorPopUp : ElementFinder;
+  hotelBedsPopUp : ElementFinder;
   iframe : ElementFinder;
   contactUs : ElementFinder;
   bottomInfo : ElementArrayFinder;
@@ -33,6 +34,7 @@ export class PricingPage {
     this.aerTicketFlights = $("a[href*='phptravels.gumroad.com/l/ocyro']");
     this.kiwiFlightsPopUp = $("a[href*='phptravels.gumroad.com/l/bplom']");
     this.travelPayOutsPopUp = $("a[href*='phptravels.gumroad.com/l/vurcy']");
+    this.hotelBedsPopUp = $("a[href*='phptravels.gumroad.com/l/yqgbc']");
     this.viatorPopUp = $("a[href*='phptravels.gumroad.com/l/fxaax']");
     this.contactUs = $(".main-content a[href*='phptravels.com/contact-us']");
     this.bottomInfo = $$(".bottom .info");
