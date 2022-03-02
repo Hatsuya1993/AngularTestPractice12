@@ -12,6 +12,7 @@ export class PricingPage {
   kiwiFlightsPopUp: ElementFinder;
   travelPayOutsPopUp : ElementFinder;
   viatorPopUp : ElementFinder;
+  rezlive : ElementFinder;
   hotelBedsPopUp : ElementFinder;
   agodaPopUp : ElementFinder;
   iframe : ElementFinder;
@@ -38,6 +39,7 @@ export class PricingPage {
     this.hotelBedsPopUp = $("a[href*='phptravels.gumroad.com/l/yqgbc']");
     this.viatorPopUp = $("a[href*='phptravels.gumroad.com/l/fxaax']");
     this.agodaPopUp = $("a[href*='phptravels.gumroad.com/l/xyznu']");
+    this.rezlive = $("a[href*='phptravels.gumroad.com/l/xgles']");
     this.contactUs = $(".main-content a[href*='phptravels.com/contact-us']");
     this.bottomInfo = $$(".bottom .info");
     this.frequentlyAsked = $(".faq .faq-title");
