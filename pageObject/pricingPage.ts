@@ -13,6 +13,7 @@ export class PricingPage {
   travelPayOutsPopUp : ElementFinder;
   viatorPopUp : ElementFinder;
   hotelBedsPopUp : ElementFinder;
+  agodaPopUp : ElementFinder;
   iframe : ElementFinder;
   contactUs : ElementFinder;
   bottomInfo : ElementArrayFinder;
@@ -36,6 +37,7 @@ export class PricingPage {
     this.travelPayOutsPopUp = $("a[href*='phptravels.gumroad.com/l/vurcy']");
     this.hotelBedsPopUp = $("a[href*='phptravels.gumroad.com/l/yqgbc']");
     this.viatorPopUp = $("a[href*='phptravels.gumroad.com/l/fxaax']");
+    this.agodaPopUp = $("a[href*='phptravels.gumroad.com/l/xyznu']");
     this.contactUs = $(".main-content a[href*='phptravels.com/contact-us']");
     this.bottomInfo = $$(".bottom .info");
     this.frequentlyAsked = $(".faq .faq-title");
