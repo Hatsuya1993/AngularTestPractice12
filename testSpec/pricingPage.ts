@@ -116,9 +116,18 @@ describe("Testing orderPage", () => {
     await Helper.handleExitIframe();
   });
 
-  fit("Clicking Hotelston buy this from popup will display checkout form", async () => {
+  it("Clicking Hotelston buy this from popup will display checkout form", async () => {
     await Helper.scrollPage("1200");
     await Helper.clickItem(pricingPage.hotelstonPopUp);
+    await Helper.handleIframe(pricingPage.iframe);
+    await Helper.clickItem(pricingPage.buyThisButton);
+    expect(await pricingPage.checkoutPopUpForm.isDisplayed()).toBeTruthy();
+    await Helper.handleExitIframe();
+  });
+
+  fit("Clicking HubSpot CRM buy this from popup will display checkout form", async () => {
+    await Helper.scrollPage("1200");
+    await Helper.clickItem(pricingPage.CRMHubSpotPopUp);
     await Helper.handleIframe(pricingPage.iframe);
     await Helper.clickItem(pricingPage.buyThisButton);
     expect(await pricingPage.checkoutPopUpForm.isDisplayed()).toBeTruthy();

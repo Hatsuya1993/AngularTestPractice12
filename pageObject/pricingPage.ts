@@ -15,6 +15,7 @@ export class PricingPage {
   rezlive : ElementFinder;
   hotelstonPopUp : ElementFinder;
   hotelBedsPopUp : ElementFinder;
+  CRMHubSpotPopUp : ElementFinder;
   agodaPopUp : ElementFinder;
   iframe : ElementFinder;
   contactUs : ElementFinder;
@@ -39,6 +40,7 @@ export class PricingPage {
     this.travelPayOutsPopUp = $("a[href*='phptravels.gumroad.com/l/vurcy']");
     this.hotelBedsPopUp = $("a[href*='phptravels.gumroad.com/l/yqgbc']");
     this.viatorPopUp = $("a[href*='phptravels.gumroad.com/l/fxaax']");
+    this.CRMHubSpotPopUp = $("a[href*='phptravels.gumroad.com/l/fljug']");
     this.agodaPopUp = $("a[href*='phptravels.gumroad.com/l/xyznu']");
     this.hotelstonPopUp = $("a[href*='phptravels.gumroad.com/l/dqajx']");
     this.rezlive = $("a[href*='phptravels.gumroad.com/l/xgles']");
