@@ -17,6 +17,7 @@ export class PricingPage {
   hotelBedsPopUp : ElementFinder;
   CRMHubSpotPopUp : ElementFinder;
   customGateWayPopUp : ElementFinder;
+  setmposPopUp : ElementFinder;
   agodaPopUp : ElementFinder;
   iframe : ElementFinder;
   contactUs : ElementFinder;
@@ -45,6 +46,7 @@ export class PricingPage {
     this.agodaPopUp = $("a[href*='phptravels.gumroad.com/l/xyznu']");
     this.hotelstonPopUp = $("a[href*='phptravels.gumroad.com/l/dqajx']");
     this.customGateWayPopUp = $("a[href*='phptravels.gumroad.com/l/kblry']");
+    this.setmposPopUp = $("a[href*='phptravels.gumroad.com/l/hdrpv']");
     this.rezlive = $("a[href*='phptravels.gumroad.com/l/xgles']");
     this.contactUs = $(".main-content a[href*='phptravels.com/contact-us']");
     this.bottomInfo = $$(".bottom .info");

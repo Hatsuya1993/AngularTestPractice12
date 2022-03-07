@@ -134,9 +134,18 @@ describe("Testing orderPage", () => {
     await Helper.handleExitIframe();
   });
 
-  fit("Clicking custom gateways buy this from popup will display checkout form", async () => {
+  it("Clicking custom gateways buy this from popup will display checkout form", async () => {
     await Helper.scrollPage("1800");
     await Helper.clickItem(pricingPage.customGateWayPopUp);
+    await Helper.handleIframe(pricingPage.iframe);
+    await Helper.clickItem(pricingPage.buyThisButton);
+    expect(await pricingPage.checkoutPopUpForm.isDisplayed()).toBeTruthy();
+    await Helper.handleExitIframe();
+  });
+
+  fit("Clicking setmpos buy this from popup will display checkout form", async () => {
+    await Helper.scrollPage("1800");
+    await Helper.clickItem(pricingPage.setmposPopUp);
     await Helper.handleIframe(pricingPage.iframe);
     await Helper.clickItem(pricingPage.buyThisButton);
     expect(await pricingPage.checkoutPopUpForm.isDisplayed()).toBeTruthy();
