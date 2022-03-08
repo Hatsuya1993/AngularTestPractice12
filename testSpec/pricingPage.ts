@@ -143,7 +143,7 @@ describe("Testing orderPage", () => {
     await Helper.handleExitIframe();
   });
 
-  fit("Clicking setmpos buy this from popup will display checkout form", async () => {
+  it("Clicking setmpos buy this from popup will display checkout form", async () => {
     await Helper.scrollPage("1800");
     await Helper.clickItem(pricingPage.setmposPopUp);
     await Helper.handleIframe(pricingPage.iframe);
@@ -195,5 +195,10 @@ describe("Testing orderPage", () => {
     await Helper.displayed(pricingPage.worldLeadingBooking);
     expect(await pricingPage.worldLeadingBooking.isDisplayed()).toBeTruthy();
     expect(await pricingPage.worldLeadingBooking.getText()).toBe("World's leading booking software");
+  });
+
+  fit("Paypal's button should be disabled", async () => {
+    await Helper.scrollPage("2000");
+    expect(pricingPage.paypalButton.getAttribute("disabled")).toEqual("true");
   });
 });

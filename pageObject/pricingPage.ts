@@ -19,6 +19,7 @@ export class PricingPage {
   customGateWayPopUp : ElementFinder;
   setmposPopUp : ElementFinder;
   agodaPopUp : ElementFinder;
+  paypalButton : ElementFinder;
   iframe : ElementFinder;
   contactUs : ElementFinder;
   bottomInfo : ElementArrayFinder;
@@ -48,6 +49,7 @@ export class PricingPage {
     this.customGateWayPopUp = $("a[href*='phptravels.gumroad.com/l/kblry']");
     this.setmposPopUp = $("a[href*='phptravels.gumroad.com/l/hdrpv']");
     this.rezlive = $("a[href*='phptravels.gumroad.com/l/xgles']");
+    this.paypalButton = $(".item_id_Paypal .btn-primary");
     this.contactUs = $(".main-content a[href*='phptravels.com/contact-us']");
     this.bottomInfo = $$(".bottom .info");
     this.frequentlyAsked = $(".faq .faq-title");
