@@ -197,8 +197,13 @@ describe("Testing orderPage", () => {
     expect(await pricingPage.worldLeadingBooking.getText()).toBe("World's leading booking software");
   });
 
-  fit("Paypal's button should be disabled", async () => {
+  it("Paypal's button should be disabled", async () => {
     await Helper.scrollPage("2000");
     expect(pricingPage.paypalButton.getAttribute("disabled")).toEqual("true");
+  });
+
+  fit("Stripe button should be disabled", async () => {
+    await Helper.scrollPage("2000");
+    expect(pricingPage.stripeButton.getAttribute("disabled")).toEqual("true");
   });
 });

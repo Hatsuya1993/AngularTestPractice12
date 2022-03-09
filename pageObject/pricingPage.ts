@@ -29,6 +29,7 @@ export class PricingPage {
   checkoutPopUpForm : ElementFinder;
   iWantThisButton : ElementFinder;
   buyThisButton : ElementFinder;
+  stripeButton : ElementFinder;
 
   constructor(private readonly $main = ("#Main")) {
     this.website = "https://phptravels.com/order";
@@ -50,6 +51,7 @@ export class PricingPage {
     this.setmposPopUp = $("a[href*='phptravels.gumroad.com/l/hdrpv']");
     this.rezlive = $("a[href*='phptravels.gumroad.com/l/xgles']");
     this.paypalButton = $(".item_id_Paypal .btn-primary");
+    this.stripeButton = $(".item_id_Paypal .btn-primary");
     this.contactUs = $(".main-content a[href*='phptravels.com/contact-us']");
     this.bottomInfo = $$(".bottom .info");
     this.frequentlyAsked = $(".faq .faq-title");
