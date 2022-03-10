@@ -202,8 +202,13 @@ describe("Testing orderPage", () => {
     expect(pricingPage.paypalButton.getAttribute("disabled")).toEqual("true");
   });
 
-  fit("Stripe button should be disabled", async () => {
+  it("Stripe button should be disabled", async () => {
     await Helper.scrollPage("2000");
     expect(pricingPage.stripeButton.getAttribute("disabled")).toEqual("true");
+  });
+
+  fit("Paddle button should be disabled", async () => {
+    await Helper.scrollPage("2000");
+    expect(pricingPage.paddleButton.getAttribute("disabled")).toEqual("true");
   });
 });
