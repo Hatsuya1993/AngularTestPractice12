@@ -207,8 +207,13 @@ describe("Testing orderPage", () => {
     expect(pricingPage.stripeButton.getAttribute("disabled")).toEqual("true");
   });
 
-  fit("Paddle button should be disabled", async () => {
+  it("Paddle button should be disabled", async () => {
     await Helper.scrollPage("2000");
     expect(pricingPage.paddleButton.getAttribute("disabled")).toEqual("true");
+  });
+
+  fit("Bank button should be disabled", async () => {
+    await Helper.scrollPage("2000");
+    expect(pricingPage.bankButton.getAttribute("disabled")).toEqual("true");
   });
 });
