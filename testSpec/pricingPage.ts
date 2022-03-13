@@ -217,8 +217,14 @@ describe("Testing orderPage", () => {
     expect(pricingPage.bankButton.getAttribute("disabled")).toEqual("true");
   });
 
-  fit("Pay later button should be disabled", async () => {
+  it("Pay later button should be disabled", async () => {
     await Helper.scrollPage("2000");
     expect(pricingPage.paylaterButton.getAttribute("disabled")).toEqual("true");
+  });
+
+  fit("Paypal clicked later will open a new page", async () => {
+    await Helper.scrollPage("1500");
+    await Helper.moveClickItem(pricingPage.paypalButton);
+    expect(await (await browser.getAllWindowHandles()).length).toBe(2);
   });
 });
