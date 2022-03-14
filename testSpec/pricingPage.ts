@@ -228,9 +228,15 @@ describe("Testing orderPage", () => {
     expect(await (await browser.getAllWindowHandles()).length).toBe(2);
   });
 
-  fit("Stripe clicked later will open a new page", async () => {
+  it("Stripe clicked later will open a new page", async () => {
     await Helper.scrollPage("1500");
     await Helper.moveClickItem(pricingPage.stripeButton);
+    expect(await (await browser.getAllWindowHandles()).length).toBe(2);
+  });
+
+  fit("Paddle clicked later will open a new page", async () => {
+    await Helper.scrollPage("1500");
+    await Helper.moveClickItem(pricingPage.paddleButton);
     expect(await (await browser.getAllWindowHandles()).length).toBe(2);
   });
 });
