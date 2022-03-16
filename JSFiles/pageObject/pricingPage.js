@@ -12,39 +12,39 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.PricingPage = void 0;
 const protractor_1 = require("protractor");
 class PricingPage {
-    constructor($main = ("#Main")) {
-        this.$main = $main;
+    constructor($root = protractor_1.$("#PageContainer")) {
+        this.$root = $root;
         this.website = "https://phptravels.com/order";
-        this.plans = protractor_1.$$(".plan-type");
-        this.travelPortFlights = protractor_1.$("a[href*='phptravels.gumroad.com/l/utzhq']");
-        this.travelPortFlightsPopUp = protractor_1.$(".product-row");
-        this.iframe = protractor_1.$(".gumroad-overlay-iframe");
-        this.amadeusFlights = protractor_1.$("a[href*='phptravels.gumroad.com/l/nevel']");
-        this.amadeusFlightsPopUp = protractor_1.$(".product-row");
-        this.aerTicketFlights = protractor_1.$("a[href*='phptravels.gumroad.com/l/ocyro']");
-        this.kiwiFlightsPopUp = protractor_1.$("a[href*='phptravels.gumroad.com/l/bplom']");
-        this.travelPayOutsPopUp = protractor_1.$("a[href*='phptravels.gumroad.com/l/vurcy']");
-        this.hotelBedsPopUp = protractor_1.$("a[href*='phptravels.gumroad.com/l/yqgbc']");
-        this.viatorPopUp = protractor_1.$("a[href*='phptravels.gumroad.com/l/fxaax']");
-        this.CRMHubSpotPopUp = protractor_1.$("a[href*='phptravels.gumroad.com/l/fljug']");
-        this.agodaPopUp = protractor_1.$("a[href*='phptravels.gumroad.com/l/xyznu']");
-        this.hotelstonPopUp = protractor_1.$("a[href*='phptravels.gumroad.com/l/dqajx']");
-        this.customGateWayPopUp = protractor_1.$("a[href*='phptravels.gumroad.com/l/kblry']");
-        this.setmposPopUp = protractor_1.$("a[href*='phptravels.gumroad.com/l/hdrpv']");
-        this.rezlive = protractor_1.$("a[href*='phptravels.gumroad.com/l/xgles']");
-        this.paddleButton = protractor_1.$(".item_id_Paddle .btn-primary");
-        this.paypalButton = protractor_1.$(".item_id_Paypal .btn-primary");
-        this.stripeButton = protractor_1.$(".item_id_Paypal .btn-primary");
-        this.bankButton = protractor_1.$(".item_id_Bank .btn-primary");
-        this.contactUs = protractor_1.$(".main-content a[href*='phptravels.com/contact-us']");
-        this.bottomInfo = protractor_1.$$(".bottom .info");
-        this.frequentlyAsked = protractor_1.$(".faq .faq-title");
-        this.lookingForCustomization = protractor_1.$(".working-in-a-team-container .main-content h2");
-        this.worldLeadingBooking = protractor_1.$(".form-group h2");
-        this.checkoutPopUpForm = protractor_1.$(".buy-form-main");
-        this.iWantThisButton = protractor_1.element(protractor_1.by.buttonText("I want this!"));
-        this.buyThisButton = protractor_1.element(protractor_1.by.buttonText("Buy this"));
-        this.paylaterButton = protractor_1.$(".item_id_Pay .btn-primary");
+        this.plans = this.$root.$$(".plan-type");
+        this.travelPortFlights = this.$root.$("a[href*='phptravels.gumroad.com/l/utzhq']");
+        this.travelPortFlightsPopUp = this.$root.$(".product-row");
+        this.iframe = this.$root.$(".gumroad-overlay-iframe");
+        this.amadeusFlights = this.$root.$("a[href*='phptravels.gumroad.com/l/nevel']");
+        this.amadeusFlightsPopUp = this.$root.$(".product-row");
+        this.aerTicketFlights = this.$root.$("a[href*='phptravels.gumroad.com/l/ocyro']");
+        this.kiwiFlightsPopUp = this.$root.$("a[href*='phptravels.gumroad.com/l/bplom']");
+        this.travelPayOutsPopUp = this.$root.$("a[href*='phptravels.gumroad.com/l/vurcy']");
+        this.hotelBedsPopUp = this.$root.$("a[href*='phptravels.gumroad.com/l/yqgbc']");
+        this.viatorPopUp = this.$root.$("a[href*='phptravels.gumroad.com/l/fxaax']");
+        this.CRMHubSpotPopUp = this.$root.$("a[href*='phptravels.gumroad.com/l/fljug']");
+        this.agodaPopUp = this.$root.$("a[href*='phptravels.gumroad.com/l/xyznu']");
+        this.hotelstonPopUp = this.$root.$("a[href*='phptravels.gumroad.com/l/dqajx']");
+        this.customGateWayPopUp = this.$root.$("a[href*='phptravels.gumroad.com/l/kblry']");
+        this.setmposPopUp = this.$root.$("a[href*='phptravels.gumroad.com/l/hdrpv']");
+        this.rezlive = this.$root.$("a[href*='phptravels.gumroad.com/l/xgles']");
+        this.paddleButton = this.$root.$(".item_id_Paddle .btn-primary");
+        this.paypalButton = this.$root.$(".item_id_Paypal .btn-primary");
+        this.stripeButton = this.$root.$(".item_id_Paypal .btn-primary");
+        this.bankButton = this.$root.$(".item_id_Bank .btn-primary");
+        this.contactUs = this.$root.$(".main-content a[href*='phptravels.com/contact-us']");
+        this.bottomInfo = this.$root.$$(".bottom .info");
+        this.frequentlyAsked = this.$root.$(".faq .faq-title");
+        this.lookingForCustomization = this.$root.$(".working-in-a-team-container .main-content h2");
+        this.worldLeadingBooking = this.$root.$(".form-group h2");
+        this.checkoutPopUpForm = this.$root.$(".buy-form-main");
+        this.iWantThisButton = this.$root.element(protractor_1.by.buttonText("I want this!"));
+        this.buyThisButton = this.$root.element(protractor_1.by.buttonText("Buy this"));
+        this.paylaterButton = this.$root.$(".item_id_Pay .btn-primary");
     }
     getAllPlans(data1, data2) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -58,4 +58,4 @@ class PricingPage {
     }
 }
 exports.PricingPage = PricingPage;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHJpY2luZ1BhZ2UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9wYWdlT2JqZWN0L3ByaWNpbmdQYWdlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7OztBQUFBLDJDQUEwRjtBQUcxRixNQUFhLFdBQVc7SUFpQ3RCLFlBQTZCLFFBQVEsQ0FBQyxPQUFPLENBQUM7UUFBakIsVUFBSyxHQUFMLEtBQUssQ0FBWTtRQUM1QyxJQUFJLENBQUMsT0FBTyxHQUFHLDhCQUE4QixDQUFDO1FBQzlDLElBQUksQ0FBQyxLQUFLLEdBQUcsZUFBRSxDQUFDLFlBQVksQ0FBQyxDQUFDO1FBQzlCLElBQUksQ0FBQyxpQkFBaUIsR0FBRyxjQUFDLENBQUMsMkNBQTJDLENBQUMsQ0FBQztRQUN4RSxJQUFJLENBQUMsc0JBQXNCLEdBQUcsY0FBQyxDQUFDLGNBQWMsQ0FBQyxDQUFDO1FBQ2hELElBQUksQ0FBQyxNQUFNLEdBQUcsY0FBQyxDQUFDLHlCQUF5QixDQUFDLENBQUM7UUFDM0MsSUFBSSxDQUFDLGNBQWMsR0FBRyxjQUFDLENBQUMsMkNBQTJDLENBQUMsQ0FBQztRQUNyRSxJQUFJLENBQUMsbUJBQW1CLEdBQUcsY0FBQyxDQUFDLGNBQWMsQ0FBQyxDQUFDO1FBQzdDLElBQUksQ0FBQyxnQkFBZ0IsR0FBRyxjQUFDLENBQUMsMkNBQTJDLENBQUMsQ0FBQztRQUN2RSxJQUFJLENBQUMsZ0JBQWdCLEdBQUcsY0FBQyxDQUFDLDJDQUEyQyxDQUFDLENBQUM7UUFDdkUsSUFBSSxDQUFDLGtCQUFrQixHQUFHLGNBQUMsQ0FBQywyQ0FBMkMsQ0FBQyxDQUFDO1FBQ3pFLElBQUksQ0FBQyxjQUFjLEdBQUcsY0FBQyxDQUFDLDJDQUEyQyxDQUFDLENBQUM7UUFDckUsSUFBSSxDQUFDLFdBQVcsR0FBRyxjQUFDLENBQUMsMkNBQTJDLENBQUMsQ0FBQztRQUNsRSxJQUFJLENBQUMsZUFBZSxHQUFHLGNBQUMsQ0FBQywyQ0FBMkMsQ0FBQyxDQUFDO1FBQ3RFLElBQUksQ0FBQyxVQUFVLEdBQUcsY0FBQyxDQUFDLDJDQUEyQyxDQUFDLENBQUM7UUFDakUsSUFBSSxDQUFDLGNBQWMsR0FBRyxjQUFDLENBQUMsMkNBQTJDLENBQUMsQ0FBQztRQUNyRSxJQUFJLENBQUMsa0JBQWtCLEdBQUcsY0FBQyxDQUFDLDJDQUEyQyxDQUFDLENBQUM7UUFDekUsSUFBSSxDQUFDLFlBQVksR0FBRyxjQUFDLENBQUMsMkNBQTJDLENBQUMsQ0FBQztRQUNuRSxJQUFJLENBQUMsT0FBTyxHQUFHLGNBQUMsQ0FBQywyQ0FBMkMsQ0FBQyxDQUFDO1FBQzlELElBQUksQ0FBQyxZQUFZLEdBQUcsY0FBQyxDQUFDLDhCQUE4QixDQUFDLENBQUM7UUFDdEQsSUFBSSxDQUFDLFlBQVksR0FBRyxjQUFDLENBQUMsOEJBQThCLENBQUMsQ0FBQztRQUN0RCxJQUFJLENBQUMsWUFBWSxHQUFHLGNBQUMsQ0FBQyw4QkFBOEIsQ0FBQyxDQUFDO1FBQ3RELElBQUksQ0FBQyxVQUFVLEdBQUcsY0FBQyxDQUFDLDRCQUE0QixDQUFDLENBQUM7UUFDbEQsSUFBSSxDQUFDLFNBQVMsR0FBRyxjQUFDLENBQUMsb0RBQW9ELENBQUMsQ0FBQztRQUN6RSxJQUFJLENBQUMsVUFBVSxHQUFHLGVBQUUsQ0FBQyxlQUFlLENBQUMsQ0FBQztRQUN0QyxJQUFJLENBQUMsZUFBZSxHQUFHLGNBQUMsQ0FBQyxpQkFBaUIsQ0FBQyxDQUFDO1FBQzVDLElBQUksQ0FBQyx1QkFBdUIsR0FBRyxjQUFDLENBQUMsK0NBQStDLENBQUMsQ0FBQztRQUNsRixJQUFJLENBQUMsbUJBQW1CLEdBQUcsY0FBQyxDQUFDLGdCQUFnQixDQUFDLENBQUM7UUFDL0MsSUFBSSxDQUFDLGlCQUFpQixHQUFHLGNBQUMsQ0FBQyxnQkFBZ0IsQ0FBQyxDQUFDO1FBQzdDLElBQUksQ0FBQyxlQUFlLEdBQUcsb0JBQU8sQ0FBQyxlQUFFLENBQUMsVUFBVSxDQUFDLGNBQWMsQ0FBQyxDQUFDLENBQUM7UUFDOUQsSUFBSSxDQUFDLGFBQWEsR0FBRyxvQkFBTyxDQUFDLGVBQUUsQ0FBQyxVQUFVLENBQUMsVUFBVSxDQUFDLENBQUMsQ0FBQztRQUN4RCxJQUFJLENBQUMsY0FBYyxHQUFHLGNBQUMsQ0FBQywyQkFBMkIsQ0FBQyxDQUFDO0lBQ3ZELENBQUM7SUFFSyxXQUFXLENBQUMsS0FBMEIsRUFBRSxLQUFxQjs7WUFDakUsS0FBSyxJQUFJLENBQUMsR0FBRyxDQUFDLEVBQUUsQ0FBQyxJQUFHLE1BQU0sS0FBSyxDQUFDLEtBQUssRUFBRSxDQUFBLEVBQUUsQ0FBQyxFQUFFLEVBQUU7Z0JBQzVDLElBQUksS0FBSyxDQUFDLFFBQVEsQ0FBQyxNQUFNLEtBQUssQ0FBQyxHQUFHLENBQUMsQ0FBQyxDQUFDLENBQUMsT0FBTyxFQUFFLENBQUM7b0JBQUUsU0FBUztnQkFDM0QsT0FBTyxLQUFLLENBQUM7YUFDZDtZQUNELE9BQU8sSUFBSSxDQUFDO1FBQ2QsQ0FBQztLQUFBO0NBQ0Y7QUExRUQsa0NBMEVDIn0=
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHJpY2luZ1BhZ2UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9wYWdlT2JqZWN0L3ByaWNpbmdQYWdlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7OztBQUFBLDJDQUFvRTtBQUdwRSxNQUFhLFdBQVc7SUFpQ3RCLFlBQTZCLFFBQXdCLGNBQUMsQ0FBQyxnQkFBZ0IsQ0FBQztRQUEzQyxVQUFLLEdBQUwsS0FBSyxDQUFzQztRQUN0RSxJQUFJLENBQUMsT0FBTyxHQUFHLDhCQUE4QixDQUFDO1FBQzlDLElBQUksQ0FBQyxLQUFLLEdBQUcsSUFBSSxDQUFDLEtBQUssQ0FBQyxFQUFFLENBQUMsWUFBWSxDQUFDLENBQUM7UUFDekMsSUFBSSxDQUFDLGlCQUFpQixHQUFHLElBQUksQ0FBQyxLQUFLLENBQUMsQ0FBQyxDQUFDLDJDQUEyQyxDQUFDLENBQUM7UUFDbkYsSUFBSSxDQUFDLHNCQUFzQixHQUFHLElBQUksQ0FBQyxLQUFLLENBQUMsQ0FBQyxDQUFDLGNBQWMsQ0FBQyxDQUFDO1FBQzNELElBQUksQ0FBQyxNQUFNLEdBQUcsSUFBSSxDQUFDLEtBQUssQ0FBQyxDQUFDLENBQUMseUJBQXlCLENBQUMsQ0FBQztRQUN0RCxJQUFJLENBQUMsY0FBYyxHQUFHLElBQUksQ0FBQyxLQUFLLENBQUMsQ0FBQyxDQUFDLDJDQUEyQyxDQUFDLENBQUM7UUFDaEYsSUFBSSxDQUFDLG1CQUFtQixHQUFHLElBQUksQ0FBQyxLQUFLLENBQUMsQ0FBQyxDQUFDLGNBQWMsQ0FBQyxDQUFDO1FBQ3hELElBQUksQ0FBQyxnQkFBZ0IsR0FBRyxJQUFJLENBQUMsS0FBSyxDQUFDLENBQUMsQ0FBQywyQ0FBMkMsQ0FBQyxDQUFDO1FBQ2xGLElBQUksQ0FBQyxnQkFBZ0IsR0FBRyxJQUFJLENBQUMsS0FBSyxDQUFDLENBQUMsQ0FBQywyQ0FBMkMsQ0FBQyxDQUFDO1FBQ2xGLElBQUksQ0FBQyxrQkFBa0IsR0FBRyxJQUFJLENBQUMsS0FBSyxD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

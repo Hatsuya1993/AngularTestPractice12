@@ -3,10 +3,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.IntegrationPage = void 0;
 const protractor_1 = require("protractor");
 class IntegrationPage {
-    constructor($main = ("main")) {
+    constructor($main = protractor_1.$("main")) {
         this.$main = $main;
-        this.configuration = protractor_1.$("a[href='/startup/configuration']");
+        this.configuration = this.$main.$("a[href='/startup/configuration']");
     }
 }
 exports.IntegrationPage = IntegrationPage;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZG9jc1BhZ2UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9wYWdlT2JqZWN0L2RvY3NQYWdlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7OztBQUFBLDJDQUE0QztBQUU1QyxNQUFhLGVBQWU7SUFHMUIsWUFBNkIsUUFBUSxDQUFDLE1BQU0sQ0FBQztRQUFoQixVQUFLLEdBQUwsS0FBSyxDQUFXO1FBQzNDLElBQUksQ0FBQyxhQUFhLEdBQUcsY0FBQyxDQUFDLGtDQUFrQyxDQUFDLENBQUM7SUFDN0QsQ0FBQztDQUNGO0FBTkQsMENBTUMifQ==
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZG9jc1BhZ2UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9wYWdlT2JqZWN0L2RvY3NQYWdlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7OztBQUFBLDJDQUE0QztBQUU1QyxNQUFhLGVBQWU7SUFHMUIsWUFBNkIsUUFBd0IsY0FBQyxDQUFDLE1BQU0sQ0FBQztRQUFqQyxVQUFLLEdBQUwsS0FBSyxDQUE0QjtRQUM1RCxJQUFJLENBQUMsYUFBYSxHQUFHLElBQUksQ0FBQyxLQUFLLENBQUMsQ0FBQyxDQUFDLGtDQUFrQyxDQUFDLENBQUM7SUFDeEUsQ0FBQztDQUNGO0FBTkQsMENBTUMifQ==
