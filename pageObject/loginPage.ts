@@ -1,4 +1,4 @@
-import {$, ElementFinder, element, by} from "protractor";
+import {$, ElementFinder, by} from "protractor";
 import {Helper} from "../helper/helper";
 
 export interface LoginDetails {
@@ -22,20 +22,20 @@ export class LoginPage {
   passwordLabel : ElementFinder;
   forgot : ElementFinder;
 
-  constructor(private readonly $main = ("#Main")) {
-    this.createNewAccount = $("a[href='register.php']");
+  constructor(private readonly $main : ElementFinder = $("#Main")) {
+    this.createNewAccount = this.$main.$("a[href='register.php']");
     this.website = "https://phptravels.org/login";
-    this.email = $("#inputEmail");
-    this.password = $("#inputPassword");
-    this.loginButton = $("#login");
-    this.recaptchaBox = $(".recaptcha-checkbox-border");
-    this.alertInfo = $(".alert.alert-danger");
-    this.firstName = $("#inputEmail");
-    this.iframe = $("iframe[title='reCAPTCHA']");
-    this.title = $(".login-title");
-    this.emailLabel = $("label[for='inputEmail']");
-    this.passwordLabel = $("label[for='inputPassword']");
-    this.forgot = element(by.linkText("Forgot?"));
+    this.email = this.$main.$("#inputEmail");
+    this.password = this.$main.$("#inputPassword");
+    this.loginButton = this.$main.$("#login");
+    this.recaptchaBox = this.$main.$(".recaptcha-checkbox-border");
+    this.alertInfo = this.$main.$(".alert.alert-danger");
+    this.firstName = this.$main.$("#inputEmail");
+    this.iframe = this.$main.$("iframe[title='reCAPTCHA']");
+    this.title = this.$main.$(".login-title");
+    this.emailLabel = this.$main.$("label[for='inputEmail']");
+    this.passwordLabel = this.$main.$("label[for='inputPassword']");
+    this.forgot = this.$main.element(by.linkText("Forgot?"));
   }
 
   async fill(data: Partial<LoginDetails>) {

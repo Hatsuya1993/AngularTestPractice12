@@ -1,4 +1,4 @@
-import {element, ElementFinder, $, by} from "protractor";
+import {ElementFinder, $, by} from "protractor";
 import {Helper} from "../helper/helper";
 
 export class OrderPage {
@@ -11,19 +11,19 @@ export class OrderPage {
   mobileInput : ElementFinder;
   orderPageData : ElementFinder;
 
-  constructor(private readonly $main = ("main")) {
-    this.buyNowButton = $("#order_button");
-    this.checkBoxOption = $("input[type=\"checkbox\"]");
-    this.firstNameInput = $("#first_name");
-    this.lastNameInput = $("#last_name");
-    this.businessNameInput = $("#bizname");
-    this.emailAddressInput = $("#email");
-    this.mobileInput = $("#mobile");
-    this.orderPageData = $("#order");
+  constructor(private readonly $main : ElementFinder = $("main")) {
+    this.buyNowButton = this.$main.$("#order_button");
+    this.checkBoxOption = this.$main.$("input[type=\"checkbox\"]");
+    this.firstNameInput = this.$main.$("#first_name");
+    this.lastNameInput = this.$main.$("#last_name");
+    this.businessNameInput = this.$main.$("#bizname");
+    this.emailAddressInput = this.$main.$("#email");
+    this.mobileInput = this.$main.$("#mobile");
+    this.orderPageData = this.$main.$("#order");
   }
 
   public async getCheckBox(id: string) {
-    this.checkBoxOption = element(by.id(id));
+    this.checkBoxOption = this.$main.element(by.id(id));
     await Helper.displayed(this.checkBoxOption);
     await Helper.clickItem(this.checkBoxOption);
   }

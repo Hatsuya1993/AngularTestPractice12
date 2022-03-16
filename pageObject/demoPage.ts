@@ -1,4 +1,4 @@
-import {$, by, element, ElementFinder} from "protractor";
+import {$, by, ElementFinder} from "protractor";
 
 export class DemoPage {
   website : string;
@@ -32,36 +32,36 @@ export class DemoPage {
   hotelIntegration : ElementFinder;
   sharedCloudHosting : ElementFinder;
 
-  constructor(private readonly $main = $("#Main")) {
+  constructor(private readonly $main : ElementFinder = $("#Main")) {
     this.website = "https://phptravels.com/demo/";
-    this.title = $("#PHPTRAVELS");
-    this.subTitle = $("#TRAVEL_TECHNOLOGY_PARTNER");
+    this.title = this.$main.$("#PHPTRAVELS");
+    this.subTitle = this.$main.$("#TRAVEL_TECHNOLOGY_PARTNER");
     this.mainTitle = this.$main.$(".main-title");
-    this.navOption = $("nav.clearfix");
-    this.demoOption = element(by.linkText("Demo"));
-    this.pricingOption = element(by.linkText("Pricing"));
-    this.integrationOption = element(by.linkText("Integrations"));
-    this.docsOption = element(by.linkText("Docs"));
-    this.blogOption = element(by.linkText("Blog"));
-    this.loginOption = element(by.linkText("Login"));
-    this.facebookIcon = element(by.css("a[href='https://www.facebook.com/phptravels/']"));
-    this.youtubeIcon = element(by.css("a[href='https://www.youtube.com/c/phptravelsofficial']"));
-    this.twitterIcon = element(by.css("a[href='https://www.twitter.com/phptravels']"));
-    this.linkedIn = element(by.css("a[href='https://www.linkedin.com/company/phptravels/']"));
-    this.instagramIcon = element(by.css("a[href='https://www.instagram.com/phptravels_/']"));
-    this.deskTopLink = element(by.linkText("Desktop App"));
-    this.mobileAppLink = element(by.linkText("Mobile Apps"));
-    this.featuresLink = element(by.linkText("Features"));
-    this.requirementsLink = element(by.linkText("Requirements"));
-    this.technologyLink = element(by.linkText("Technology"));
-    this.changeLogLink = element(by.linkText("Changelog"));
-    this.updatesLink = element(by.linkText("Updates"));
-    this.providersLink = element(by.linkText("Providers"));
-    this.affiliateLink = element(by.linkText("Affiliate"));
-    this.roadMapLink = element(by.linkText("Road Map"));
-    this.productServicesLink = element(by.linkText("Product Services"));
-    this.customizationLink = element(by.linkText("Customizations"));
-    this.hotelIntegration = element(by.css("a[href=\"https://phptravels.com/expedia-api-integration/\"]"));
-    this.sharedCloudHosting = element(by.linkText("Shared Cloud Hosting"));
+    this.navOption = this.$main.$("nav.clearfix");
+    this.demoOption = this.$main.element(by.linkText("Demo"));
+    this.pricingOption = this.$main.element(by.linkText("Pricing"));
+    this.integrationOption = this.$main.element(by.linkText("Integrations"));
+    this.docsOption = this.$main.element(by.linkText("Docs"));
+    this.blogOption = this.$main.element(by.linkText("Blog"));
+    this.loginOption = this.$main.element(by.linkText("Login"));
+    this.facebookIcon = this.$main.element(by.css("a[href='https://www.facebook.com/phptravels/']"));
+    this.youtubeIcon = this.$main.element(by.css("a[href='https://www.youtube.com/c/phptravelsofficial']"));
+    this.twitterIcon = this.$main.element(by.css("a[href='https://www.twitter.com/phptravels']"));
+    this.linkedIn = this.$main.element(by.css("a[href='https://www.linkedin.com/company/phptravels/']"));
+    this.instagramIcon = this.$main.element(by.css("a[href='https://www.instagram.com/phptravels_/']"));
+    this.deskTopLink = this.$main.element(by.linkText("Desktop App"));
+    this.mobileAppLink = this.$main.element(by.linkText("Mobile Apps"));
+    this.featuresLink = this.$main.element(by.linkText("Features"));
+    this.requirementsLink = this.$main.element(by.linkText("Requirements"));
+    this.technologyLink = this.$main.element(by.linkText("Technology"));
+    this.changeLogLink = this.$main.element(by.linkText("Changelog"));
+    this.updatesLink = this.$main.element(by.linkText("Updates"));
+    this.providersLink = this.$main.element(by.linkText("Providers"));
+    this.affiliateLink = this.$main.element(by.linkText("Affiliate"));
+    this.roadMapLink = this.$main.element(by.linkText("Road Map"));
+    this.productServicesLink = this.$main.element(by.linkText("Product Services"));
+    this.customizationLink = this.$main.element(by.linkText("Customizations"));
+    this.hotelIntegration = this.$main.element(by.css("a[href=\"https://phptravels.com/expedia-api-integration/\"]"));
+    this.sharedCloudHosting = this.$main.element(by.linkText("Shared Cloud Hosting"));
   }
 }

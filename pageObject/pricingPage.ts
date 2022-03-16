@@ -1,4 +1,4 @@
-import {$$, ElementArrayFinder, ElementFinder, $, element, by, browser} from "protractor";
+import {ElementArrayFinder, ElementFinder, $, by} from "protractor";
 
 
 export class PricingPage {
@@ -34,38 +34,38 @@ export class PricingPage {
   bankButton : ElementFinder;
   paylaterButton : ElementFinder;
 
-  constructor(private readonly $main = ("#Main")) {
+  constructor(private readonly $root : ElementFinder = $("#PageContainer")) {
     this.website = "https://phptravels.com/order";
-    this.plans = $$(".plan-type");
-    this.travelPortFlights = $("a[href*='phptravels.gumroad.com/l/utzhq']");
-    this.travelPortFlightsPopUp = $(".product-row");
-    this.iframe = $(".gumroad-overlay-iframe");
-    this.amadeusFlights = $("a[href*='phptravels.gumroad.com/l/nevel']");
-    this.amadeusFlightsPopUp = $(".product-row");
-    this.aerTicketFlights = $("a[href*='phptravels.gumroad.com/l/ocyro']");
-    this.kiwiFlightsPopUp = $("a[href*='phptravels.gumroad.com/l/bplom']");
-    this.travelPayOutsPopUp = $("a[href*='phptravels.gumroad.com/l/vurcy']");
-    this.hotelBedsPopUp = $("a[href*='phptravels.gumroad.com/l/yqgbc']");
-    this.viatorPopUp = $("a[href*='phptravels.gumroad.com/l/fxaax']");
-    this.CRMHubSpotPopUp = $("a[href*='phptravels.gumroad.com/l/fljug']");
-    this.agodaPopUp = $("a[href*='phptravels.gumroad.com/l/xyznu']");
-    this.hotelstonPopUp = $("a[href*='phptravels.gumroad.com/l/dqajx']");
-    this.customGateWayPopUp = $("a[href*='phptravels.gumroad.com/l/kblry']");
-    this.setmposPopUp = $("a[href*='phptravels.gumroad.com/l/hdrpv']");
-    this.rezlive = $("a[href*='phptravels.gumroad.com/l/xgles']");
-    this.paddleButton = $(".item_id_Paddle .btn-primary");
-    this.paypalButton = $(".item_id_Paypal .btn-primary");
-    this.stripeButton = $(".item_id_Paypal .btn-primary");
-    this.bankButton = $(".item_id_Bank .btn-primary");
-    this.contactUs = $(".main-content a[href*='phptravels.com/contact-us']");
-    this.bottomInfo = $$(".bottom .info");
-    this.frequentlyAsked = $(".faq .faq-title");
-    this.lookingForCustomization = $(".working-in-a-team-container .main-content h2");
-    this.worldLeadingBooking = $(".form-group h2");
-    this.checkoutPopUpForm = $(".buy-form-main");
-    this.iWantThisButton = element(by.buttonText("I want this!"));
-    this.buyThisButton = element(by.buttonText("Buy this"));
-    this.paylaterButton = $(".item_id_Pay .btn-primary");
+    this.plans = this.$root.$$(".plan-type");
+    this.travelPortFlights = this.$root.$("a[href*='phptravels.gumroad.com/l/utzhq']");
+    this.travelPortFlightsPopUp = this.$root.$(".product-row");
+    this.iframe = this.$root.$(".gumroad-overlay-iframe");
+    this.amadeusFlights = this.$root.$("a[href*='phptravels.gumroad.com/l/nevel']");
+    this.amadeusFlightsPopUp = this.$root.$(".product-row");
+    this.aerTicketFlights = this.$root.$("a[href*='phptravels.gumroad.com/l/ocyro']");
+    this.kiwiFlightsPopUp = this.$root.$("a[href*='phptravels.gumroad.com/l/bplom']");
+    this.travelPayOutsPopUp = this.$root.$("a[href*='phptravels.gumroad.com/l/vurcy']");
+    this.hotelBedsPopUp = this.$root.$("a[href*='phptravels.gumroad.com/l/yqgbc']");
+    this.viatorPopUp = this.$root.$("a[href*='phptravels.gumroad.com/l/fxaax']");
+    this.CRMHubSpotPopUp = this.$root.$("a[href*='phptravels.gumroad.com/l/fljug']");
+    this.agodaPopUp = this.$root.$("a[href*='phptravels.gumroad.com/l/xyznu']");
+    this.hotelstonPopUp = this.$root.$("a[href*='phptravels.gumroad.com/l/dqajx']");
+    this.customGateWayPopUp = this.$root.$("a[href*='phptravels.gumroad.com/l/kblry']");
+    this.setmposPopUp = this.$root.$("a[href*='phptravels.gumroad.com/l/hdrpv']");
+    this.rezlive = this.$root.$("a[href*='phptravels.gumroad.com/l/xgles']");
+    this.paddleButton = this.$root.$(".item_id_Paddle .btn-primary");
+    this.paypalButton = this.$root.$(".item_id_Paypal .btn-primary");
+    this.stripeButton = this.$root.$(".item_id_Paypal .btn-primary");
+    this.bankButton = this.$root.$(".item_id_Bank .btn-primary");
+    this.contactUs = this.$root.$(".main-content a[href*='phptravels.com/contact-us']");
+    this.bottomInfo = this.$root.$$(".bottom .info");
+    this.frequentlyAsked = this.$root.$(".faq .faq-title");
+    this.lookingForCustomization = this.$root.$(".working-in-a-team-container .main-content h2");
+    this.worldLeadingBooking = this.$root.$(".form-group h2");
+    this.checkoutPopUpForm = this.$root.$(".buy-form-main");
+    this.iWantThisButton = this.$root.element(by.buttonText("I want this!"));
+    this.buyThisButton = this.$root.element(by.buttonText("Buy this"));
+    this.paylaterButton = this.$root.$(".item_id_Pay .btn-primary");
   }
 
   async getAllPlans(data1 : ElementArrayFinder, data2 : Array<String>) : Promise<Boolean> {

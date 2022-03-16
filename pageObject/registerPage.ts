@@ -1,4 +1,4 @@
-import {ElementFinder, $, by, element} from "protractor";
+import {ElementFinder, $, by} from "protractor";
 import {Helper} from "../helper/helper";
 
 export interface RegisterDetails {
@@ -56,42 +56,42 @@ export class RegisterPage {
   labelPasswordTwo : ElementFinder;
 
 
-  constructor(private readonly $main = ("#Main")) {
+  constructor(private readonly $main : ElementFinder = $("#Main")) {
     this.website = "https://phptravels.org/register.php";
-    this.firstName = $("#inputFirstName");
-    this.lastName = $("#inputLastName");
-    this.email = $("#inputEmail");
-    this.phoneNumber = $("#inputPhone");
-    this.companyName = $("#inputCompanyName");
-    this.streetAddress = $("#inputAddress1");
-    this.streetAddress2 = $("#inputAddress2");
-    this.city = $("#inputCity");
-    this.state = $("#stateinput");
-    this.postCode = $("#inputPostcode");
-    this.country = $("#inputCountry");
-    this.mobile = $("#customfield2");
-    this.password = $("#inputNewPassword1");
-    this.confirmPassword = $("#inputNewPassword2");
-    this.captchaBox = $("#recaptcha-anchor .recaptcha-checkbox-border");
-    this.registerButton = element(by.buttonText("Register"));
-    this.reCaptcha = $("iframe[title='reCAPTCHA']");
-    this.noMatchPassword = $("#nonMatchingPasswordResult");
-    this.errorAlert = $(".alert.alert-danger");
-    this.registerTitle = $(".login-title");
-    this.labelForFirstName = $("label[for='inputFirstName']");
-    this.labelForLastName = $("label[for='inputLastName']");
-    this.labelForEmailAddress = $("label[for='inputEmail']");
-    this.labelForPhone = $("label[for='inputPhone']");
-    this.labelForCompanyName = $("label[for='inputCompanyName']");
-    this.labelStreetAddress = $("label[for='inputAddress1']");
-    this.labelStreetAddress2 = $("label[for='inputAddress2']");
-    this.labelCity = $("label[for='inputCity']");
-    this.labelState = $("label[for='stateinput']");
-    this.labelPostCode = $("label[for='inputPostcode']");
-    this.labelCountry = $("label[for='inputCountry']");
-    this.labelMobile = $("label[for='customfield2']");
-    this.labelPasswordOne = $("label[for='inputNewPassword1']");
-    this.labelPasswordTwo = $("label[for='inputNewPassword2']");
+    this.firstName = this.$main.$("#inputFirstName");
+    this.lastName = this.$main.$("#inputLastName");
+    this.email = this.$main.$("#inputEmail");
+    this.phoneNumber = this.$main.$("#inputPhone");
+    this.companyName = this.$main.$("#inputCompanyName");
+    this.streetAddress = this.$main.$("#inputAddress1");
+    this.streetAddress2 = this.$main.$("#inputAddress2");
+    this.city = this.$main.$("#inputCity");
+    this.state = this.$main.$("#stateinput");
+    this.postCode = this.$main.$("#inputPostcode");
+    this.country = this.$main.$("#inputCountry");
+    this.mobile = this.$main.$("#customfield2");
+    this.password = this.$main.$("#inputNewPassword1");
+    this.confirmPassword = this.$main.$("#inputNewPassword2");
+    this.captchaBox = this.$main.$("#recaptcha-anchor .recaptcha-checkbox-border");
+    this.registerButton = this.$main.element(by.buttonText("Register"));
+    this.reCaptcha = this.$main.$("iframe[title='reCAPTCHA']");
+    this.noMatchPassword = this.$main.$("#nonMatchingPasswordResult");
+    this.errorAlert = this.$main.$(".alert.alert-danger");
+    this.registerTitle = this.$main.$(".login-title");
+    this.labelForFirstName = this.$main.$("label[for='inputFirstName']");
+    this.labelForLastName = this.$main.$("label[for='inputLastName']");
+    this.labelForEmailAddress = this.$main.$("label[for='inputEmail']");
+    this.labelForPhone = this.$main.$("label[for='inputPhone']");
+    this.labelForCompanyName = this.$main.$("label[for='inputCompanyName']");
+    this.labelStreetAddress = this.$main.$("label[for='inputAddress1']");
+    this.labelStreetAddress2 = this.$main.$("label[for='inputAddress2']");
+    this.labelCity = this.$main.$("label[for='inputCity']");
+    this.labelState = this.$main.$("label[for='stateinput']");
+    this.labelPostCode = this.$main.$("label[for='inputPostcode']");
+    this.labelCountry = this.$main.$("label[for='inputCountry']");
+    this.labelMobile = this.$main.$("label[for='customfield2']");
+    this.labelPasswordOne = this.$main.$("label[for='inputNewPassword1']");
+    this.labelPasswordTwo = this.$main.$("label[for='inputNewPassword2']");
   }
 
   async fill(data: Partial<RegisterDetails>) {

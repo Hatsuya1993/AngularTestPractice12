@@ -1,4 +1,4 @@
-import {element, ElementFinder, $, by} from "protractor";
+import {ElementFinder, $, by} from "protractor";
 
 interface formForConfirmOrder {
     firstName: string,
@@ -17,13 +17,13 @@ export class ConfirmOrderPage {
   mobileInput : ElementFinder;
   submitButton : ElementFinder;
 
-  constructor(private readonly $main = ("main")) {
-    this.firstNameInput = $("#first_name");
-    this.lastNameInput = $("#last_name");
-    this.businessNameInput = $("#bizname");
-    this.emailAddressInput = $("#email");
-    this.mobileInput = $("#mobile");
-    this.submitButton = element(by.buttonText("Confirm Order"));
+  constructor(private readonly $main : ElementFinder = $("main")) {
+    this.firstNameInput = this.$main.$("#first_name");
+    this.lastNameInput = this.$main.$("#last_name");
+    this.businessNameInput = this.$main.$("#bizname");
+    this.emailAddressInput = this.$main.$("#email");
+    this.mobileInput = this.$main.$("#mobile");
+    this.submitButton = this.$main.element(by.buttonText("Confirm Order"));
   }
 
   public async fillInConfirmOrder(info: formForConfirmOrder) {
