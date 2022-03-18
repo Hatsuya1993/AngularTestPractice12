@@ -246,9 +246,15 @@ describe("Testing orderPage", () => {
     expect(await (await browser.getAllWindowHandles()).length).toBe(2);
   });
 
-  fit("Pay later clicked later will open a new page", async () => {
+  it("Pay later clicked later will open a new page", async () => {
     await Helper.scrollPage("1500");
     await Helper.moveClickItem(pricingPage.paylaterButton);
     expect(await (await browser.getAllWindowHandles()).length).toBe(2);
+  });
+
+  fit("Paypal click will move to home page", async () => {
+    await Helper.scrollPage("1500");
+    await Helper.moveClickItem(pricingPage.paypalButton);
+    expect(await browser.getCurrentUrl()).toContain("phptravels");
   });
 });
