@@ -252,9 +252,15 @@ describe("Testing orderPage", () => {
     expect(await (await browser.getAllWindowHandles()).length).toBe(2);
   });
 
-  fit("Paypal click will move to home page", async () => {
+  it("Paypal click will move to home page", async () => {
     await Helper.scrollPage("1500");
     await Helper.moveClickItem(pricingPage.paypalButton);
+    expect(await browser.getCurrentUrl()).toContain("phptravels");
+  });
+
+  fit("Stripe clicked later will move to home page", async () => {
+    await Helper.scrollPage("1500");
+    await Helper.moveClickItem(pricingPage.stripeButton);
     expect(await browser.getCurrentUrl()).toContain("phptravels");
   });
 });
