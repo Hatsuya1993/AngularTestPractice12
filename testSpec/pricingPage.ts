@@ -258,9 +258,15 @@ describe("Testing orderPage", () => {
     expect(await browser.getCurrentUrl()).toContain("phptravels");
   });
 
-  fit("Stripe clicked later will move to home page", async () => {
+  it("Stripe clicked later will move to home page", async () => {
     await Helper.scrollPage("1500");
     await Helper.moveClickItem(pricingPage.stripeButton);
+    expect(await browser.getCurrentUrl()).toContain("phptravels");
+  });
+
+  fit("Paddle clicked later will move to home page", async () => {
+    await Helper.scrollPage("1500");
+    await Helper.moveClickItem(pricingPage.paddleButton);
     expect(await browser.getCurrentUrl()).toContain("phptravels");
   });
 });
