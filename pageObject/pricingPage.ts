@@ -33,6 +33,7 @@ export class PricingPage {
   paddleButton : ElementFinder;
   bankButton : ElementFinder;
   paylaterButton : ElementFinder;
+  worldLeadingBookingContainer : ElementFinder;
 
   constructor(private readonly $root : ElementFinder = $("#PageContainer")) {
     this.website = "https://phptravels.com/order";
@@ -66,6 +67,7 @@ export class PricingPage {
     this.iWantThisButton = this.$root.element(by.buttonText("I want this!"));
     this.buyThisButton = this.$root.element(by.buttonText("Buy this"));
     this.paylaterButton = this.$root.$(".item_id_Pay .btn-primary");
+    this.worldLeadingBookingContainer = this.$root.$(".time-saving-approach");
   }
 
   async getAllPlans(data1 : ElementArrayFinder, data2 : Array<String>) : Promise<Boolean> {

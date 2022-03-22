@@ -276,9 +276,13 @@ describe("Testing orderPage", () => {
     expect(await browser.getCurrentUrl()).toContain("phptravels");
   });
 
-  fit("Pay later clicked later will move to home page", async () => {
+  it("Pay later clicked later will move to home page", async () => {
     await Helper.scrollPage("1500");
     await Helper.moveClickItem(pricingPage.paylaterButton);
     expect(await browser.getCurrentUrl()).toContain("phptravels");
+  });
+
+  fit("World's leading booking software is displayed", async () => {
+    expect(await pricingPage.worldLeadingBookingContainer.isDisplayed()).toBeTruthy();
   });
 });
