@@ -193,7 +193,7 @@ describe("Testing orderPage", () => {
     expect(await browser.getCurrentUrl()).toContain("kiwitaxi");
   });
 
-  fit("Should open to the correct website for iway", async () => {
+  it("Should open to the correct website for iway", async () => {
     const integratePage = await viewToPage.moveToIntegrate(demoPage.integrationOption);
     await Helper.clickItem(integratePage.iway);
     expect((await browser.getAllWindowHandles()).length).toBe(2);

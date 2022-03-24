@@ -282,7 +282,7 @@ describe("Testing orderPage", () => {
     expect(await browser.getCurrentUrl()).toContain("phptravels");
   });
 
-  fit("World's leading booking software is displayed", async () => {
+  it("World's leading booking software is displayed", async () => {
     expect(await pricingPage.worldLeadingBookingContainer.isDisplayed()).toBeTruthy();
   });
 });

@@ -3,7 +3,7 @@ import {globalData} from "../helper/global";
 import {DemoPage} from "../pageObject/demoPage";
 import {Helper} from "../helper/helper";
 import {OrderPage} from "../pageObject/orderPage";
-import {ConfirmOrderPage} from "../pageObject/confirmOrder";
+import {ConfirmOrderPage} from "../pageObject/confirmOrderPage";
 
 
 describe("Testing orderPage", () => {

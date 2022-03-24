@@ -55,7 +55,7 @@ describe("Testing loginPage", () => {
     expect(loginPage.alertInfo.isDisplayed()).toBeTruthy();
   });
 
-  fit("Check forgot link is displayed and correctly labeled", async () => {
+  it("Check forgot link is displayed and correctly labeled", async () => {
     expect(await loginPage.forgot.isDisplayed()).toBeTruthy();
     expect(await loginPage.forgot.getText()).toBe("Forgot?");
   });
