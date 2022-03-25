@@ -16,7 +16,11 @@ describe("Hotel Module Page", () => {
     await browser.close();
   });
 
-  fit("Correct link for hotels module features", async () => {
+  it("Correct link for hotels module features", async () => {
     expect(await browser.getCurrentUrl()).toContain("hotels-module-features");
+  });
+
+  fit("Header should be displayed", async () => {
+    expect(await hotelModulePage.header.isDisplayed()).toBeTruthy();
   });
 });
