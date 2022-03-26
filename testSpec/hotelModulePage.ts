@@ -25,6 +25,6 @@ describe("Hotel Module Page", () => {
   });
 
   fit("Hotels booking module should be displayed", async () => {
-    expect(await hotelModulePage.hotelsModule.isDisplayed()).toBeTruthy();
+    expect(await hotelModulePage.hotelsModule.first().isDisplayed()).toBeTruthy();
   });
 });
