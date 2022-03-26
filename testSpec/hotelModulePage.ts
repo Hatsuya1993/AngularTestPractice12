@@ -20,7 +20,11 @@ describe("Hotel Module Page", () => {
     expect(await browser.getCurrentUrl()).toContain("hotels-module-features");
   });
 
-  fit("Header should be displayed", async () => {
+  it("Header should be displayed", async () => {
     expect(await hotelModulePage.header.isDisplayed()).toBeTruthy();
+  });
+
+  fit("Hotels booking module should be displayed", async () => {
+    expect(await hotelModulePage.hotelsModule.isDisplayed()).toBeTruthy();
   });
 });
