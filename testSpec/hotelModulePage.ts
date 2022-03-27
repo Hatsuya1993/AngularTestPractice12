@@ -7,7 +7,7 @@ describe("Hotel Module Page", () => {
 
   beforeEach( async () => {
     browser.waitForAngularEnabled(false);
-    await browser.get(hotelModulePage.website);
+    await browser.get(hotelModulePage.getWebsite());
     await browser.manage().window().maximize();
     await browser.sleep(globalData["WAIT_TIME"]["WAIT_LONG"]);
   });
@@ -21,10 +21,14 @@ describe("Hotel Module Page", () => {
   });
 
   it("Header should be displayed", async () => {
-    expect(await hotelModulePage.header.isDisplayed()).toBeTruthy();
+    expect(await hotelModulePage.getHeader().isDisplayed()).toBeTruthy();
   });
 
-  fit("Hotels booking module should be displayed", async () => {
-    expect(await hotelModulePage.hotelsModule.first().isDisplayed()).toBeTruthy();
+  it("Hotels booking module should be displayed", async () => {
+    expect(await hotelModulePage.getHotelsModule().first().isDisplayed()).toBeTruthy();
+  });
+
+  it("Full calendar should be displayed", async () => {
+    expect(await hotelModulePage.getFullCalendar().first().isDisplayed()).toBeTruthy();
   });
 });
