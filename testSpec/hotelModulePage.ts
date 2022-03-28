@@ -31,4 +31,8 @@ describe("Hotel Module Page", () => {
   it("Full calendar should be displayed", async () => {
     expect(await hotelModulePage.getFullCalendar().first().isDisplayed()).toBeTruthy();
   });
+
+  fit("Main features should be displayed", async () => {
+    expect(await hotelModulePage.getMainFeatures().isDisplayed()).toBeTruthy();
+  });
 });

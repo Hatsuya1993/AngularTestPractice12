@@ -6,6 +6,7 @@ export class HotelModulePage {
   private readonly header : ElementFinder;
   private readonly hotelsModule : ElementArrayFinder;
   private readonly fullCalendar : ElementArrayFinder;
+  private readonly mainFeatures : ElementFinder;
 
   constructor(private readonly $main : ElementFinder = $("body")) {
     this.website = "https://phptravels.com/hotels-module-features/";
@@ -13,6 +14,7 @@ export class HotelModulePage {
     this.header = this.$main.$("header.BS-header");
     this.hotelsModule = this.$main.$$(".container-outer.grey");
     this.fullCalendar = this.$main.$$(".container-outer.white");
+    this.mainFeatures = this.$main.$(".features.grey");
   }
 
   getWebsite() : string {
@@ -33,5 +35,9 @@ export class HotelModulePage {
 
   getFullCalendar() : ElementArrayFinder {
     return this.fullCalendar;
+  }
+
+  getMainFeatures() : ElementFinder {
+    return this.mainFeatures;
   }
 }
