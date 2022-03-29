@@ -32,7 +32,11 @@ describe("Hotel Module Page", () => {
     expect(await hotelModulePage.getFullCalendar().first().isDisplayed()).toBeTruthy();
   });
 
-  fit("Main features should be displayed", async () => {
+  it("Main features should be displayed", async () => {
     expect(await hotelModulePage.getMainFeatures().isDisplayed()).toBeTruthy();
+  });
+
+  fit("Hotels module should be displayed", async () => {
+    expect(await hotelModulePage.getGoogleMaps().last().isDisplayed()).toBeTruthy();
   });
 });
