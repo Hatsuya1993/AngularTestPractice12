@@ -9,6 +9,7 @@ export class HotelModulePage {
   private readonly mainFeatures : ElementFinder;
   private readonly googleMaps : ElementArrayFinder;
   private readonly banner : ElementFinder;
+  private readonly bannerTitle : ElementFinder;
 
   constructor(private readonly $main : ElementFinder = $("body")) {
     this.website = "https://phptravels.com/hotels-module-features/";
@@ -19,6 +20,7 @@ export class HotelModulePage {
     this.mainFeatures = this.$main.$(".features.grey");
     this.googleMaps = this.$main.$$(".container-outer.white");
     this.banner = this.$main.$(".gradient-cover");
+    this.bannerTitle = this.$main.$(".gradient .container .col-12 h2");
   }
 
   getWebsite() : string {
@@ -49,5 +51,8 @@ export class HotelModulePage {
   }
   getBanner() : ElementFinder {
     return this.banner;
+  }
+  getBannerTitle() : ElementFinder {
+    return this.bannerTitle;
   }
 }
