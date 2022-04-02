@@ -44,7 +44,11 @@ describe("Hotel Module Page", () => {
     expect(await hotelModulePage.getBanner().isDisplayed()).toBeTruthy();
   });
 
-  fit("Banner title should populate the correct data", async () => {
+  it("Banner title should be displayed", async () => {
     expect(await hotelModulePage.getBannerTitle().isDisplayed()).toBeTruthy();
+  });
+
+  fit("Banner title should be populated correctly", async () => {
+    expect(await hotelModulePage.getBannerTitle().getText()).toContain("Complete Hotel Management ");
   });
 });
