@@ -52,7 +52,11 @@ describe("Hotel Module Page", () => {
     expect(await hotelModulePage.getBannerTitle().getText()).toContain("Complete Hotel Management ");
   });
 
-  fit("Banner description should be displayed", async () => {
+  it("Banner description should be displayed", async () => {
     expect(await hotelModulePage.getBannerDescription().isDisplayed()).toBeTruthy();
+  });
+
+  fit("View pricing button should be displayed", async () => {
+    expect(await hotelModulePage.getViewPricing().isDisplayed()).toBeTruthy();
   });
 });
