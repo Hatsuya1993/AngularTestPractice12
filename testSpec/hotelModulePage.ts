@@ -1,5 +1,6 @@
 import {browser} from "protractor";
 import {globalData} from "../helper/global";
+import {Helper} from "../helper/helper";
 import {HotelModulePage} from "../pageObject/hotelModulePage";
 
 describe("Hotel Module Page", () => {
@@ -56,7 +57,12 @@ describe("Hotel Module Page", () => {
     expect(await hotelModulePage.getBannerDescription().isDisplayed()).toBeTruthy();
   });
 
-  fit("View pricing button should be displayed", async () => {
+  it("View pricing button should be displayed", async () => {
     expect(await hotelModulePage.getViewPricing().isDisplayed()).toBeTruthy();
+  });
+
+  fit("Pricing page should move to the order page", async () => {
+    await Helper.clickItem(hotelModulePage.getViewPricing());
+    expect(await browser.getCurrentUrl()).toContain("order");
   });
 });
