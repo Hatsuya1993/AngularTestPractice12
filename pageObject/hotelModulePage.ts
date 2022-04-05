@@ -12,6 +12,7 @@ export class HotelModulePage {
   private readonly bannerTitle : ElementFinder;
   private readonly bannerDescription : ElementFinder;
   private readonly viewPricing : ElementFinder;
+  private readonly overviewDemoButton : ElementFinder;
 
   constructor(private readonly $main : ElementFinder = $("body")) {
     this.website = "https://phptravels.com/hotels-module-features/";
@@ -25,28 +26,24 @@ export class HotelModulePage {
     this.bannerTitle = this.$main.$(".gradient .container .col-12 h2");
     this.bannerDescription = this.$main.$(".gradient .container .col-md-8 p");
     this.viewPricing = this.$main.$("[href*='phptravels.com/order']");
+    this.overviewDemoButton = this.$main.$("[href*='https://phptravels.com/demo']");
   }
 
   getWebsite() : string {
     return this.website;
   }
-
   getConfiguration() : ElementFinder {
     return this.configuration;
   }
-
   getHeader() : ElementFinder {
     return this.header;
   }
-
   getHotelsModule() : ElementArrayFinder {
     return this.hotelsModule;
   }
-
   getFullCalendar() : ElementArrayFinder {
     return this.fullCalendar;
   }
-
   getMainFeatures() : ElementFinder {
     return this.mainFeatures;
   }
@@ -64,5 +61,8 @@ export class HotelModulePage {
   }
   getViewPricing() : ElementFinder {
     return this.viewPricing;
+  }
+  getOverviewButton() : ElementFinder {
+    return this.overviewDemoButton;
   }
 }

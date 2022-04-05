@@ -61,8 +61,12 @@ describe("Hotel Module Page", () => {
     expect(await hotelModulePage.getViewPricing().isDisplayed()).toBeTruthy();
   });
 
-  fit("Pricing page should move to the order page", async () => {
+  it("Pricing page should move to the order page", async () => {
     await Helper.clickItem(hotelModulePage.getViewPricing());
     expect(await browser.getCurrentUrl()).toContain("order");
+  });
+
+  fit("View overview demo button should be displayed", async () => {
+    expect(await hotelModulePage.getOverviewButton().isDisplayed()).toBeTruthy();
   });
 });
