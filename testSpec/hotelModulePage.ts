@@ -66,7 +66,12 @@ describe("Hotel Module Page", () => {
     expect(await browser.getCurrentUrl()).toContain("order");
   });
 
-  fit("View overview demo button should be displayed", async () => {
+  it("View overview demo button should be displayed", async () => {
     expect(await hotelModulePage.getOverviewButton().isDisplayed()).toBeTruthy();
+  });
+
+  fit("Clicking the demon button will move to the demo page", async () => {
+    await Helper.clickItem(hotelModulePage.getOverviewButton());
+    expect(await browser.getCurrentUrl()).toContain("demo");
   });
 });
