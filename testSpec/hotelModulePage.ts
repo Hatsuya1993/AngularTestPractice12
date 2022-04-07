@@ -70,7 +70,7 @@ describe("Hotel Module Page", () => {
     expect(await hotelModulePage.getOverviewButton().isDisplayed()).toBeTruthy();
   });
 
-  fit("Clicking the demon button will move to the demo page", async () => {
+  it("Clicking the demo button will move to the demo page", async () => {
     await Helper.clickItem(hotelModulePage.getOverviewButton());
     expect(await browser.getCurrentUrl()).toContain("demo");
   });
