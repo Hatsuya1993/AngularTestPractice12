@@ -82,4 +82,38 @@ describe("Flights Reservation Module", () => {
   /* Verify features 2 description is correctly populated*/
 
   /* Verify features 3 description is correctly populated*/
+
+  /* Verify booking system is displayed */
+
+  /* Verify booking system is populated correctly */
+
+  /* Verify booking system description is displayed */
+
+  /* Verify the demo button is displayed */
+
+  /* Verify the demo button will move to the demo page */
+
+  /* Verify the real time bookings from gds is displayed */
+
+  /* Verify the real time bookings from gds is populated correctly */
+
+  /* Verify the real time bookings from gds description is displayed */
+
+  /* Verify the real time bookings from gds description is populated correctky */
+
+  /* Verify the banner is displayed */
+
+  /* Verify the banner title is displayed */
+
+  /* Verify the banner title is populated correctly */
+
+  /* Verify the banner description is displayed */
+
+  /* Verify the pricing button is displayed */
+
+  /* Verify the pricing button will move to the order page */
+
+  /* Verify the regions are displayed */
+
+  /* Verify the footer is displayed */
 });
