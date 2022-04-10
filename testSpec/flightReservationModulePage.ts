@@ -12,6 +12,9 @@ describe("Flights Reservation Module", () => {
   });
 
   /* Verify if the url is correctly displayed */
+  fit("Verify if the url is correctly displayed", async () => {
+    expect(await browser.getCurrentUrl()).toContain("flights-module-features");
+  });
 
   /* Verify the header is displayed */
 
