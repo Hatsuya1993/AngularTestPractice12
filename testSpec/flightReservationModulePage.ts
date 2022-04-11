@@ -17,11 +17,14 @@ describe("Flights Reservation Module", () => {
   });
 
   /* Verify the header is displayed */
-  fit("Verify if the header is displayed", async () => {
+  it("Verify if the header is displayed", async () => {
     expect(await flightReservationModulePage.getHeader().isDisplayed()).toBeTruthy();
   });
 
   /* Verify the header title is displayed */
+  it("Verify if the header title is displayed", async () => {
+    expect(await flightReservationModulePage.getHeaderTitle().isDisplayed()).toBeTruthy();
+  });
 
   /* Verify the header title is correctly populated */
 

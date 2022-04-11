@@ -3,10 +3,12 @@ import {$, ElementFinder} from "protractor";
 export class FlightReservationModulePage {
   private readonly website : string;
   private readonly header : ElementFinder;
+  private readonly headerTitle : ElementFinder;
 
   constructor(private readonly $main : ElementFinder = $("body")) {
     this.website = "https://phptravels.com/flights-module-features/";
     this.header = this.$main.$(".BS-header");
+    this.headerTitle = this.$main.$("#header-title");
   }
 
   getWebsite() : string {
@@ -15,5 +17,9 @@ export class FlightReservationModulePage {
 
   getHeader() : ElementFinder {
     return this.header;
+  }
+
+  getHeaderTitle() : ElementFinder {
+    return this.headerTitle;
   }
 }
