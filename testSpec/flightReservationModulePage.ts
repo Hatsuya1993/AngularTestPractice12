@@ -27,6 +27,9 @@ describe("Flights Reservation Module", () => {
   });
 
   /* Verify the header title is correctly populated */
+  fit("Verify the header title is correctly populated", async () => {
+    expect(await flightReservationModulePage.getHeaderTitle().getText()).toContain("Flights Reservation Module");
+  });
 
   /* Verify the header description is displayed */
 
