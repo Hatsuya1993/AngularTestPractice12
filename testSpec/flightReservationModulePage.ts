@@ -37,11 +37,14 @@ describe("Flights Reservation Module", () => {
   });
 
   /* Verify the header description is correctly populated */
-  fit("Verify the header description is correctly populated", async () => {
+  it("Verify the header description is correctly populated", async () => {
     expect(await flightReservationModulePage.getHeaderDescription().getText()).toContain("Airline Ticketing Software with Flight Booking engine in built");
   });
 
   /* Verify a total of 3 options under header*/
+  fit("Verify there are a total of 3 options", async () => {
+    expect(await flightReservationModulePage.getOptions().count()).toEqual(3);
+  });
 
   /* Verify option 1 title is displayed */
 
