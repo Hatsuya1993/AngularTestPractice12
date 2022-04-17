@@ -42,12 +42,14 @@ describe("Flights Reservation Module", () => {
   });
 
   /* Verify a total of 3 options under header*/
-  fit("Verify there are a total of 3 options", async () => {
+  it("Verify there are a total of 3 options", async () => {
     expect(await flightReservationModulePage.getOptions().count()).toEqual(3);
   });
 
   /* Verify option 1 title is displayed */
-
+  fit("Verify options 1 title is displayed", async () => {
+    expect(await flightReservationModulePage.getOptionsOneTitle().isDisplayed()).toBeTruthy();
+  });
   /* Verify option 1 title is correctly populated */
 
   /* Verify option 1 description is displayed */
