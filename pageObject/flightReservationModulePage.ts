@@ -7,6 +7,7 @@ export class FlightReservationModulePage {
   private readonly headerDescription : ElementFinder;
   private readonly options : ElementArrayFinder;
   private readonly optionsOneTitle : ElementFinder;
+  private readonly optionsOneDescription : ElementFinder;
 
   constructor(private readonly $main : ElementFinder = $("body")) {
     this.website = "https://phptravels.com/flights-module-features/";
@@ -15,6 +16,7 @@ export class FlightReservationModulePage {
     this.headerDescription = this.$main.$("#header-description");
     this.options = this.$main.$$(".container-outer[style='overflow:hidden; ']");
     this.optionsOneTitle = this.$main.element(by.cssContainingText("h2", "Search filter and reserve flights tickets"));
+    this.optionsOneDescription = this.$main.$$("div.col-md-5").get(0).$("p");
   }
 
   getWebsite() : string {
@@ -39,5 +41,9 @@ export class FlightReservationModulePage {
 
   getOptionsOneTitle() : ElementFinder {
     return this.optionsOneTitle;
+  }
+
+  getOptionsOneDescription() : ElementFinder {
+    return this.optionsOneDescription;
   }
 }
