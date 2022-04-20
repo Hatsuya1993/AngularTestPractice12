@@ -62,11 +62,14 @@ describe("Flights Reservation Module", () => {
   });
 
   /* Verify option 1 description is correctly populated*/
-  fit("Verify options 1 description is correctly populated", async () => {
+  it("Verify options 1 description is correctly populated", async () => {
     expect(await flightReservationModulePage.getOptionsOneDescription().getText()).toBe("Premium features included search by oneway return ticket or offer multi destination booking facility to your clients with with realtime and opensource code platform of phptravels");
   });
 
   /* Verify option 2 title is displayed */
+  fit("Verify options 2 title is displayed", async () => {
+    expect(await flightReservationModulePage.getOptionsTwoTitle().isDisplayed()).toBeTruthy();
+  });
 
   /* Verify option 2 title is correctly populated */
 
