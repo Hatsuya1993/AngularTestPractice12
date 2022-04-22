@@ -52,7 +52,7 @@ describe("Flights Reservation Module", () => {
   });
 
   /* Verify option 1 title is correctly populated */
-  it("Verify options 1 title is displayed", async () => {
+  it("Verify options 1 title is displayed correctly", async () => {
     expect(await flightReservationModulePage.getOptionsOneTitle().getText()).toBe("Search filter and reserve flights tickets");
   });
 
@@ -67,11 +67,14 @@ describe("Flights Reservation Module", () => {
   });
 
   /* Verify option 2 title is displayed */
-  fit("Verify options 2 title is displayed", async () => {
+  it("Verify options 2 title is displayed", async () => {
     expect(await flightReservationModulePage.getOptionsTwoTitle().isDisplayed()).toBeTruthy();
   });
 
   /* Verify option 2 title is correctly populated */
+  fit("Verify options 2 title is displayed correctly", async () => {
+    expect(await flightReservationModulePage.getOptionsTwoTitle().getText()).toBe("Flights booking module");
+  });
 
   /* Verify option 2 description is displayed */
 
