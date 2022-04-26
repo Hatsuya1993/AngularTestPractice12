@@ -10,7 +10,7 @@ export class FlightReservationModulePage {
   private readonly optionsOneDescription : ElementFinder;
   private readonly optionsTwoTitle : ElementFinder;
   private readonly optionsTwoDescription : ElementFinder;
-
+  private readonly optionsThreeTitle : ElementFinder;
 
   constructor(private readonly $main : ElementFinder = $("body")) {
     this.website = "https://phptravels.com/flights-module-features/";
@@ -22,6 +22,7 @@ export class FlightReservationModulePage {
     this.optionsOneDescription = this.$main.$$("div.col-md-5").get(0).$("p");
     this.optionsTwoTitle = this.$main.element(by.cssContainingText("h2", "Flights booking module"));
     this.optionsTwoDescription = this.$main.$$("div.col-md-5").get(1).$("p");
+    this.optionsThreeTitle = this.$main.element(by.cssContainingText("h2", "Complete flights back-office system"));
   }
 
   getWebsite() : string {
@@ -58,5 +59,9 @@ export class FlightReservationModulePage {
 
   getOptionsTwoDescription() : ElementFinder {
     return this.optionsTwoDescription;
+  }
+
+  getOptionsThreeTitle() : ElementFinder {
+    return this.optionsThreeTitle;
   }
 }

@@ -82,11 +82,14 @@ describe("Flights Reservation Module", () => {
   });
 
   /* Verify option 2 description is correctly populated*/
-  fit("Verify options 2 description is displayed", async () => {
+  it("Verify options 2 description is displayed", async () => {
     expect(await flightReservationModulePage.getOptionsTwoDescription().getText()).toBe("Dedicated flights module with multiple features and functionalities such as adding flights managing routes airlines and working with multiple GDS APIs. it also supports multi-currency and multi-language with ability to auto update currency rates and support with major online payment gateways to accept payments for each booking made on your website.");
   });
 
   /* Verify option 3 title is displayed */
+  fit("Verify options 3 title is displayed", async () => {
+    expect(await flightReservationModulePage.getOptionsThreeTitle().isDisplayed()).toBeTruthy();
+  });
 
   /* Verify option 3 title is correctly populated */
 
