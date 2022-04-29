@@ -97,11 +97,14 @@ describe("Flights Reservation Module", () => {
   });
 
   /* Verify option 3 description is displayed */
-  fit("Verify options 3 description is displayed", async () => {
+  it("Verify options 3 description is displayed", async () => {
     expect(await flightReservationModulePage.getOptionsThreeDescription().isDisplayed()).toBeTruthy();
   });
 
   /* Verify option 3 description is correctly populated*/
+  fit("Verify options 3 description is displayed correctly", async () => {
+    expect(await flightReservationModulePage.getOptionsThreeDescription().getText()).toBe("Sell flights tickets direct from your own GDS account simply by connecting with your credentials. no tech skills required to make it functionaly just deploy phptravels on your site and enable which modules and services you like to sell from.");
+  });
 
   /* Verify features is displayed */
 
