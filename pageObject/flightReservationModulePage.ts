@@ -13,6 +13,7 @@ export class FlightReservationModulePage {
   private readonly optionsThreeTitle : ElementFinder;
   private readonly optionsThreeDescription : ElementFinder;
   private readonly features : ElementFinder;
+  private readonly featuresContainer : ElementFinder;
 
 
   constructor(private readonly $main : ElementFinder = $("body")) {
@@ -28,6 +29,7 @@ export class FlightReservationModulePage {
     this.optionsThreeTitle = this.$main.element(by.cssContainingText("h2", "Complete flights back-office system"));
     this.optionsThreeDescription = this.$main.$$("div.col-md-5").get(2).$("p");
     this.features = this.$main.element(by.cssContainingText("h2", "Main Features"));
+    this.featuresContainer = this.$main.$(".features");
   }
 
   getWebsite() : string {
@@ -76,5 +78,9 @@ export class FlightReservationModulePage {
 
   getFeatures() : ElementFinder {
     return this.features;
+  }
+
+  getFeaturesContainer() : ElementFinder {
+    return this.featuresContainer;
   }
 }

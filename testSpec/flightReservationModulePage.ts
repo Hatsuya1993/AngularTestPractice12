@@ -107,16 +107,19 @@ describe("Flights Reservation Module", () => {
   });
 
   /* Verify features is displayed */
-  it("Verify features is displayed", async () => {
-    expect(await flightReservationModulePage.getFeatures().isDisplayed()).toBeTruthy();
+  fit("Verify features is displayed", async () => {
+    expect(await flightReservationModulePage.getFeaturesContainer().isDisplayed()).toBeTruthy();
   });
 
   // Verify features is correctly populated
-  fit("Verify features is correctly populated", async () => {
+  it("Verify features is correctly populated", async () => {
     expect(await flightReservationModulePage.getFeatures().getText()).toBe("Main Features");
   });
 
   /* Verify features title is displayed */
+  it("Verify features title is displayed", async () => {
+    expect(await flightReservationModulePage.getFeatures().isDisplayed()).toBeTruthy();
+  });
 
   /* Verify features title is correctly populated */
 
