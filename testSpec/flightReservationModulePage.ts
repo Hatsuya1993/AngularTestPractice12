@@ -107,7 +107,7 @@ describe("Flights Reservation Module", () => {
   });
 
   /* Verify features is displayed */
-  fit("Verify features is displayed", async () => {
+  it("Verify features is displayed", async () => {
     expect(await flightReservationModulePage.getFeaturesContainer().isDisplayed()).toBeTruthy();
   });
 
@@ -121,9 +121,10 @@ describe("Flights Reservation Module", () => {
     expect(await flightReservationModulePage.getFeatures().isDisplayed()).toBeTruthy();
   });
 
-  /* Verify features title is correctly populated */
-
   /* Verify features options is populated */
+  fit("Verify features options is displayed", async () => {
+    expect(await flightReservationModulePage.getFeaturesOptions().isDisplayed()).toBeTruthy();
+  });
 
   /* Verify features options is displaying 3 options*/
 
