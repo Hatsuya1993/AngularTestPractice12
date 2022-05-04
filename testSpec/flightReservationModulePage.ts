@@ -122,11 +122,14 @@ describe("Flights Reservation Module", () => {
   });
 
   /* Verify features options is populated */
-  fit("Verify features options is displayed", async () => {
+  it("Verify features options is displayed", async () => {
     expect(await flightReservationModulePage.getFeaturesOptions().isDisplayed()).toBeTruthy();
   });
 
   /* Verify features options is displaying 3 options*/
+  fit("Verify features options is displayed 3 options", async () => {
+    expect(await flightReservationModulePage.getFeaturesOptionsEach().count()).toBe(3);
+  });
 
   /* Verify features 1 title is displayed*/
 
