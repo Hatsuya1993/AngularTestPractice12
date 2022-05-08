@@ -18,6 +18,7 @@ export class FlightReservationModulePage {
   private readonly featuresOptionsEach : ElementArrayFinder;
   private readonly featuresOptionsOneTitle : ElementFinder;
   private readonly featuresOptionsTwoTitle : ElementFinder;
+  private readonly featuresOptionsThreeTitle : ElementFinder;
 
 
   constructor(private readonly $main : ElementFinder = $("body")) {
@@ -38,6 +39,7 @@ export class FlightReservationModulePage {
     this.featuresOptionsEach = this.featuresOptions.$$("div .container");
     this.featuresOptionsOneTitle = this.$main.element(by.cssContainingText("h5", "Flight Listing"));
     this.featuresOptionsTwoTitle = this.$main.element(by.cssContainingText("h5", "Last Minutes Deals"));
+    this.featuresOptionsThreeTitle = this.$main.element(by.cssContainingText("h5", "Popular Flights"));
   }
 
   getWebsite() : string {
@@ -106,5 +108,9 @@ export class FlightReservationModulePage {
 
   getFeaturesOptionsTwoTitle() : ElementFinder {
     return this.featuresOptionsTwoTitle;
+  }
+
+  getFeaturesOptionsThreeTitle() : ElementFinder {
+    return this.featuresOptionsThreeTitle;
   }
 }
