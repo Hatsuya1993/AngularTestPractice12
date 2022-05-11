@@ -147,11 +147,14 @@ describe("Flights Reservation Module", () => {
   });
 
   /* Verify features 1 title is correctly populated*/
-  fit("Verify features options one title is displayed correctly", async () => {
+  it("Verify features options one title is displayed correctly", async () => {
     expect(await flightReservationModulePage.getFeaturesOptionsOneTitle().getText()).toBe("Flight Listing");
   });
 
   /* Verify features 2 title is correctly populated*/
+  fit("Verify features options two title is displayed correctly", async () => {
+    expect(await flightReservationModulePage.getFeaturesOptionsTwoTitle().getText()).toBe("Last Minutes Deals");
+  });
 
   /* Verify features 3 title is correctly populated*/
 
