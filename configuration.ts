@@ -15,7 +15,7 @@ export const config: Config = {
   // to protractor (in this example conf.js).
   // They may include glob patterns.
   specs: ["testSpec/registerPage.ts"],
-  restartBrowserBetweenTests: true,
+  // restartBrowserBetweenTests: true,
 
   // Options to be passed to Jasmine-node.
   jasmineNodeOpts: {

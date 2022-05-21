@@ -3,12 +3,17 @@ import {globalData} from "../helper/global";
 import {FlightReservationModulePage} from "../pageObject/flightReservationModulePage";
 
 describe("Flights Reservation Module", () => {
-  const flightReservationModulePage = new FlightReservationModulePage();
+  let flightReservationModulePage;
   beforeEach(async () => {
     browser.waitForAngularEnabled(false);
+    flightReservationModulePage = new FlightReservationModulePage();
     await browser.get(flightReservationModulePage.getWebsite());
     await browser.manage().window().maximize();
     await browser.sleep(globalData["WAIT_TIME"]["WAIT_LONG"]);
+  });
+
+  afterEach(async () => {
+    await browser.close();
   });
 
   /* Verify if the url is correctly displayed */
@@ -162,11 +167,14 @@ describe("Flights Reservation Module", () => {
   });
 
   /* Verify features 1 description is displayed*/
-  fit("Verify features options one description is displayed", async () => {
-    expect(await flightReservationModulePage.getFeaturesOptionsOneDescrition().getText()).toBe("Flight Listing");
+  it("Verify features options one description is displayed", async () => {
+    expect(await (await flightReservationModulePage.getFeaturesOptionsOneDescrition().getText()).length).toBeGreaterThan(0);
   });
 
   /* Verify features 2 description is displayed*/
+  it("Verify features options two description is displayed", async () => {
+    expect(await (await flightReservationModulePage.getFeaturesOptionsTwoDescription().getText()).length).toBeGreaterThan(0);
+  });
 
   /* Verify features 3 description is displayed*/
 
