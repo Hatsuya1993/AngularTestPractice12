@@ -6,18 +6,20 @@ import {ViewToPage} from "../view/viewToPage";
 
 
 describe("Testing orderPage", () => {
-  const demoPage = new DemoPage();
-  const viewToPage = new ViewToPage();
+  let demoPage;
+  let viewToPage;
 
   beforeEach( async () => {
     browser.waitForAngularEnabled(false);
+    demoPage = new DemoPage();
+    viewToPage = new ViewToPage();
     await browser.get(demoPage.website);
     await browser.manage().window().maximize();
     await browser.sleep(globalData["WAIT_TIME"]["WAIT_LONG"]);
   });
 
   afterEach( async () => {
-    await browser.close();
+    await browser.restart();
   });
 
   it("Should check the default content is displayed", async () => {

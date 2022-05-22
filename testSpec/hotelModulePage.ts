@@ -4,17 +4,18 @@ import {Helper} from "../helper/helper";
 import {HotelModulePage} from "../pageObject/hotelModulePage";
 
 describe("Hotel Module Page", () => {
-  const hotelModulePage = new HotelModulePage();
+  let hotelModulePage;
 
   beforeEach( async () => {
     browser.waitForAngularEnabled(false);
+    hotelModulePage = new HotelModulePage();
     await browser.get(hotelModulePage.getWebsite());
     await browser.manage().window().maximize();
     await browser.sleep(globalData["WAIT_TIME"]["WAIT_LONG"]);
   });
 
   afterEach( async () => {
-    await browser.close();
+    await browser.restart();
   });
 
   it("Correct link for hotels module features", async () => {

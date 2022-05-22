@@ -13,7 +13,7 @@ describe("Flights Reservation Module", () => {
   });
 
   afterEach(async () => {
-    await browser.close();
+    await browser.restart();
   });
 
   /* Verify if the url is correctly displayed */

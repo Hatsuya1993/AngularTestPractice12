@@ -64,4 +64,8 @@ export class DemoPage {
     this.hotelIntegration = this.$main.element(by.css("a[href=\"https://phptravels.com/expedia-api-integration/\"]"));
     this.sharedCloudHosting = this.$main.element(by.linkText("Shared Cloud Hosting"));
   }
+
+  getWebsite() : string {
+    return this.website;
+  }
 }

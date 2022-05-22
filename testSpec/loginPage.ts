@@ -4,7 +4,7 @@ import {Helper} from "../helper/helper";
 import {LoginDetails, LoginPage} from "../pageObject/loginPage";
 
 describe("Testing loginPage", () => {
-  const loginPage = new LoginPage();
+  let loginPage;
 
   const loginDetails : Partial<LoginDetails> = {
     email: "testEmail@test.com",
@@ -13,13 +13,14 @@ describe("Testing loginPage", () => {
 
   beforeEach( async () => {
     browser.waitForAngularEnabled(false);
+    loginPage = new LoginPage();
     await browser.get(loginPage.website);
     await browser.manage().window().maximize();
     await browser.sleep(globalData["WAIT_TIME"]["WAIT_LONG"]);
   });
 
   afterEach( async () => {
-    await browser.close();
+    await browser.restart();
   });
 
   it("Correct link for login", async () => {

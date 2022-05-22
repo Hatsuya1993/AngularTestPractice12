@@ -4,17 +4,18 @@ import {PricingPage} from "../pageObject/pricingPage";
 import {Helper} from "../helper/helper";
 
 describe("Testing orderPage", () => {
-  const pricingPage = new PricingPage();
+  let pricingPage;
 
   beforeEach( async () => {
     browser.waitForAngularEnabled(false);
+    pricingPage = new PricingPage();
     await browser.get(pricingPage.website);
     await browser.manage().window().maximize();
     await browser.sleep(globalData["WAIT_TIME"]["WAIT_LONG"]);
   });
 
   afterEach( async () => {
-    await browser.close();
+    await browser.restart();
   });
 
   it("Correct link for docs php travels", async () => {

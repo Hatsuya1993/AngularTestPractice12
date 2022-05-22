@@ -4,7 +4,7 @@ import {Helper} from "../helper/helper";
 import {RegisterDetails, RegisterPage} from "../pageObject/registerPage";
 
 describe("Testing registerPage", () => {
-  const registerPage = new RegisterPage();
+  let registerPage;
 
   const accountRegister : Partial<RegisterDetails> = {
     firstName: "FirstNameTest"+ new Date().getTime() / 1000,
@@ -39,13 +39,14 @@ describe("Testing registerPage", () => {
 
   beforeEach( async () => {
     browser.waitForAngularEnabled(false);
+    registerPage = new RegisterPage();
     await browser.get(registerPage.website);
     await browser.manage().window().maximize();
     await browser.sleep(globalData["WAIT_TIME"]["WAIT_LONG"]);
   });
 
   afterEach( async () => {
-    await browser.close();
+    await browser.restart();
   });
 
   it("Correct link for docs php travels", async () => {

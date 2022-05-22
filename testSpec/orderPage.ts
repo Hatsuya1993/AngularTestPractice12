@@ -7,19 +7,21 @@ import {ConfirmOrderPage} from "../pageObject/confirmOrderPage";
 
 
 describe("Testing orderPage", () => {
-  const demoPage = new DemoPage();
-  const orderPage = new OrderPage();
-  const confirmOrderPage = new ConfirmOrderPage();
-
+  let demoPage;
+  let orderPage;
+  let confirmOrderPage;
   beforeEach( async () => {
     browser.waitForAngularEnabled(false);
+    demoPage = new DemoPage();
+    orderPage = new OrderPage();
+    confirmOrderPage = new ConfirmOrderPage();
     await browser.get(demoPage.website);
     await browser.manage().window().maximize();
     await browser.sleep(globalData["WAIT_TIME"]["WAIT_LONG"]);
   });
 
   afterEach( async () => {
-    await browser.close();
+    await browser.restart();
   });
 
   it("Should disable the buy now button by default", async () => {
