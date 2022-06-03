@@ -32,7 +32,7 @@ export class DemoPage {
   hotelIntegration : ElementFinder;
   sharedCloudHosting : ElementFinder;
 
-  constructor(private readonly $main : ElementFinder = $("#Main")) {
+  constructor(private readonly $main : ElementFinder = $("body")) {
     this.website = "https://phptravels.com/demo/";
     this.title = this.$main.$("#PHPTRAVELS");
     this.subTitle = this.$main.$("#TRAVEL_TECHNOLOGY_PARTNER");
@@ -67,5 +67,121 @@ export class DemoPage {
 
   getWebsite() : string {
     return this.website;
+  }
+
+  getTitle() : ElementFinder {
+    return this.title;
+  }
+
+  getSubtitle() : ElementFinder {
+    return this.subTitle;
+  }
+
+  getMainTitle() : ElementFinder {
+    return this.mainTitle;
+  }
+
+  getNavOption() : ElementFinder {
+    return this.navOption;
+  }
+
+  getDemoOption() : ElementFinder {
+    return this.demoOption;
+  }
+
+  getPricingOption() : ElementFinder {
+    return this.pricingOption;
+  }
+
+  getIntegrationOption() : ElementFinder {
+    return this.integrationOption;
+  }
+
+  getDocsOption() : ElementFinder {
+    return this.docsOption;
+  }
+
+  getBlogOption() : ElementFinder {
+    return this.blogOption;
+  }
+
+  getLoginOption() : ElementFinder {
+    return this.loginOption;
+  }
+
+  getFacebookIcon() : ElementFinder {
+    return this.facebookIcon;
+  }
+
+  getYoutubeIcon() : ElementFinder {
+    return this.youtubeIcon;
+  }
+
+  getTwitterIcon() : ElementFinder {
+    return this.twitterIcon;
+  }
+
+  getLinkedIn() : ElementFinder {
+    return this.linkedIn;
+  }
+
+  getInstagramIcon() : ElementFinder {
+    return this.instagramIcon;
+  }
+
+  getDeskTopLink() : ElementFinder {
+    return this.deskTopLink;
+  }
+
+  getMobileAppLink() : ElementFinder {
+    return this.mobileAppLink;
+  }
+
+  getFeaturesLink() : ElementFinder {
+    return this.featuresLink;
+  }
+
+  getRequirementsLink() : ElementFinder {
+    return this.requirementsLink;
+  }
+
+  getTechnologyLink() : ElementFinder {
+    return this.technologyLink;
+  }
+
+  getChangeLogLink() : ElementFinder {
+    return this.changeLogLink;
+  }
+
+  getUpdatesLink() : ElementFinder {
+    return this.updatesLink;
+  }
+
+  getProvidersLink() : ElementFinder {
+    return this.providersLink;
+  }
+
+  getAffiliateLink() : ElementFinder {
+    return this.affiliateLink;
+  }
+
+  getRoadMapLink() : ElementFinder {
+    return this.roadMapLink;
+  }
+
+  getProductServicesLink() : ElementFinder {
+    return this.productServicesLink;
+  }
+
+  getCustomizationLink() : ElementFinder {
+    return this.customizationLink;
+  }
+
+  getHotelIntegration() : ElementFinder {
+    return this.hotelIntegration;
+  }
+
+  getSharedCloudHosting() : ElementFinder {
+    return this.sharedCloudHosting;
   }
 }

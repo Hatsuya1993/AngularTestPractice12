@@ -1,0 +1,4 @@
+[2022-06-03T15:59:58.864] [DEBUG] default - Check the url for the register page
+[2022-06-03T16:00:11.497] [DEBUG] default - Click element of [object Object]
+[2022-06-03T16:00:17.526] [DEBUG] default - Get all tabs of CDwindow-63CF559EE04F28BFE65F49802A650F8C,CDwindow-97DCB2727BAEF58AE20BD3A0B21C5EC0
+[2022-06-03T16:00:17.539] [DEBUG] default - Switch to CDwindow-97DCB2727BAEF58AE20BD3A0B21C5EC0

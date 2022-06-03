@@ -1,14 +1,17 @@
 import {browser, ElementFinder, ExpectedConditions, ElementArrayFinder} from "protractor";
 import {globalData} from "./global";
+import {Log4jsconfig} from "../config/log4jsconfig";
 
 const EC = ExpectedConditions;
+
+const log4jsconfig = new Log4jsconfig();
 
 export class Helper {
   static async displayed(item : ElementFinder) : Promise<boolean> {
     await browser.sleep(globalData["WAIT_TIME"]["WAIT_SHORT"]);
-    await browser.wait(EC.presenceOf(item), globalData["WAIT_TIME"]["WAIT_LONGER"]);
+    await browser.wait(EC.presenceOf(item), globalData["WAIT_TIME"]["WAIT_LONGER"], "Presence false");
     await browser.sleep(globalData["WAIT_TIME"]["WAIT_SHORT"]);
-    await browser.wait(EC.visibilityOf(item), globalData["WAIT_TIME"]["WAIT_LONGER"]);
+    await browser.wait(EC.visibilityOf(item), globalData["WAIT_TIME"]["WAIT_LONGER"], "Visibility false");
     await browser.sleep(globalData["WAIT_TIME"]["WAIT_SHORT"]);
     return true;
   }
@@ -17,6 +20,7 @@ export class Helper {
     await browser.sleep(globalData["WAIT_TIME"]["WAIT_SHORT"]);
     if (await this.displayed(item)) {
       await item.click();
+      log4jsconfig.log().debug(`Click element of ${item}`);
       await browser.sleep(globalData["WAIT_TIME"]["WAIT_SHORT"]);
     }
   }
@@ -29,7 +33,9 @@ export class Helper {
   static async handleTabs(tabs: number) {
     await browser.sleep(globalData["WAIT_TIME"]["WAIT_SHORT"]);
     const windowHandles = await browser.getAllWindowHandles();
+    log4jsconfig.log().debug(`Get all tabs of ${windowHandles}`);
     await browser.switchTo().window(windowHandles[tabs]);
+    log4jsconfig.log().debug(`Switch to ${windowHandles[tabs]}`);
     await browser.sleep(globalData["WAIT_TIME"]["WAIT_SHORT"]);
   }
 
@@ -59,5 +65,14 @@ export class Helper {
 
   static async handleExitIframe() {
     await browser.switchTo().defaultContent();
+  }
+
+  static async checkString(given: ElementFinder, actual: string) : Promise<boolean> {
+    log4jsconfig.log().debug(`Given ${await given.getText()} and actual of ${actual}`);
+    if (await given.getText() === actual) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }

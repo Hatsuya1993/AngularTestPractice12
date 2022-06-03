@@ -10,11 +10,10 @@ export const config: Config = {
   capabilities: {
     browserName: "chrome",
   },
-
   // Spec patterns are relative to the configuration file location passed
   // to protractor (in this example conf.js).
   // They may include glob patterns.
-  specs: ["./testSpec/flightReservationModulePage.ts"],
+  specs: ["./testSpec/demoPage.ts"],
   // restartBrowserBetweenTests: true,
 
   // Options to be passed to Jasmine-node.
