@@ -6,4 +6,8 @@ export class IntegrationPage {
   constructor(private readonly $main : ElementFinder = $("main")) {
     this.configuration = this.$main.$("a[href='/startup/configuration']");
   }
+
+  getDocsOption() : ElementFinder {
+    return this.configuration;
+  }
 }

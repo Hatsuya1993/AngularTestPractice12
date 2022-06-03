@@ -2,3 +2,24 @@
 [2022-06-03T16:00:11.497] [DEBUG] default - Click element of [object Object]
 [2022-06-03T16:00:17.526] [DEBUG] default - Get all tabs of CDwindow-63CF559EE04F28BFE65F49802A650F8C,CDwindow-97DCB2727BAEF58AE20BD3A0B21C5EC0
 [2022-06-03T16:00:17.539] [DEBUG] default - Switch to CDwindow-97DCB2727BAEF58AE20BD3A0B21C5EC0
+[2022-06-03T16:02:16.693] [DEBUG] default - Opening website of https://phptravels.com/demo/
+[2022-06-03T16:02:17.571] [DEBUG] default - Website opened https://phptravels.com/demo/
+[2022-06-03T16:02:23.774] [DEBUG] default - Opening website of https://phptravels.com/demo/
+[2022-06-03T16:02:24.681] [DEBUG] default - Website opened https://phptravels.com/demo/
+[2022-06-03T16:02:29.831] [DEBUG] default - Check if the title is correct
+[2022-06-03T16:02:29.890] [DEBUG] default - Given PHPTRAVELS and actual of PHPTRAVELS
+[2022-06-03T16:02:31.181] [DEBUG] default - Opening website of https://phptravels.com/demo/
+[2022-06-03T16:02:32.054] [DEBUG] default - Website opened https://phptravels.com/demo/
+[2022-06-03T16:34:48.552] [DEBUG] default - Opening website of https://phptravels.com/demo/
+[2022-06-03T16:34:49.746] [DEBUG] default - Website opened https://phptravels.com/demo/
+[2022-06-03T16:34:54.895] [DEBUG] default - Correct link for docs php travel
+[2022-06-03T16:35:07.284] [DEBUG] default - Click element of [object Object]
+[2022-06-03T16:35:13.298] [DEBUG] default - Get all tabs of CDwindow-DBE8DF3E7EB46942E8E6B2AC50C76B0A,CDwindow-7E84E8791FE14E1074C03D5707B2E68F
+[2022-06-03T16:35:13.323] [DEBUG] default - Switch to CDwindow-7E84E8791FE14E1074C03D5707B2E68F
+[2022-06-03T16:35:22.536] [DEBUG] default - Opening website of https://phptravels.com/demo/
+[2022-06-03T16:35:29.959] [DEBUG] default - Opening website of https://phptravels.com/demo/
+[2022-06-03T16:35:31.287] [DEBUG] default - Website opened https://phptravels.com/demo/
+[2022-06-03T16:35:36.427] [DEBUG] default - Correct link for docs php travel
+[2022-06-03T16:35:48.757] [DEBUG] default - Click element of [object Object]
+[2022-06-03T16:35:54.782] [DEBUG] default - Get all tabs of CDwindow-1A5B6A9EDE0CE645359300E082F44344,CDwindow-20B17090E4A480238318A6E6678A5457
+[2022-06-03T16:35:54.795] [DEBUG] default - Switch to CDwindow-20B17090E4A480238318A6E6678A5457
