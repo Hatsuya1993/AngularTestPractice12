@@ -1,0 +1,1 @@
+{"version":3,"file":"viewToPage.js","sourceRoot":"","sources":["../../view/viewToPage.ts"],"names":[],"mappings":";;;;;;;;;;;;AACA,6CAAwC;AACxC,mEAA8D;AAE9D,MAAa,UAAU;IACrB,YAA6B,QAAQ,CAAC,MAAM,CAAC;QAAhB,UAAK,GAAL,KAAK,CAAW;IAE7C,CAAC;IAEY,eAAe,CAAC,IAAoB;;YAC/C,MAAM,eAAM,CAAC,SAAS,CAAC,IAAI,CAAC,CAAC;YAC7B,OAAO,IAAI,iCAAe,EAAE,CAAC;QAC/B,CAAC;KAAA;CACF;AATD,gCASC"}
