@@ -2,6 +2,7 @@ import {$, by, ElementFinder} from "protractor";
 
 export class DemoPage {
   website : string;
+  product : ElementFinder;
   title : ElementFinder;
   subTitle : ElementFinder;
   mainTitle : ElementFinder;
@@ -41,6 +42,7 @@ export class DemoPage {
     this.demoOption = this.$main.element(by.linkText("Demo"));
     this.pricingOption = this.$main.element(by.linkText("Pricing"));
     this.integrationOption = this.$main.element(by.linkText("Integrations"));
+    this.product = this.$main.element(by.xpath("span[contains(text(), 'Product')]"));
     this.docsOption = this.$main.element(by.linkText("Docs"));
     this.blogOption = this.$main.element(by.linkText("Blog"));
     this.loginOption = this.$main.element(by.linkText("Login"));
@@ -83,6 +85,10 @@ export class DemoPage {
 
   getNavOption() : ElementFinder {
     return this.navOption;
+  }
+
+  getProduct() : ElementFinder {
+    return this.product;
   }
 
   getDemoOption() : ElementFinder {

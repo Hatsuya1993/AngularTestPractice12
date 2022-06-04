@@ -62,6 +62,20 @@ class Helper {
             yield protractor_1.browser.executeScript(`window.scrollTo(0,${amount});`);
         });
     }
+    static scrollPageImplicit(value) {
+        return __awaiter(this, void 0, void 0, function* () {
+            for (let i = 0; i < value; i++) {
+                protractor_1.browser.executeScript("window.scrollBy(0, 10)");
+            }
+        });
+    }
+    static scrollAndCheck(data) {
+        return __awaiter(this, void 0, void 0, function* () {
+            while ((yield this.displayed(data)) != true) {
+                this.scrollPageImplicit(global_1.globalData["SCROLL"]["SCROLL_SHORT"]);
+            }
+        });
+    }
     static mouseOverElement(data) {
         return __awaiter(this, void 0, void 0, function* () {
             yield protractor_1.browser.actions().mouseMove(data).perform();

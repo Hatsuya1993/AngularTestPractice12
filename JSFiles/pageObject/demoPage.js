@@ -13,6 +13,7 @@ class DemoPage {
         this.demoOption = this.$main.element(protractor_1.by.linkText("Demo"));
         this.pricingOption = this.$main.element(protractor_1.by.linkText("Pricing"));
         this.integrationOption = this.$main.element(protractor_1.by.linkText("Integrations"));
+        this.product = this.$main.element(protractor_1.by.xpath("span[contains(text(), 'Product')]"));
         this.docsOption = this.$main.element(protractor_1.by.linkText("Docs"));
         this.blogOption = this.$main.element(protractor_1.by.linkText("Blog"));
         this.loginOption = this.$main.element(protractor_1.by.linkText("Login"));
@@ -50,6 +51,9 @@ class DemoPage {
     }
     getNavOption() {
         return this.navOption;
+    }
+    getProduct() {
+        return this.product;
     }
     getDemoOption() {
         return this.demoOption;

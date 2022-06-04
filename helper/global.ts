@@ -5,6 +5,9 @@ const globalData : object = {
     WAIT_LONGER: 8000,
     WAIT_LONGEST: 15000,
   },
+  SCROLL: {
+    SCROLL_SHORT: 50,
+  },
 };
 
 export {globalData};

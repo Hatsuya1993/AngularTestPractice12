@@ -47,6 +47,18 @@ export class Helper {
     await browser.executeScript(`window.scrollTo(0,${amount});`);
   }
 
+  static async scrollPageImplicit(value : number) {
+    for (let i = 0; i < value; i++) {
+      browser.executeScript("window.scrollBy(0, 10)");
+    }
+  }
+
+  static async scrollAndCheck(data : ElementFinder) {
+    while (await this.displayed(data) != true) {
+      this.scrollPageImplicit(globalData["SCROLL"]["SCROLL_SHORT"]);
+    }
+  }
+
   static async mouseOverElement(data: ElementFinder) {
     await browser.actions().mouseMove(data).perform();
   }

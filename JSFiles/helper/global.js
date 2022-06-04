@@ -8,6 +8,9 @@ const globalData = {
         WAIT_LONGER: 8000,
         WAIT_LONGEST: 15000,
     },
+    SCROLL: {
+        SCROLL_SHORT: 50,
+    },
 };
 exports.globalData = globalData;
 //# sourceMappingURL=global.js.map

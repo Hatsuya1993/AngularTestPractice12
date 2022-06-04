@@ -1,102 +1,53 @@
-[2022-06-03T17:52:41.867] [DEBUG] default - Verify options 2 title is displayed correctly
-[2022-06-03T17:52:43.011] [DEBUG] default - Opening website of https://phptravels.com/flights-module-features/
-[2022-06-03T17:52:43.941] [DEBUG] default - Website opened https://phptravels.com/flights-module-features/
-[2022-06-03T17:52:49.096] [DEBUG] default - Verify options 2 description is displayed
-[2022-06-03T17:52:50.273] [DEBUG] default - Opening website of https://phptravels.com/flights-module-features/
-[2022-06-03T17:52:51.139] [DEBUG] default - Website opened https://phptravels.com/flights-module-features/
-[2022-06-03T17:52:56.290] [DEBUG] default - Verify options 2 description is correctly populated
-[2022-06-03T17:52:57.368] [DEBUG] default - Opening website of https://phptravels.com/flights-module-features/
-[2022-06-03T17:52:58.250] [DEBUG] default - Website opened https://phptravels.com/flights-module-features/
-[2022-06-03T17:53:03.397] [DEBUG] default - Verify options 3 title is displayed
-[2022-06-03T17:53:04.422] [DEBUG] default - Opening website of https://phptravels.com/flights-module-features/
-[2022-06-03T17:53:05.274] [DEBUG] default - Website opened https://phptravels.com/flights-module-features/
-[2022-06-03T17:53:10.416] [DEBUG] default - Verify options 3 title is displayed correctly
-[2022-06-03T17:53:11.459] [DEBUG] default - Opening website of https://phptravels.com/flights-module-features/
-[2022-06-03T17:53:12.321] [DEBUG] default - Website opened https://phptravels.com/flights-module-features/
-[2022-06-03T17:53:17.462] [DEBUG] default - Verify options 3 description is displayed
-[2022-06-03T17:53:18.623] [DEBUG] default - Opening website of https://phptravels.com/flights-module-features/
-[2022-06-03T17:53:19.980] [DEBUG] default - Website opened https://phptravels.com/flights-module-features/
-[2022-06-03T17:53:25.118] [DEBUG] default - Correct link for docs php travel
-[2022-06-03T17:53:26.109] [DEBUG] default - Opening website of https://phptravels.com/flights-module-features/
-[2022-06-03T17:53:27.264] [DEBUG] default - Website opened https://phptravels.com/flights-module-features/
-[2022-06-03T17:53:32.416] [DEBUG] default - Correct link for docs php travel
-[2022-06-03T17:53:33.385] [DEBUG] default - Opening website of https://phptravels.com/flights-module-features/
-[2022-06-03T17:53:34.198] [DEBUG] default - Website opened https://phptravels.com/flights-module-features/
-[2022-06-03T17:53:39.341] [DEBUG] default - Correct link for docs php travel
-[2022-06-03T17:53:40.249] [DEBUG] default - Opening website of https://phptravels.com/flights-module-features/
-[2022-06-03T17:53:41.106] [DEBUG] default - Website opened https://phptravels.com/flights-module-features/
-[2022-06-03T17:53:46.241] [DEBUG] default - Correct link for docs php travel
-[2022-06-03T17:53:47.250] [DEBUG] default - Opening website of https://phptravels.com/flights-module-features/
-[2022-06-03T17:53:48.091] [DEBUG] default - Website opened https://phptravels.com/flights-module-features/
-[2022-06-03T17:53:53.247] [DEBUG] default - Correct link for docs php travel
-[2022-06-03T17:53:54.578] [DEBUG] default - Opening website of https://phptravels.com/flights-module-features/
-[2022-06-03T17:53:55.525] [DEBUG] default - Website opened https://phptravels.com/flights-module-features/
-[2022-06-03T17:54:00.667] [DEBUG] default - Correct link for docs php travel
-[2022-06-03T17:54:01.873] [DEBUG] default - Opening website of https://phptravels.com/flights-module-features/
-[2022-06-03T17:54:02.656] [DEBUG] default - Website opened https://phptravels.com/flights-module-features/
-[2022-06-03T17:54:07.791] [DEBUG] default - Correct link for docs php travel
-[2022-06-03T17:54:08.615] [DEBUG] default - Opening website of https://phptravels.com/flights-module-features/
-[2022-06-03T17:54:09.578] [DEBUG] default - Website opened https://phptravels.com/flights-module-features/
-[2022-06-03T17:54:14.721] [DEBUG] default - Correct link for docs php travel
-[2022-06-03T17:54:15.514] [DEBUG] default - Opening website of https://phptravels.com/flights-module-features/
-[2022-06-03T17:54:16.362] [DEBUG] default - Website opened https://phptravels.com/flights-module-features/
-[2022-06-03T17:54:21.497] [DEBUG] default - Correct link for docs php travel
-[2022-06-03T17:54:22.276] [DEBUG] default - Opening website of https://phptravels.com/flights-module-features/
-[2022-06-03T17:54:23.103] [DEBUG] default - Website opened https://phptravels.com/flights-module-features/
-[2022-06-03T17:54:28.240] [DEBUG] default - Correct link for docs php travel
-[2022-06-03T17:54:29.016] [DEBUG] default - Opening website of https://phptravels.com/flights-module-features/
-[2022-06-03T17:54:29.838] [DEBUG] default - Website opened https://phptravels.com/flights-module-features/
-[2022-06-03T17:54:34.982] [DEBUG] default - Correct link for docs php travel
-[2022-06-03T17:54:35.800] [DEBUG] default - Opening website of https://phptravels.com/flights-module-features/
-[2022-06-03T17:54:36.620] [DEBUG] default - Website opened https://phptravels.com/flights-module-features/
-[2022-06-03T17:54:41.760] [DEBUG] default - Correct link for docs php travel
-[2022-06-03T17:54:42.550] [DEBUG] default - Opening website of https://phptravels.com/flights-module-features/
-[2022-06-03T17:54:43.293] [DEBUG] default - Website opened https://phptravels.com/flights-module-features/
-[2022-06-03T17:54:48.442] [DEBUG] default - Correct link for docs php travel
-[2022-06-03T17:54:49.236] [DEBUG] default - Opening website of https://phptravels.com/flights-module-features/
-[2022-06-03T17:54:49.975] [DEBUG] default - Website opened https://phptravels.com/flights-module-features/
-[2022-06-03T17:54:55.100] [DEBUG] default - Correct link for docs php travel
-[2022-06-03T18:01:07.057] [DEBUG] default - Opening website of https://phptravels.com/hotels-module-features/
-[2022-06-03T18:01:08.752] [DEBUG] default - Website opened https://phptravels.com/hotels-module-features/
-[2022-06-03T18:01:13.926] [DEBUG] default - Correct link for hotels module features
-[2022-06-03T18:01:14.703] [DEBUG] default - Opening website of https://phptravels.com/hotels-module-features/
-[2022-06-03T18:01:16.193] [DEBUG] default - Website opened https://phptravels.com/hotels-module-features/
-[2022-06-03T18:01:21.318] [DEBUG] default - Header should be displayed
-[2022-06-03T18:01:21.969] [DEBUG] default - Opening website of https://phptravels.com/hotels-module-features/
-[2022-06-03T18:01:23.449] [DEBUG] default - Website opened https://phptravels.com/hotels-module-features/
-[2022-06-03T18:01:28.587] [DEBUG] default - Hotels booking module should be displayed
-[2022-06-03T18:01:29.268] [DEBUG] default - Opening website of https://phptravels.com/hotels-module-features/
-[2022-06-03T18:01:30.891] [DEBUG] default - Website opened https://phptravels.com/hotels-module-features/
-[2022-06-03T18:01:36.034] [DEBUG] default - Full calendar should be displayed
-[2022-06-03T18:01:36.826] [DEBUG] default - Opening website of https://phptravels.com/hotels-module-features/
-[2022-06-03T18:01:38.421] [DEBUG] default - Website opened https://phptravels.com/hotels-module-features/
-[2022-06-03T18:01:43.546] [DEBUG] default - Main features should be displayed
-[2022-06-03T18:01:44.283] [DEBUG] default - Opening website of https://phptravels.com/hotels-module-features/
-[2022-06-03T18:01:45.848] [DEBUG] default - Website opened https://phptravels.com/hotels-module-features/
-[2022-06-03T18:01:50.987] [DEBUG] default - Hotels module should be displayed
-[2022-06-03T18:01:51.686] [DEBUG] default - Opening website of https://phptravels.com/hotels-module-features/
-[2022-06-03T18:01:53.163] [DEBUG] default - Website opened https://phptravels.com/hotels-module-features/
-[2022-06-03T18:01:58.291] [DEBUG] default - Banner should be displayed
-[2022-06-03T18:01:58.961] [DEBUG] default - Opening website of https://phptravels.com/hotels-module-features/
-[2022-06-03T18:02:00.627] [DEBUG] default - Website opened https://phptravels.com/hotels-module-features/
-[2022-06-03T18:02:05.761] [DEBUG] default - Banner title should be displayed
-[2022-06-03T18:02:06.439] [DEBUG] default - Opening website of https://phptravels.com/hotels-module-features/
-[2022-06-03T18:02:08.006] [DEBUG] default - Website opened https://phptravels.com/hotels-module-features/
-[2022-06-03T18:02:13.150] [DEBUG] default - Banner title should be populated correctly
-[2022-06-03T18:02:13.930] [DEBUG] default - Opening website of https://phptravels.com/hotels-module-features/
-[2022-06-03T18:02:15.429] [DEBUG] default - Website opened https://phptravels.com/hotels-module-features/
-[2022-06-03T18:02:20.562] [DEBUG] default - Banner description should be displayed
-[2022-06-03T18:02:21.330] [DEBUG] default - Opening website of https://phptravels.com/hotels-module-features/
-[2022-06-03T18:02:22.877] [DEBUG] default - Website opened https://phptravels.com/hotels-module-features/
-[2022-06-03T18:02:28.022] [DEBUG] default - View pricing button should be displayed
-[2022-06-03T18:02:28.989] [DEBUG] default - Opening website of https://phptravels.com/hotels-module-features/
-[2022-06-03T18:02:30.655] [DEBUG] default - Website opened https://phptravels.com/hotels-module-features/
-[2022-06-03T18:02:35.803] [DEBUG] default - Pricing page should move to the order page
-[2022-06-03T18:02:49.338] [DEBUG] default - Click element of [object Object]
-[2022-06-03T18:02:53.010] [DEBUG] default - Opening website of https://phptravels.com/hotels-module-features/
-[2022-06-03T18:02:54.481] [DEBUG] default - Website opened https://phptravels.com/hotels-module-features/
-[2022-06-03T18:02:59.622] [DEBUG] default - View overview demo button should be displayed
-[2022-06-03T18:03:00.394] [DEBUG] default - Opening website of https://phptravels.com/hotels-module-features/
-[2022-06-03T18:03:01.970] [DEBUG] default - Website opened https://phptravels.com/hotels-module-features/
-[2022-06-03T18:03:07.117] [DEBUG] default - Clicking the demo button will move to the demo page
-[2022-06-03T18:03:19.867] [DEBUG] default - Click element of [object Object]
+[2022-06-04T08:55:13.046] [DEBUG] default - Should open to the correct website for travelport
+[2022-06-04T08:57:40.080] [DEBUG] default - Opening website of https://phptravels.com/integrations/
+[2022-06-04T08:57:40.963] [DEBUG] default - Website opened https://phptravels.com/integrations/
+[2022-06-04T08:57:46.114] [DEBUG] default - Should check the default content is displayed
+[2022-06-04T08:57:47.025] [DEBUG] default - Opening website of https://phptravels.com/integrations/
+[2022-06-04T08:57:47.763] [DEBUG] default - Website opened https://phptravels.com/integrations/
+[2022-06-04T08:57:52.906] [DEBUG] default - Should open another tab to the correct website for travelport
+[2022-06-04T08:58:14.251] [DEBUG] default - Click element of [object Object]
+[2022-06-04T08:58:18.136] [DEBUG] default - Opening website of https://phptravels.com/integrations/
+[2022-06-04T08:58:18.996] [DEBUG] default - Website opened https://phptravels.com/integrations/
+[2022-06-04T08:58:24.125] [DEBUG] default - Should open to the correct website for travelport
+[2022-06-04T08:58:45.450] [DEBUG] default - Click element of [object Object]
+[2022-06-04T08:58:51.482] [DEBUG] default - Get all tabs of CDwindow-477D92EBC4E24496B0A57C297AE088D3,CDwindow-ECCA5E39657C2A53512D19C8FA5416AD
+[2022-06-04T08:58:51.490] [DEBUG] default - Switch to CDwindow-ECCA5E39657C2A53512D19C8FA5416AD
+[2022-06-04T08:58:55.380] [DEBUG] default - Opening website of https://phptravels.com/integrations/
+[2022-06-04T08:58:56.180] [DEBUG] default - Website opened https://phptravels.com/integrations/
+[2022-06-04T08:59:01.319] [DEBUG] default - Should open another tab to the correct website for travelport documentation
+[2022-06-04T09:05:07.184] [DEBUG] default - Opening website of https://phptravels.com/integrations/
+[2022-06-04T09:05:08.455] [DEBUG] default - Website opened https://phptravels.com/integrations/
+[2022-06-04T09:05:13.591] [DEBUG] default - Should check the default content is displayed
+[2022-06-04T09:05:14.535] [DEBUG] default - Opening website of https://phptravels.com/integrations/
+[2022-06-04T09:05:15.396] [DEBUG] default - Website opened https://phptravels.com/integrations/
+[2022-06-04T09:05:20.548] [DEBUG] default - Should open another tab to the correct website for travelport
+[2022-06-04T09:05:41.896] [DEBUG] default - Click element of [object Object]
+[2022-06-04T09:05:45.803] [DEBUG] default - Opening website of https://phptravels.com/integrations/
+[2022-06-04T09:05:46.588] [DEBUG] default - Website opened https://phptravels.com/integrations/
+[2022-06-04T09:05:51.738] [DEBUG] default - Should open to the correct website for travelport
+[2022-06-04T09:06:13.134] [DEBUG] default - Click element of [object Object]
+[2022-06-04T09:06:19.156] [DEBUG] default - Get all tabs of CDwindow-4DB3C8BDCF4F51E6E3B67B8F634FEFE0,CDwindow-5D0E5A645CC048817851BF06BD485321
+[2022-06-04T09:06:19.164] [DEBUG] default - Switch to CDwindow-5D0E5A645CC048817851BF06BD485321
+[2022-06-04T09:19:57.173] [DEBUG] default - Opening website of https://phptravels.com/integrations/
+[2022-06-04T09:19:58.210] [DEBUG] default - Website opened https://phptravels.com/integrations/
+[2022-06-04T09:20:03.410] [DEBUG] default - Should check the default content is displayed
+[2022-06-04T09:20:04.357] [DEBUG] default - Opening website of https://phptravels.com/integrations/
+[2022-06-04T09:20:05.938] [DEBUG] default - Website opened https://phptravels.com/integrations/
+[2022-06-04T09:20:11.067] [DEBUG] default - Should open another tab to the correct website for travelport
+[2022-06-04T09:20:32.586] [DEBUG] default - Click element of [object Object]
+[2022-06-04T09:20:36.346] [DEBUG] default - Opening website of https://phptravels.com/integrations/
+[2022-06-04T09:20:37.055] [DEBUG] default - Website opened https://phptravels.com/integrations/
+[2022-06-04T09:20:42.186] [DEBUG] default - Should open to the correct website for travelport
+[2022-06-04T09:21:03.697] [DEBUG] default - Click element of [object Object]
+[2022-06-04T09:21:09.723] [DEBUG] default - Get all tabs of CDwindow-01A92A13D1D24856D7A4758CB5DBFFDB,CDwindow-C6AD0A357CE9A130B50932729C3B3A24
+[2022-06-04T09:21:09.735] [DEBUG] default - Switch to CDwindow-C6AD0A357CE9A130B50932729C3B3A24
+[2022-06-04T09:21:13.619] [DEBUG] default - Opening website of https://phptravels.com/integrations/
+[2022-06-04T09:21:14.361] [DEBUG] default - Website opened https://phptravels.com/integrations/
+[2022-06-04T09:21:19.501] [DEBUG] default - Should open another tab to the correct website for Amadeus
+[2022-06-04T09:21:41.042] [DEBUG] default - Click element of [object Object]
+[2022-06-04T09:21:45.369] [DEBUG] default - Opening website of https://phptravels.com/integrations/
+[2022-06-04T09:21:46.497] [DEBUG] default - Website opened https://phptravels.com/integrations/
+[2022-06-04T09:21:51.652] [DEBUG] default - Should open to the correct website for Amadeus
+[2022-06-04T09:22:13.241] [DEBUG] default - Click element of [object Object]
+[2022-06-04T09:22:19.257] [DEBUG] default - Get all tabs of CDwindow-0DC112952B60F981B6B12EA6A77E53EA,CDwindow-5E3FC24ED974FAA8AF0D4511007E0A90
+[2022-06-04T09:22:19.270] [DEBUG] default - Switch to CDwindow-5E3FC24ED974FAA8AF0D4511007E0A90
