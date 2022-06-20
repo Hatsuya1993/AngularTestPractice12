@@ -2,6 +2,7 @@ import {browser} from "protractor";
 import {globalData} from "../helper/global";
 import {FlightReservationModulePage} from "../pageObject/flightReservationModulePage";
 import {Log4jsconfig} from "../config/log4jsconfig";
+import {Helper} from "../helper/helper";
 
 describe("Flights Reservation Module", () => {
   let flightReservationModulePage : FlightReservationModulePage;
@@ -249,14 +250,22 @@ describe("Flights Reservation Module", () => {
   });
 
   /* Verify booking system description is displayed */
-  fit("Verify booking system description is displayed", async () => {
+  it("Verify booking system description is displayed", async () => {
     log4jsconfig.log().debug("Verify booking system description is displayed");
     expect(await flightReservationModulePage.getCompleteFlightBookingSystemDescription().isDisplayed()).toBeTruthy();
   });
 
   /* Verify the demo button is displayed */
+  it("Verify the demo button is displayed", async () => {
+    log4jsconfig.log().debug("Verify the demo button is displayed");
+    expect(await flightReservationModulePage.getOverviewButton().isDisplayed()).toBeTruthy();
+  });
 
   /* Verify the demo button will move to the demo page */
+  it("Verify the demo button will move to the demo page", async () => {
+    await Helper.clickItem(flightReservationModulePage.getOverviewButton());
+    expect(await browser.getCurrentUrl()).toContain("demo");
+  });
 
   /* Verify the real time bookings from gds is displayed */
 

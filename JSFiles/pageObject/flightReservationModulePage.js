@@ -28,6 +28,7 @@ class FlightReservationModulePage {
         this.featuresOptionsThreeDescription = this.featuresOptionsThreeTitle.element(protractor_1.by.xpath("following-sibling::p"));
         this.completeFlightBookingSystem = this.$main.element(protractor_1.by.cssContainingText("h2", "Complete flight booking system"));
         this.completeFlightBookingSystemDescription = this.completeFlightBookingSystem.element(protractor_1.by.xpath("following-sibling::p"));
+        this.overviewButton = this.$main.element(protractor_1.by.linkText("Overview demo"));
     }
     getWebsite() {
         return this.website;
@@ -97,6 +98,9 @@ class FlightReservationModulePage {
     }
     getCompleteFlightBookingSystemDescription() {
         return this.completeFlightBookingSystemDescription;
+    }
+    getOverviewButton() {
+        return this.overviewButton;
     }
 }
 exports.FlightReservationModulePage = FlightReservationModulePage;

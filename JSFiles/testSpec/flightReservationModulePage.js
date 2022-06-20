@@ -13,6 +13,7 @@ const protractor_1 = require("protractor");
 const global_1 = require("../helper/global");
 const flightReservationModulePage_1 = require("../pageObject/flightReservationModulePage");
 const log4jsconfig_1 = require("../config/log4jsconfig");
+const helper_1 = require("../helper/helper");
 describe("Flights Reservation Module", () => {
     let flightReservationModulePage;
     const log4jsconfig = new log4jsconfig_1.Log4jsconfig();
@@ -219,12 +220,20 @@ describe("Flights Reservation Module", () => {
         expect(yield flightReservationModulePage.getCompleteFlightBookingSystem().getText()).toBe("Complete flight booking system");
     }));
     /* Verify booking system description is displayed */
-    fit("Verify booking system description is displayed", () => __awaiter(void 0, void 0, void 0, function* () {
+    it("Verify booking system description is displayed", () => __awaiter(void 0, void 0, void 0, function* () {
         log4jsconfig.log().debug("Verify booking system description is displayed");
         expect(yield flightReservationModulePage.getCompleteFlightBookingSystemDescription().isDisplayed()).toBeTruthy();
     }));
     /* Verify the demo button is displayed */
+    it("Verify the demo button is displayed", () => __awaiter(void 0, void 0, void 0, function* () {
+        log4jsconfig.log().debug("Verify the demo button is displayed");
+        expect(yield flightReservationModulePage.getOverviewButton().isDisplayed()).toBeTruthy();
+    }));
     /* Verify the demo button will move to the demo page */
+    it("Verify the demo button will move to the demo page", () => __awaiter(void 0, void 0, void 0, function* () {
+        yield helper_1.Helper.clickItem(flightReservationModulePage.getOverviewButton());
+        expect(yield protractor_1.browser.getCurrentUrl()).toContain("demo");
+    }));
     /* Verify the real time bookings from gds is displayed */
     /* Verify the real time bookings from gds is populated correctly */
     /* Verify the real time bookings from gds description is displayed */

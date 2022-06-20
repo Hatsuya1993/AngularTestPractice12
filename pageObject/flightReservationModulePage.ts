@@ -24,6 +24,7 @@ export class FlightReservationModulePage {
   private readonly featuresOptionsThreeDescription : ElementFinder;
   private readonly completeFlightBookingSystem : ElementFinder;
   private readonly completeFlightBookingSystemDescription : ElementFinder;
+  private readonly overviewButton : ElementFinder;
 
   constructor(private readonly $main : ElementFinder = $("body")) {
     this.website = "https://phptravels.com/flights-module-features/";
@@ -49,6 +50,7 @@ export class FlightReservationModulePage {
     this.featuresOptionsThreeDescription = this.featuresOptionsThreeTitle.element(by.xpath("following-sibling::p"));
     this.completeFlightBookingSystem = this.$main.element(by.cssContainingText("h2", "Complete flight booking system"));
     this.completeFlightBookingSystemDescription = this.completeFlightBookingSystem.element(by.xpath("following-sibling::p"));
+    this.overviewButton = this.$main.element(by.linkText("Overview demo"));
   }
 
   getWebsite() : string {
@@ -141,5 +143,9 @@ export class FlightReservationModulePage {
 
   getCompleteFlightBookingSystemDescription() : ElementFinder {
     return this.completeFlightBookingSystemDescription;
+  }
+
+  getOverviewButton() : ElementFinder {
+    return this.overviewButton;
   }
 }
