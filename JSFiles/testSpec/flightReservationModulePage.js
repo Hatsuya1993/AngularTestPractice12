@@ -230,7 +230,8 @@ describe("Flights Reservation Module", () => {
         expect(yield flightReservationModulePage.getOverviewButton().isDisplayed()).toBeTruthy();
     }));
     /* Verify the demo button will move to the demo page */
-    fit("Verify the demo button will move to the demo page", () => __awaiter(void 0, void 0, void 0, function* () {
+    it("Verify the demo button will move to the demo page", () => __awaiter(void 0, void 0, void 0, function* () {
+        log4jsconfig.log().debug("Verify the demo button will move to the demo page");
         yield helper_1.Helper.clickItem(flightReservationModulePage.getOverviewButton());
         expect(yield protractor_1.browser.getCurrentUrl()).toContain("demo");
     }));

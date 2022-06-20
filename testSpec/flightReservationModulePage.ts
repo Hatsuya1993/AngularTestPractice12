@@ -262,7 +262,8 @@ describe("Flights Reservation Module", () => {
   });
 
   /* Verify the demo button will move to the demo page */
-  fit("Verify the demo button will move to the demo page", async () => {
+  it("Verify the demo button will move to the demo page", async () => {
+    log4jsconfig.log().debug("Verify the demo button will move to the demo page");
     await Helper.clickItem(flightReservationModulePage.getOverviewButton());
     expect(await browser.getCurrentUrl()).toContain("demo");
   });
