@@ -1,2 +1,1 @@
-npm install
-protractor JSFiles/configuration.js
+npm install && protractor JSFiles/configuration.js
