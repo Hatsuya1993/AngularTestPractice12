@@ -64,3 +64,22 @@
 [2022-06-20T20:36:02.278] [DEBUG] default - Check if the title is correct
 [2022-06-20T20:55:05.649] [DEBUG] default - Opening website of https://phptravels.com/demo/
 [2022-06-20T20:55:07.350] [DEBUG] default - Website opened https://phptravels.com/demo/
+[2022-06-20T21:06:58.526] [DEBUG] default - Opening website of https://phptravels.com/demo/
+[2022-06-20T21:31:01.759] [DEBUG] default - Opening website of https://phptravels.com/demo/
+[2022-06-20T21:31:02.942] [DEBUG] default - Website opened https://phptravels.com/demo/
+[2022-06-20T21:31:09.164] [DEBUG] default - Opening website of https://phptravels.com/demo/
+[2022-06-20T21:31:09.907] [DEBUG] default - Website opened https://phptravels.com/demo/
+[2022-06-20T21:31:15.046] [DEBUG] default - Check if the title is correct
+[2022-06-20T21:31:15.131] [DEBUG] default - Given PHPTRAVELS and actual of PHPTRAVELS
+[2022-06-20T22:15:08.659] [DEBUG] default - Opening website of https://phptravels.com/flights-module-features/
+[2022-06-20T22:15:09.741] [DEBUG] default - Website opened https://phptravels.com/flights-module-features/
+[2022-06-20T22:15:28.152] [DEBUG] default - Click element of [object Object]
+[2022-06-20T22:18:02.490] [DEBUG] default - Opening website of https://phptravels.com/flights-module-features/
+[2022-06-20T22:18:03.511] [DEBUG] default - Website opened https://phptravels.com/flights-module-features/
+[2022-06-20T22:18:21.881] [DEBUG] default - Click element of [object Object]
+[2022-06-20T22:21:23.161] [DEBUG] default - Opening website of https://phptravels.com/flights-module-features/
+[2022-06-20T22:21:24.205] [DEBUG] default - Website opened https://phptravels.com/flights-module-features/
+[2022-06-20T22:21:42.582] [DEBUG] default - Click element of [object Object]
+[2022-06-20T22:27:19.941] [DEBUG] default - Opening website of https://phptravels.com/flights-module-features/
+[2022-06-20T22:27:20.815] [DEBUG] default - Website opened https://phptravels.com/flights-module-features/
+[2022-06-20T22:27:38.944] [DEBUG] default - Click element of [object Object]

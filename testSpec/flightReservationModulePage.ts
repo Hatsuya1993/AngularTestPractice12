@@ -262,7 +262,7 @@ describe("Flights Reservation Module", () => {
   });
 
   /* Verify the demo button will move to the demo page */
-  it("Verify the demo button will move to the demo page", async () => {
+  fit("Verify the demo button will move to the demo page", async () => {
     await Helper.clickItem(flightReservationModulePage.getOverviewButton());
     expect(await browser.getCurrentUrl()).toContain("demo");
   });

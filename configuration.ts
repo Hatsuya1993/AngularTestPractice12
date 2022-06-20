@@ -1,5 +1,4 @@
 import {Config} from "protractor";
-const Jasmine2HtmlReporter = require("protractor-jasmine2-html-reporter");
 
 // An example configuration file
 export const config: Config = {
@@ -13,12 +12,13 @@ export const config: Config = {
   // Spec patterns are relative to the configuration file location passed
   // to protractor (in this example conf.js).
   // They may include glob patterns.
-  specs: ["./testSpec/*.ts"],
+  specs: ["./testSpec/flightReservationModulePage.ts"],
   // restartBrowserBetweenTests: true,
   onPrepare: function() {
+    const AllureReporter = require("jasmine-allure-reporter");
     jasmine.getEnv().addReporter(
-        new Jasmine2HtmlReporter({
-          savePath: "./target/screenshots",
+        new AllureReporter({
+          resultsDir: "allure-results",
         }),
     );
   },
