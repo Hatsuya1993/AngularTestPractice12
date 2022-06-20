@@ -25,6 +25,9 @@ class FlightReservationModulePage {
         this.featuresOptionsThreeTitle = this.$main.element(protractor_1.by.cssContainingText("h5", "Popular Flights"));
         this.featuresOptionsOneDescription = this.featuresOptionsOneTitle.element(protractor_1.by.xpath("following-sibling::p"));
         this.featuresOptionsTwoDescription = this.featuresOptionsTwoTitle.element(protractor_1.by.xpath("following-sibling::p"));
+        this.featuresOptionsThreeDescription = this.featuresOptionsThreeTitle.element(protractor_1.by.xpath("following-sibling::p"));
+        this.completeFlightBookingSystem = this.$main.element(protractor_1.by.cssContainingText("h2", "Complete flight booking system"));
+        this.completeFlightBookingSystemDescription = this.completeFlightBookingSystem.element(protractor_1.by.xpath("following-sibling::p"));
     }
     getWebsite() {
         return this.website;
@@ -85,6 +88,15 @@ class FlightReservationModulePage {
     }
     getFeaturesOptionsTwoDescription() {
         return this.featuresOptionsTwoDescription;
+    }
+    getFeaturesOptionsThreeDescription() {
+        return this.featuresOptionsThreeDescription;
+    }
+    getCompleteFlightBookingSystem() {
+        return this.completeFlightBookingSystem;
+    }
+    getCompleteFlightBookingSystemDescription() {
+        return this.completeFlightBookingSystemDescription;
     }
 }
 exports.FlightReservationModulePage = FlightReservationModulePage;

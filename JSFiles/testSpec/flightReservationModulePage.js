@@ -120,81 +120,109 @@ describe("Flights Reservation Module", () => {
     }));
     /* Verify option 3 description is correctly populated*/
     it("Verify options 3 description is displayed correctly", () => __awaiter(void 0, void 0, void 0, function* () {
-        log4jsconfig.log().debug("Correct link for docs php travel");
+        log4jsconfig.log().debug("Verify options 3 description is displayed correctly");
         expect(yield flightReservationModulePage.getOptionsThreeDescription().getText()).toBe("Sell flights tickets direct from your own GDS account simply by connecting with your credentials. no tech skills required to make it functionaly just deploy phptravels on your site and enable which modules and services you like to sell from.");
     }));
     /* Verify features is displayed */
     it("Verify features is displayed", () => __awaiter(void 0, void 0, void 0, function* () {
-        log4jsconfig.log().debug("Correct link for docs php travel");
+        log4jsconfig.log().debug("Verify features is displayed");
         expect(yield flightReservationModulePage.getFeaturesContainer().isDisplayed()).toBeTruthy();
     }));
     // Verify features is correctly populated
     it("Verify features is correctly populated", () => __awaiter(void 0, void 0, void 0, function* () {
-        log4jsconfig.log().debug("Correct link for docs php travel");
+        log4jsconfig.log().debug("Verify features is correctly populated");
         expect(yield flightReservationModulePage.getFeatures().getText()).toBe("Main Features");
     }));
     /* Verify features title is displayed */
     it("Verify features title is displayed", () => __awaiter(void 0, void 0, void 0, function* () {
-        log4jsconfig.log().debug("Correct link for docs php travel");
+        log4jsconfig.log().debug("Verify features title is displayed");
         expect(yield flightReservationModulePage.getFeatures().isDisplayed()).toBeTruthy();
     }));
     /* Verify features options is populated */
     it("Verify features options is displayed", () => __awaiter(void 0, void 0, void 0, function* () {
-        log4jsconfig.log().debug("Correct link for docs php travel");
+        log4jsconfig.log().debug("Verify features options is displayed");
         expect(yield flightReservationModulePage.getFeaturesOptions().isDisplayed()).toBeTruthy();
     }));
     /* Verify features options is displaying 3 options*/
     it("Verify features options is displayed 3 options", () => __awaiter(void 0, void 0, void 0, function* () {
-        log4jsconfig.log().debug("Correct link for docs php travel");
+        log4jsconfig.log().debug("Verify features options is displayed 3 options");
         expect(yield flightReservationModulePage.getFeaturesOptionsEach().count()).toBe(3);
     }));
     /* Verify features 1 title is displayed*/
     it("Verify features options one title is displayed", () => __awaiter(void 0, void 0, void 0, function* () {
-        log4jsconfig.log().debug("Correct link for docs php travel");
+        log4jsconfig.log().debug("Verify features options one title is displayed");
         expect(yield flightReservationModulePage.getFeaturesOptionsOneTitle().isDisplayed()).toBeTruthy();
     }));
     /* Verify features 2 title is displayed*/
     it("Verify features options two title is displayed", () => __awaiter(void 0, void 0, void 0, function* () {
-        log4jsconfig.log().debug("Correct link for docs php travel");
+        log4jsconfig.log().debug("Verify features options two title is displayed");
         expect(yield flightReservationModulePage.getFeaturesOptionsTwoTitle().isDisplayed()).toBeTruthy();
     }));
     /* Verify features 3 title is displayed*/
     it("Verify features options three title is displayed", () => __awaiter(void 0, void 0, void 0, function* () {
-        log4jsconfig.log().debug("Correct link for docs php travel");
+        log4jsconfig.log().debug("Verify features options three title is displayed");
         expect(yield flightReservationModulePage.getFeaturesOptionsThreeTitle().isDisplayed()).toBeTruthy();
     }));
     /* Verify features 1 title is correctly populated*/
     it("Verify features options one title is displayed correctly", () => __awaiter(void 0, void 0, void 0, function* () {
-        log4jsconfig.log().debug("Correct link for docs php travel");
+        log4jsconfig.log().debug("Verify features options one title is displayed correctly");
         expect(yield flightReservationModulePage.getFeaturesOptionsOneTitle().getText()).toBe("Flight Listing");
     }));
     /* Verify features 2 title is correctly populated*/
     it("Verify features options two title is displayed correctly", () => __awaiter(void 0, void 0, void 0, function* () {
-        log4jsconfig.log().debug("Correct link for docs php travel");
+        log4jsconfig.log().debug("Verify features options two title is displayed correctly");
         expect(yield flightReservationModulePage.getFeaturesOptionsTwoTitle().getText()).toBe("Last Minutes Deals");
     }));
     /* Verify features 3 title is correctly populated*/
     it("Verify features options three title is displayed correctly", () => __awaiter(void 0, void 0, void 0, function* () {
-        log4jsconfig.log().debug("Correct link for docs php travel");
+        log4jsconfig.log().debug("Verify features options three title is displayed correctly");
         expect(yield flightReservationModulePage.getFeaturesOptionsThreeTitle().getText()).toBe("Popular Flights");
     }));
     /* Verify features 1 description is displayed*/
     it("Verify features options one description is displayed", () => __awaiter(void 0, void 0, void 0, function* () {
-        log4jsconfig.log().debug("Correct link for docs php travel");
-        expect(yield (yield flightReservationModulePage.getFeaturesOptionsOneDescrition().getText()).length).toBeGreaterThan(0);
+        log4jsconfig.log().debug("Verify features options one description is displayed");
+        expect(yield flightReservationModulePage.getFeaturesOptionsOneDescrition().isDisplayed()).toBeTruthy();
     }));
     /* Verify features 2 description is displayed*/
     it("Verify features options two description is displayed", () => __awaiter(void 0, void 0, void 0, function* () {
-        log4jsconfig.log().debug("Correct link for docs php travel");
-        expect(yield (yield flightReservationModulePage.getFeaturesOptionsTwoDescription().getText()).length).toBeGreaterThan(0);
+        log4jsconfig.log().debug("Verify features options two description is displayed");
+        expect(yield (yield flightReservationModulePage.getFeaturesOptionsTwoDescription().getText()).length).toBeTruthy();
     }));
     /* Verify features 3 description is displayed*/
+    it("Verify features options three description is displayed", () => __awaiter(void 0, void 0, void 0, function* () {
+        log4jsconfig.log().debug("Verify features options three description is displayed");
+        expect(yield (yield flightReservationModulePage.getFeaturesOptionsThreeDescription().getText()).length).toBeTruthy();
+    }));
     /* Verify features 1 description is correctly populated*/
+    it("Verify features options one description is correctly displayed", () => __awaiter(void 0, void 0, void 0, function* () {
+        log4jsconfig.log().debug("Verify features options one description is correctly displayed");
+        expect(yield (yield flightReservationModulePage.getFeaturesOptionsOneDescrition().getText()).length).toBeGreaterThan(0);
+    }));
     /* Verify features 2 description is correctly populated*/
+    it("Verify features options two description is correctly displayed", () => __awaiter(void 0, void 0, void 0, function* () {
+        log4jsconfig.log().debug("Verify features options two description is correctly displayed");
+        expect(yield (yield flightReservationModulePage.getFeaturesOptionsTwoDescription().getText()).length).toBeGreaterThan(0);
+    }));
     /* Verify features 3 description is correctly populated*/
+    it("Verify features options three description is correctly displayed", () => __awaiter(void 0, void 0, void 0, function* () {
+        log4jsconfig.log().debug("Verify features options three description is correctly displayed");
+        expect(yield (yield flightReservationModulePage.getFeaturesOptionsThreeDescription().getText()).length).toBeGreaterThan(0);
+    }));
     /* Verify booking system is displayed */
+    it("Verify booking system is displayed", () => __awaiter(void 0, void 0, void 0, function* () {
+        log4jsconfig.log().debug("Verify booking system is displayed");
+        expect(yield flightReservationModulePage.getCompleteFlightBookingSystem().isDisplayed()).toBeTruthy();
+    }));
     /* Verify booking system is populated correctly */
+    it("Verify booking system is populated correctly", () => __awaiter(void 0, void 0, void 0, function* () {
+        log4jsconfig.log().debug("Verify booking system is populated correctly");
+        expect(yield flightReservationModulePage.getCompleteFlightBookingSystem().getText()).toBe("Complete flight booking system");
+    }));
     /* Verify booking system description is displayed */
+    fit("Verify booking system description is displayed", () => __awaiter(void 0, void 0, void 0, function* () {
+        log4jsconfig.log().debug("Verify booking system description is displayed");
+        expect(yield flightReservationModulePage.getCompleteFlightBookingSystemDescription().isDisplayed()).toBeTruthy();
+    }));
     /* Verify the demo button is displayed */
     /* Verify the demo button will move to the demo page */
     /* Verify the real time bookings from gds is displayed */
