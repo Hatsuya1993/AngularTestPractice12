@@ -19,7 +19,7 @@ export const config: Config = {
   // Spec patterns are relative to the configuration file location passed
   // to protractor (in this example conf.js).
   // They may include glob patterns.
-  specs: ["./testSpec/*.ts"],
+  specs: ["./testSpec/flightReservationModulePage.ts"],
   // restartBrowserBetweenTests: true,
   onPrepare: function() {
     const AllureReporter = require("jasmine-allure-reporter");

@@ -1,0 +1,335 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1655823985101' stop='1655824345826'>
+    <name>Flights Reservation Module</name>
+    <title>Flights Reservation Module</title>
+    <test-cases>
+        <test-case start='1655823985101' status='passed' stop='1655823993118'>
+            <name>Verify if the url is correctly displayed</name>
+            <title>Verify if the url is correctly displayed</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1655823993118' status='passed' stop='1655824000608'>
+            <name>Verify if the header is displayed</name>
+            <title>Verify if the header is displayed</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1655824000608' status='passed' stop='1655824008631'>
+            <name>Verify if the header title is displayed</name>
+            <title>Verify if the header title is displayed</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1655824008631' status='passed' stop='1655824016902'>
+            <name>Verify the header title is correctly populated</name>
+            <title>Verify the header title is correctly populated</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1655824016902' status='passed' stop='1655824024387'>
+            <name>Verify the header description is displayed</name>
+            <title>Verify the header description is displayed</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1655824024387' status='passed' stop='1655824042240'>
+            <name>Verify the header description is correctly populated</name>
+            <title>Verify the header description is correctly populated</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1655824042241' status='passed' stop='1655824053567'>
+            <name>Verify there are a total of 3 options</name>
+            <title>Verify there are a total of 3 options</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1655824053567' status='passed' stop='1655824061258'>
+            <name>Verify options 1 title is displayed</name>
+            <title>Verify options 1 title is displayed</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1655824061258' status='passed' stop='1655824068966'>
+            <name>Verify options 1 title is displayed correctly</name>
+            <title>Verify options 1 title is displayed correctly</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1655824068966' status='passed' stop='1655824079831'>
+            <name>Verify options 1 description is displayed</name>
+            <title>Verify options 1 description is displayed</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1655824079831' status='passed' stop='1655824090507'>
+            <name>Verify options 1 description is correctly populated</name>
+            <title>Verify options 1 description is correctly populated</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1655824090507' status='passed' stop='1655824099670'>
+            <name>Verify options 2 title is displayed</name>
+            <title>Verify options 2 title is displayed</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1655824099670' status='passed' stop='1655824108236'>
+            <name>Verify options 2 title is displayed correctly</name>
+            <title>Verify options 2 title is displayed correctly</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1655824108237' status='passed' stop='1655824116083'>
+            <name>Verify options 2 description is displayed</name>
+            <title>Verify options 2 description is displayed</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1655824116083' status='passed' stop='1655824123263'>
+            <name>Verify options 2 description is correctly populated</name>
+            <title>Verify options 2 description is correctly populated</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1655824123263' status='passed' stop='1655824131420'>
+            <name>Verify options 3 title is displayed</name>
+            <title>Verify options 3 title is displayed</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1655824131420' status='passed' stop='1655824138813'>
+            <name>Verify options 3 title is displayed correctly</name>
+            <title>Verify options 3 title is displayed correctly</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1655824138813' status='passed' stop='1655824146369'>
+            <name>Verify options 3 description is displayed</name>
+            <title>Verify options 3 description is displayed</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1655824146369' status='passed' stop='1655824153758'>
+            <name>Verify options 3 description is displayed correctly</name>
+            <title>Verify options 3 description is displayed correctly</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1655824153758' status='passed' stop='1655824160875'>
+            <name>Verify features is displayed</name>
+            <title>Verify features is displayed</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1655824160875' status='passed' stop='1655824168495'>
+            <name>Verify features is correctly populated</name>
+            <title>Verify features is correctly populated</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1655824168496' status='passed' stop='1655824177327'>
+            <name>Verify features title is displayed</name>
+            <title>Verify features title is displayed</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1655824177327' status='passed' stop='1655824184457'>
+            <name>Verify features options is displayed</name>
+            <title>Verify features options is displayed</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1655824184457' status='passed' stop='1655824191814'>
+            <name>Verify features options is displayed 3 options</name>
+            <title>Verify features options is displayed 3 options</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1655824191814' status='passed' stop='1655824199304'>
+            <name>Verify features options one title is displayed</name>
+            <title>Verify features options one title is displayed</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1655824199304' status='passed' stop='1655824209249'>
+            <name>Verify features options two title is displayed</name>
+            <title>Verify features options two title is displayed</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1655824209249' status='passed' stop='1655824216811'>
+            <name>Verify features options three title is displayed</name>
+            <title>Verify features options three title is displayed</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1655824216811' status='passed' stop='1655824225561'>
+            <name>Verify features options one title is displayed correctly</name>
+            <title>Verify features options one title is displayed correctly</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1655824225561' status='passed' stop='1655824232987'>
+            <name>Verify features options two title is displayed correctly</name>
+            <title>Verify features options two title is displayed correctly</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1655824232987' status='passed' stop='1655824240802'>
+            <name>Verify features options three title is displayed correctly</name>
+            <title>Verify features options three title is displayed correctly</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1655824240803' status='passed' stop='1655824248637'>
+            <name>Verify features options one description is displayed</name>
+            <title>Verify features options one description is displayed</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1655824248637' status='passed' stop='1655824257114'>
+            <name>Verify features options two description is displayed</name>
+            <title>Verify features options two description is displayed</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1655824257114' status='passed' stop='1655824265482'>
+            <name>Verify features options three description is displayed</name>
+            <title>Verify features options three description is displayed</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1655824265482' status='passed' stop='1655824276888'>
+            <name>Verify features options one description is correctly displayed</name>
+            <title>Verify features options one description is correctly displayed</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1655824276888' status='passed' stop='1655824284449'>
+            <name>Verify features options two description is correctly displayed</name>
+            <title>Verify features options two description is correctly displayed</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1655824284449' status='passed' stop='1655824292109'>
+            <name>Verify features options three description is correctly displayed</name>
+            <title>Verify features options three description is correctly displayed</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1655824292109' status='passed' stop='1655824299289'>
+            <name>Verify booking system is displayed</name>
+            <title>Verify booking system is displayed</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1655824299289' status='passed' stop='1655824307761'>
+            <name>Verify booking system is populated correctly</name>
+            <title>Verify booking system is populated correctly</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1655824307761' status='passed' stop='1655824315041'>
+            <name>Verify booking system description is displayed</name>
+            <title>Verify booking system description is displayed</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1655824315041' status='passed' stop='1655824322773'>
+            <name>Verify the demo button is displayed</name>
+            <title>Verify the demo button is displayed</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1655824322773' status='passed' stop='1655824345826'>
+            <name>Verify the demo button will move to the demo page</name>
+            <title>Verify the demo button will move to the demo page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
